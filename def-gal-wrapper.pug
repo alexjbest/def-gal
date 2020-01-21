@@ -1,0 +1,37 @@
+doctype xml
+
+pretext
+
+    docinfo
+        latex-preamble
+            package xypic
+            package newpxtext
+            package newpxmath
+            package mathtools
+            package cancel
+            package pgfplots
+
+
+        include ./macros.pug
+
+        feedback: url https://github.com/alexjbest/def-gal/issues
+
+        initialism PAR
+
+        rename(element="inlineexercise") Exercise
+
+        latex-image-preamble.
+            \usepackage{pgfplots}
+            \pgfplotsset{compat=newest}
+
+    article#def-gal
+        title Deformation theory of Galois representations
+        subtitle MA842 at BU Spring 2020
+
+        frontmatter
+            titlepage
+                author: personname Rob Pollack
+
+                date: today/
+
+        include ./def-gal.pug

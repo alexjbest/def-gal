@@ -12,7 +12,7 @@ def-gal.tex:	def-gal-pretty.xml def-gal-latex.xsl filter.xsl
 
 docs/def-gal.pdf:	def-gal.tex
 	mkdir -p docs
-	cd docs && latexmk -pdf -shell-escape -pdflatex="pdflatex -shell-escape -interaction=nonstopmode"  ../def-gal.tex
+	cd docs && latexmk -pdf -shell-escape -pdflatex="pdflatex -shell-escape -interaction=batchmode"  ../def-gal.tex
 
 docs/images/:	docs def-gal-wrapper.xml
 	mkdir -p docs/images
@@ -44,6 +44,5 @@ clean-html:
 	rm -rf docs
 
 clean:	clean-html
-	rm -f def-gal.md
 	rm -f def-gal*.tex
 	rm -f def-gal*.xml

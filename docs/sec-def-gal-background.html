@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>DG Deformation theory of Galois representations</title>
+<title>DG Background</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/x-mathjax-config">
@@ -284,16 +284,16 @@ var js_version = 0.12;
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><span id="previousbutton" class="previous-button button toolbar-item disabled">Prev</span><span id="upbutton" class="up-button button disabled toolbar-item">Up</span><a id="nextbutton" class="next-button button toolbar-item" href="frontmatter-1.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="def-gal.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="def-gal.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><span class="previous-button button toolbar-item disabled">Prev</span><span class="up-button button disabled toolbar-item">Up</span><a class="next-button button toolbar-item" href="frontmatter-1.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="def-gal.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="def-gal.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
-<li class="link">
+<li class="link active">
 <a href="sec-def-gal-background.html" data-scroll="sec-def-gal-background"><span class="codenumber">1</span> <span class="title">Background</span></a><ul>
 <li><a href="sec-def-gal-background.html#subsection-1" data-scroll="subsection-1">Galois representations</a></li>
 <li><a href="sec-def-gal-background.html#subsection-2" data-scroll="subsection-2">Modular forms</a></li>
@@ -302,12 +302,225 @@ var js_version = 0.12;
 </li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/def-gal/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="article" id="def-gal"><section class="introduction" id="introduction-1"><p id="p-1">These are notes for Robert Pollack's course MA842 at BU Spring 2020.</p>
-<p id="p-2">The course webpage is <a class="external" href="http://math.bu.edu/people/rpollack/Teach/842spring2020.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/rpollack/Teach/842spring2020.html</code></a>.</p>
-<aside class="aside-like" id="aside-1"><p id="p-3">Lecture 1 21/1/2018</p></aside></section><nav class="summary-links"><ul>
-<li><a href="frontmatter-1.html"><span class="title">Front Matter</span></a></li>
-<li><a href="sec-def-gal-background.html"><span class="codenumber">1</span> <span class="title">Background</span></a></li>
-</ul></nav></section></div></main>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-def-gal-background"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1</span> <span class="title">Background</span>
+</h2>
+<a href="sec-def-gal-background.html" class="permalink">¶</a><section class="introduction" id="introduction-2"><p id="p-4">Let \(E_k\) denote the Eisenstein series of weight \(k\text{,}\) \(k\gt 2\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+E_k = \frac{-B_{k}}{2k} + \sum_{n=1}^\infty \sigma _{k-1} (n) q^n \in M_k(\SL_2(\ZZ))\text{.}
+\end{equation*}
+</div>
+<p>Where \(B_k\)] are the Bernoulli numbers and</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma _{k-1} (n)  = \sum_{d|n,\, d\gt 0}\text{.}
+\end{equation*}
+</div>
+<p id="p-5">\(E_2\) however is not holomorphic, so not a modular form.</p>
+<p id="p-6">Fix \(N\) a prime, notation has stuck from Mazur's Eisenstein ideal paper.</p>
+<p id="p-7">Then there exists a unique Eisenstein series on \(\Gamma _0(N)\) of weight 2.</p>
+<div class="displaymath">
+\begin{equation*}
+E_2^{(N)} = \frac{N-1}{12} + \sum_{n=1}^\infty  \sigma (n) q^n\text{.}
+\end{equation*}
+</div>
+<p id="p-8">Funny observation: if \(N \equiv  1 \pmod p\) for prime \(p \gt 3\text{.}\) Then \(p | ((N-1)/12)\text{,}\) so \(E_2^{(N)}\) “looks cuspidal”.</p>
+<p id="p-9">Then we hope that there exists a cuspidal eigenform \(f \in S_2(\Gamma _0(N))\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+f \equiv  E_2^{(N)} ``\pmod p ''\text{.}
+\end{equation*}
+</div>
+<p id="p-10">This is in fact true, due to Koike in the 70's, there exists \(f \in S_2(\Gamma _0(N))\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+a_\ell (f) \equiv  1+ \ell \pmod p
+\end{equation*}
+</div>
+<p>for all \(\ell \ne N,p\text{.}\)</p>
+<article class="example-like" id="question-1"><h6 class="heading">
+<span class="type">Question</span> <span class="codenumber">1.1</span>.</h6>
+<p id="p-11">How many such \(f\) are there?</p></article><p id="p-12">Merel '96:</p>
+<div class="displaymath">
+\begin{equation*}
+f \text{ is unique} \iff \prod_{i=1}^{(N-1)/2} i^i  \text{ is not a }p\text{-th power modulo }N\text{.}
+\end{equation*}
+</div>
+<p id="p-13">Wake and Wang-Erickson describe the dimension of the space of such \(f\) using Massey products (higher cup products).</p>
+<p id="p-14">Method: Galois deformations!</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1</span> <span class="title">Galois representations</span>
+</h3>
+<p id="p-15">We write</p>
+<div class="displaymath">
+\begin{equation*}
+G_{\QQ} = \absgal{\QQ} = \varprojlim_{F/\QQ,\text{fin. galois}} \Gal F\QQ
+\end{equation*}
+</div>
+<p>a profinite group.</p>
+<div class="displaymath" id="p-16">
+\begin{equation*}
+\rho  \colon  G_{\QQ} \to \GL_2 (\QQ_p)
+\end{equation*}
+</div>
+<p>a continuous homomorphism. Then view \(\GL_2(\QQ_p)\) as  \(\Aut(V)\) for a 2-dimensional \(\QQ_p\) vector space and fix a  2-dimensional \(\ZZ_p\)-lattice</p>
+<div class="displaymath">
+\begin{equation*}
+T \subseteq V
+\end{equation*}
+</div>
+<p>which is \(G_{\QQ}\) stable. Then we can take</p>
+<div class="displaymath">
+\begin{equation*}
+\bar \rho \colon G_\QQ \to \GL_2(\FF_p)
+\end{equation*}
+</div>
+<p>this is unique (w.r.t. the choice of \(T\)) only up to semisimplification.</p>
+<p id="p-17">So we say two Galois representations \(\rho _1,\rho _2\) are congruent if</p>
+<div class="displaymath">
+\begin{equation*}
+\bar \rho _1^\semis \simeq \bar \rho _2^\semis\text{.}
+\end{equation*}
+</div>
+<p id="p-18">We say \(\rho _1,\rho _2\) are deformations of</p>
+<div class="displaymath">
+\begin{equation*}
+\bar \rho _1= \bar \rho _2
+\end{equation*}
+</div>
+<p>(imagine this is reducible).</p>
+<p id="p-19">Start with</p>
+<div class="displaymath">
+\begin{equation*}
+\bar \rho  \colon G_\QQ \to \GL_2(\FF_p)
+\end{equation*}
+</div>
+<p>consider “all” deformations of \(\bar\rho  \) in good cases there exists a “universal” deformation of \(\bar \rho \text{.}\)</p>
+<p id="p-20">\(R^{\mathrm{univ}}\) a local ring with maximal ideal \(\ideal m_R\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+R/\ideal m_R = \FF_p\text{.}
+\end{equation*}
+</div>
+<div class="displaymath" id="p-21">
+\begin{equation*}
+\rho ^{\mathrm{univ}} \colon G_\QQ \to \GL_2(R^{\mathrm{univ}})
+\end{equation*}
+</div>
+<p>such that if \(\rho  \colon  G_\QQ \to GL_2(R)\) is a deformation of \(\bar \rho \) then there exists</p>
+<div class="displaymath">
+\begin{equation*}
+R^{\mathrm{univ}} \to R
+\end{equation*}
+</div>
+<p>such that</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{
+G_\QQ \ar[r]^{\rho ^{\mathrm{univ}}} \ar[dr]_\rho &amp; \GL_2(R^{\mathrm{univ}})\ar[d] \\
+&amp;  GL_2(R)
+}\text{.}
+\end{equation*}
+</div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2</span> <span class="title">Modular forms</span>
+</h3>
+<div class="displaymath" id="p-22">
+\begin{equation*}
+f = \sum a_n q^n \in S_k(\Gamma _0(N))
+\end{equation*}
+</div>
+<p>an eigenform leads to</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _f \colon G_\QQ \to \GL_2(K),\,K/\QQ_p \text{ finite}
+\end{equation*}
+</div>
+<p>with the property that for all \(\ell \nmid Np\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\trace(\rho _f(Frob_\ell)) = a_\ell\text{.}
+\end{equation*}
+</div>
+<p id="p-23">Modular forms can be congruent</p>
+<div class="displaymath">
+\begin{equation*}
+a_\ell (f_1) \equiv  a_\ell(f_2) \pmod p \text{ for all but finitely many } \ell
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Updownarrow
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\bar \rho _{f_1}^\semis\simeq \bar \rho _{f_2}^\semis\text{.}
+\end{equation*}
+</div>
+<p id="p-24">There exists a ring, the Hecke algebra \(\mathbf T\) parametrizing all \(f\)'s with the same \(\bar \rho \text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+f \leadsto \rho _f \implies R^{\mathrm{univ}} \to \mathbf T
+\end{equation*}
+</div>
+<p>so hope</p>
+<div class="displaymath">
+\begin{equation*}
+R^{\mathrm{univ}} \simeq \mathbf T\text{.}
+\end{equation*}
+</div>
+<p id="p-25">Wiles proof of FLT proved one of these.</p>
+<p id="p-26">Many more such theorems in the past couple of decades.</p>
+<p id="p-27">Wake and Wang-Erickson  show that the dimension of</p>
+<div class="displaymath">
+\begin{equation*}
+\{ f : f \equiv E_2^{(N)}\} \leftrightarrow \rank \mathbf T = \rank R^{\mathrm{univ}}\text{.}
+\end{equation*}
+</div>
+<div class="displaymath" id="p-28">
+\begin{equation*}
+a_\ell(f) \equiv  1+ \ell \pmod p
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\implies \bar \rho ^\semis = \mathbf 1 \oplus \mathbf \mu _p
+\end{equation*}
+</div>
+<p>but there does not exist \(R^{\mathrm{univ}}\) in this context.</p>
+<p id="p-29">The fix is to use pseudorepresentations instead of representations.</p></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3</span> <span class="title">Pseudorepresentations</span>
+</h3>
+<p id="p-30">Let \(G\) be a group.</p>
+<p id="p-31">Then a pseudorepresentation \(T\) is a map</p>
+<div class="displaymath">
+\begin{equation*}
+T\colon G \to A
+\end{equation*}
+</div>
+<p>for \(A\) a ring satisfying</p>
+<ol class="decimal">
+<li id="li-1"><div class="displaymath">
+\begin{equation*}
+T(xy) = T(yx)
+\end{equation*}
+</div></li>
+<li id="li-2"><div class="displaymath">
+\begin{equation*}
+T(x)T(y)T(z) - T(x)T(yz) - T(y)T(xz) - T(z)T(xy) + T(xyz) + T(xzy) = 0
+\end{equation*}
+</div></li>
+</ol>
+<p>and the analogous formulae for higher products.</p>
+<article class="theorem-like" id="fact-1"><h6 class="heading">
+<span class="type">Fact</span> <span class="codenumber">1.2</span>.</h6>
+<p id="p-32">If \(A\) is an algebraically closed field of characteristic \(\ne 2\text{.}\) Then for a given pseudorepresentation \(T\) there exists a true representation \(\rho \) such that</p>
+<div class="displaymath">
+\begin{equation*}
+T = \trace(\rho )\text{.}
+\end{equation*}
+</div></article><p id="p-33">But this does not hold in general.</p>
+<p id="p-34">Universal pseudodeformation rings always exist. Wake and Wang-Erickson use \(R^{\mathrm{univ}} =\) universal pseudodeformation ring.</p></section></section></div></main>
 </div>
 <!--Start: Google Classic code-->
 <script>

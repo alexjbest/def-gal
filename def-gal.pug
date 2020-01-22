@@ -1,5 +1,174 @@
 introduction
     p.
-        These are notes for Rob Pollack's course MA842 at BU Spring 2020.
+        These are notes for Robert Pollack's course MA842 at BU Spring 2020.
+    p.
+        The course webpage is #[url(href="http://math.bu.edu/people/rpollack/Teach/842spring2020.html")/].
 
     aside: p Lecture 1 21/1/2018
+
+
+section#sec-def-gal-background
+    title Background
+
+    introduction
+        p
+            | Let #[m E_k] denote the Eisenstein series of weight #[m k], #[m k\gt 2].
+            me E_k = \frac{-B_{k}}{2k} + \sum_{n=1}^\infty \sigma _{k-1} (n) q^n \in M_k(\SL_2(\ZZ))
+            | . Where #[m B_k]] are the Bernoulli numbers and
+            me \sigma _{k-1} (n)  = \sum_{d|n,\, d\gt 0}
+            | .
+        p
+            | #[m E_2] however is not holomorphic, so not a modular form.
+        p
+            | Fix #[m N] a prime, notation has stuck from Mazur's Eisenstein ideal paper.
+
+        p
+            | Then there exists a unique Eisenstein series on #[m \Gamma _0(N)] of weight 2.
+            me E_2^{(N)} = \frac{N-1}{12} + \sum_{n=1}^\infty  \sigma (n) q^n
+            | .
+        p
+            | Funny observation: if #[m N \equiv  1 \pmod p] for prime #[m p \gt 3].
+            | Then #[m p | ((N-1)/12)], so #[m E_2^{(N)}] #[q looks cuspidal].
+        p
+            | Then we hope that there exists a cuspidal eigenform #[m f \in S_2(\Gamma _0(N))] such that
+            me f \equiv  E_2^{(N)} ``\pmod p ''
+            | .
+        p
+            | This is in fact true, due to Koike in the 70's, there exists #[m f \in S_2(\Gamma _0(N))] such that
+            me a_\ell (f) \equiv  1+ \ell \pmod p
+            | for all #[m \ell \ne N,p].
+            //| Koike, Masao. “Congruences between Cusp Forms and Linear Representations of the Galois Group.” Nagoya Mathematical Journal 64 (1976): 63–85. https://projecteuclid.org/euclid.nmj/1118796081.
+        question
+            statement
+                p
+                    | How many such #[m f] are there?
+        p
+            | Merel '96:
+            me f \text{ is unique} \iff \prod_{i=1}^{(N-1)/2} i^i  \text{ is not a }p\text{-th power modulo }N
+            | .
+        p
+            | Wake and Wang-Erickson describe the dimension of the space of such #[m f] using Massey products (higher cup products).
+
+        p
+            | Method: Galois deformations!
+
+
+    subsection
+        title Galois representations
+
+        p
+            | We write
+            me G_{\QQ} = \absgal{\QQ} = \varprojlim_{F/\QQ,\text{fin. galois}} \Gal F\QQ
+            | a profinite group.
+
+        p
+            me \rho  \colon  G_{\QQ} \to \GL_2 (\QQ_p)
+            | a continuous homomorphism.
+            | Then view #[m \GL_2(\QQ_p)] as  #[m \Aut(V)] for a 2-dimensional #[m \QQ_p] vector space and fix a  2-dimensional #[m \ZZ_p]-lattice
+            me T \subseteq V
+            | which is #[m G_{\QQ}] stable.
+            | Then we can take
+            me \bar \rho \colon G_\QQ \to \GL_2(\FF_p)
+            | this is unique (w.r.t. the choice of #[m T]) only up to semisimplification.
+
+        p
+            | So we say two Galois representations #[m \rho _1,\rho _2] are congruent if
+            me \bar \rho _1^\semis \simeq \bar \rho _2^\semis
+            | .
+
+        p
+            | We say #[m \rho _1,\rho _2] are deformations of
+            me \bar \rho _1= \bar \rho _2
+            | (imagine this is reducible).
+        p
+            | Start with
+            me \bar \rho  \colon G_\QQ \to \GL_2(\FF_p)
+            | consider #[q all] deformations of #[m \bar\rho  ] in good cases there exists a #[q universal] deformation of #[m \bar \rho ].
+
+        p
+            | #[m R^{\mathrm{univ}}] a local ring with maximal ideal #[m \ideal m_R] such that
+            me R/\ideal m_R = \FF_p
+            | .
+        p
+            me \rho ^{\mathrm{univ}} \colon G_\QQ \to \GL_2(R^{\mathrm{univ}})
+            | such that if #[m \rho  \colon  G_\QQ \to GL_2(R)] is a deformation of #[m \bar \rho ] then there exists
+            me R^{\mathrm{univ}} \to R
+            | such that
+            me.
+                \xymatrix{
+                G_\QQ \ar[r]^{\rho ^{\mathrm{univ}}} \ar[dr]_\rho &amp; \GL_2(R^{\mathrm{univ}})\ar[d] \\
+                 &amp;  GL_2(R)
+                }
+
+            | .
+
+    subsection
+        title Modular forms
+
+        p
+            me f = \sum a_n q^n \in S_k(\Gamma _0(N))
+            | an eigenform leads to
+            me \rho _f \colon G_\QQ \to \GL_2(K),\,K/\QQ_p \text{ finite}
+            | with the property that for all #[m \ell \nmid Np] we have
+            me \trace(\rho _f(Frob_\ell)) = a_\ell
+            | .
+        p
+            | Modular forms can be congruent
+            me a_\ell (f_1) \equiv  a_\ell(f_2) \pmod p \text{ for all but finitely many } \ell
+            me \Updownarrow
+            me \bar \rho _{f_1}^\semis\simeq \bar \rho _{f_2}^\semis
+            |.
+
+        p
+            | There exists a ring, the Hecke algebra #[m \mathbf T] parametrizing all #[m f]'s with the same #[m \bar \rho ].
+            me f \leadsto \rho _f \implies R^{\mathrm{univ}} \to \mathbf T
+            | so hope
+            me R^{\mathrm{univ}} \simeq \mathbf T
+            | .
+
+        p
+            | Wiles proof of FLT proved one of these.
+
+        p
+            | Many more such theorems in the past couple of decades.
+
+        p
+            | Wake and Wang-Erickson  show that the dimension of
+            me \{ f : f \equiv E_2^{(N)}\} \leftrightarrow \rank \mathbf T = \rank R^{\mathrm{univ}}
+            | .
+        p
+            me a_\ell(f) \equiv  1+ \ell \pmod p
+            me \implies \bar \rho ^\semis = \mathbf 1 \oplus \mathbf \mu _p
+            | but there does not exist #[m R^{\mathrm{univ}}] in this context.
+        p
+            | The fix is to use pseudorepresentations instead of representations.
+
+    subsection
+        title Pseudorepresentations
+
+        p
+            | Let #[m G] be a group.
+        p
+            | Then a pseudorepresentation #[m T] is a map
+            me T\colon G \to A
+            | for #[m A] a ring satisfying
+            ol
+                li
+                    me T(xy) = T(yx)
+                li
+                    me T(x)T(y)T(z) - T(x)T(yz) - T(y)T(xz) - T(z)T(xy) + T(xyz) + T(xzy) = 0
+
+            | and the analogous formulae for higher products.
+
+        fact
+            statement: p
+                | If #[m A] is an algebraically closed field of characteristic #[m \ne 2].
+                | Then for a given pseudorepresentation #[m T] there exists a true representation #[m \rho ] such that
+                me T = \trace(\rho )
+                | .
+        p
+            | But this does not hold in general.
+
+        p
+            | Universal pseudodeformation rings always exist.
+            | Wake and Wang-Erickson use #[m R^{\mathrm{univ}} =] universal pseudodeformation ring.

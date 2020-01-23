@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DG Definitions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Ajax.config.path["Contrib"] = "//cdn.rawgit.com/mathjax/MathJax-third-party-extensions/22087770";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/xyjax/xypic.js", "AMSmath.js", "AMSsymbols.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="https://alexjbest.github.io/css/pretext.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{xypic}\require{newpxtext}\require{newpxmath}\require{mathtools}\require{cancel}\require{pgfplots}\require{mathrsfs}
+
+\newenvironment{smallermatrix}[1]
+{\arraycolsep=0.5pt\def\arraystretch{0.5}\tiny
+\array{#1}}
+{\endarray}
+
+\def\coloneqq{\mathrel{\mathop:}\mathrel{\mkern-1.2mu}=}
+\def\eqqcolon{=\mathrel{\mkern-1.2mu}\mathrel{\mathop:}}
+
+
+
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newcommand{\ideal}[1]{\mathfrak{#1}}
+\newcommand{\lie}[1]{\operatorname{\mathfrak{#1}}}
+\newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
+\DeclareMathOperator{\Lie}{Lie}
+
+\newcommand{\diff}{\mathop{}\!\mathrm{d}}
+\newcommand{\cinf}{C^\infty}
+\newcommand{\inv}{^{-1}}
+\newcommand{\units}{^{\times}}
+
+\newcommand{\legendre}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\pair}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\lb}{[}
+\newcommand{\rb}{]}
+\newcommand{\powerseries}[2]{#1[[#2]]}
+
+
+\newcommand{\partder}[2][]{\frac{\partial #1}{\partial #2}}
+
+
+\providecommand\mapsfrom{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
+\DeclareMathOperator{\Sha}{III}
+
+
+\newcommand{\NN}{\mathbf{N}}
+\newcommand{\ZZ}{\mathbf{Z}}
+\newcommand{\QQ}{\mathbf{Q}}
+\newcommand{\RR}{\mathbf{R}}
+\newcommand{\CC}{\mathbf{C}}
+\newcommand{\HH}{\mathbf{H}}
+\newcommand{\FF}{\mathbf{F}}
+\newcommand{\GG}{\mathbf{G}}
+\newcommand{\ints}{\mathcal{O}}
+\newcommand{\adeles}{\mathbf{A}}
+
+\newcommand{\alg}{\mathrm{alg}}
+
+\newcommand{\subgroup}{\mathrel{\subseteq}}
+
+\newcommand{\cat}[1]{\mathcal{#1}}
+\newcommand{\catname}[1]{{\mathrm{\textbf{#1}}}}
+\newcommand{\Rings}{\mathrm{Rings}}
+
+\newcommand{\Ar}{\mathrm{Ar}}
+\newcommand{\dR}{\mathrm{dR}}
+\newcommand{\crys}{\mathrm{crys}}
+\newcommand{\cris}{\mathrm{cris}}
+\newcommand{\et}{\mathrm{\acute{e}t}}
+\newcommand{\rig}{\mathrm{rig}}
+\newcommand{\sing}{\mathrm{sing}}
+\newcommand{\Pet}{\mathrm{Pet}}
+
+\newcommand{\pinf}{{1/p^\infty}}
+
+\newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
+\newcommand{\acts}{\circlearrowright}
+\newcommand\rightrightrightarrows{
+    \mathrel{\substack{\textstyle\rightarrow\\[-0.6ex]
+        \textstyle\rightarrow \\[-0.6ex]
+        \textstyle\rightarrow}}
+}
+
+\newcommand{\ab}{\mathrm{ab}}
+\newcommand{\alm}{\mathrm{a}}
+\newcommand{\an}{\mathrm{an}}
+\newcommand{\alt}{\mathrm{alt}}
+\newcommand{\cyc}{\mathrm{cyc}}
+\newcommand{\divisible}{\mathrm{div}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\un}{\mathrm{un}}
+\newcommand{\nr}{\mathrm{nr}}
+\newcommand{\ur}{\mathrm{ur}}
+\newcommand{\tamer}{\mathrm{tr}}
+\newcommand{\ns}{\mathrm{ns}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\pre}{\mathrm{pre}}
+\newcommand{\reg}{\mathrm{reg}}
+\newcommand{\spec}{\mathrm{spec}}
+\newcommand{\Set}{\mathrm{Set}}
+\newcommand{\sep}{\mathrm{sep}}
+\newcommand{\St}{\mathrm{St}}
+\newcommand{\tors}{\mathrm{tors}}
+\newcommand{\transpose}{\mathrm{T}}
+\newcommand{\semis}{\mathrm{ss}}
+
+
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Hom}{Hom}
+\newcommand{\sheafHom}{\mathscr{Hom}}
+\DeclareMathOperator{\Nat}{Nat}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\Syl}{Syl}
+\DeclareMathOperator{\Tgt}{Tgt}
+\DeclareMathOperator{\sprep}{sp}
+\DeclareMathOperator{\vol}{Vol}
+
+\DeclareMathOperator{\divisor}{div}
+\DeclareMathOperator{\divisors}{Div}
+\DeclareMathOperator{\Div}{Div} 
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Jac}{Jac}
+\DeclareMathOperator{\Princ}{Princ}
+\DeclareMathOperator{\Cycles}{Cycles}
+\DeclareMathOperator{\supp}{supp}
+
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+
+\DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\Fil}{Fil}
+
+
+\DeclareMathOperator{\polylog}{\mathcal{L}}
+
+\DeclareMathOperator{\disc}{disc}
+
+\DeclareMathOperator{\Tan}{Tan}
+\DeclareMathOperator{\Cotan}{Cotan}
+\DeclareMathOperator{\Sing}{Sing}
+
+\DeclareMathOperator{\Sel}{Sel}
+\DeclareMathOperator{\redu}{red}
+\DeclareMathOperator{\Reg}{Reg}
+\DeclareMathOperator{\Rep}{Rep}
+
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\coim}{coim}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\characteristic}{char}
+\DeclareMathOperator{\orient}{or}
+\DeclareMathOperator{\leadterm}{lt}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Ad}{Ad}
+
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\Spf}{Spf}
+\DeclareMathOperator{\Spv}{Spv}
+\DeclareMathOperator{\Spa}{Spa}
+\DeclareMathOperator{\Spm}{Spm}
+\DeclareMathOperator{\specialisation}{sp}
+\DeclareMathOperator{\Max}{Max}
+\newcommand{\Gal}[2]{\operatorname{Gal}(#1/#2)}
+\newcommand{\absgal}[1]{\operatorname{Gal}(\overline{#1}/#1)}
+\newcommand{\sepgal}[1]{\operatorname{Gal}(#1^\sep/#1)}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\res}{res}
+
+
+\DeclareMathOperator{\power}{\mathcal{P}}
+\DeclareMathOperator{\aff}{\mathbf{A}}
+\DeclareMathOperator{\PP}{\mathbf{P}}
+\DeclareMathOperator{\norm}{Norm}
+\DeclareMathOperator{\trace}{Tr}
+\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\NS}{NS}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Out}{Out}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\vf}{\mathcal{V}}
+\DeclareMathOperator{\krulldim}{krulldim}
+\DeclareMathOperator{\trdeg}{trdeg}
+\DeclareMathOperator{\Frac}{Frac}
+\DeclareMathOperator{\Prob}{Prob}
+
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\PSL}{PSL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\specialorthogonal}{SO}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\USp}{USp}
+\DeclareMathOperator{\orth}{O}
+\DeclareMathOperator{\unitary}{U}
+\DeclareMathOperator{\specialunitary}{SU}
+\DeclareMathOperator{\Sym}{Sym}
+
+\DeclareMathOperator{\Aff}{Aff}
+
+\DeclareMathOperator{\ch}{ch}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="def-gal.html"><span class="title">Deformation theory of Galois representations:</span> <span class="subtitle">MA842 at BU Spring 2020</span></a></h1>
+<p class="byline">Robert Pollack</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-def-gal-motivation.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="def-gal.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-def-gal-motivation.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="def-gal.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link">
+<a href="sec-def-gal-motivation.html" data-scroll="sec-def-gal-motivation"><span class="codenumber">1</span> <span class="title">Motivation</span></a><ul>
+<li><a href="sec-def-gal-motivation.html#subsection-1" data-scroll="subsection-1">Galois representations</a></li>
+<li><a href="sec-def-gal-motivation.html#subsection-2" data-scroll="subsection-2">Modular forms</a></li>
+<li><a href="sec-def-gal-motivation.html#subsection-3" data-scroll="subsection-3">Pseudorepresentations</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="sec-def-gal-defs.html" data-scroll="sec-def-gal-defs"><span class="codenumber">2</span> <span class="title">Definitions</span></a><ul>
+<li><a href="sec-def-gal-defs.html#subsection-4" data-scroll="subsection-4">Representations</a></li>
+<li><a href="sec-def-gal-defs.html#subsection-5" data-scroll="subsection-5">Congruences and elliptic curves</a></li>
+<li><a href="sec-def-gal-defs.html#subsection-6" data-scroll="subsection-6">Hida theory</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/def-gal/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-def-gal-defs"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2</span> <span class="title">Definitions</span>
+</h2>
+<a href="sec-def-gal-defs.html" class="permalink">¶</a><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1</span> <span class="title">Representations</span>
+</h3>
+<aside class="aside-like" id="aside-2"><p id="p-35">Lecture 2 23/1/2018</p></aside><article class="definition-like" id="def-def-gal-rep"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.1</span>. <span class="title">Representations.</span>
+</h6>
+<p id="p-36">Let \(G\) be a finite group and  \(V\) a finite dimensional vector space over \(\CC\) of dimension \(d\text{.}\) A <dfn class="terminology">representation</dfn> of  \(G\) is a homomorphism</p>
+<div class="displaymath">
+\begin{equation*}
+G \xrightarrow\rho \Aut(V) \simeq \GL_d(\CC)\text{,}
+\end{equation*}
+</div>
+<p>\(G\) acts linearly on \(V\text{.}\)</p></article><p id="p-37">Galois representations: Let \(G\) be  a Galois group, possibly infinite. \(F\) be a field,</p>
+<div class="displaymath">
+\begin{equation*}
+G_F = \absgal F = \varprojlim_{L/F,\text{ fin. gal.}} \Gal L F
+\end{equation*}
+</div>
+<p>profinite compact and totally disconnected.</p>
+<p id="p-38">Replace \(V\) with a finite free module over some topological ring \(A\)</p>
+<div class="displaymath">
+\begin{equation*}
+\rho \colon G_F \to \GL_d(A)
+\end{equation*}
+</div>
+<p>a continuous homomorphism.</p>
+<article class="example-like" id="example-1"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2</span>.</h6>
+<p id="p-39">\(A = \CC\) with the complex topology.</p></article><article class="theorem-like" id="fact-2"><h6 class="heading">
+<span class="type">Fact</span> <span class="codenumber">2.3</span>.</h6>
+<p id="p-40">In this case \(\im(\rho )\) is finite.</p></article><article class="exercise-like" id="exercise-1"><a data-knowl="" class="id-ref" data-refid="hk-exercise-1"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">2.4</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise-like"><p id="p-41">Prove this.</p></article></div>
+<p id="p-42">Then we can write</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{
+G_F \ar[rr]^{\rho} \ar[dr] &amp; &amp; \GL_d(\CC) \\
+&amp;  \Gal L F \ar[ur] &amp; 
+}
+\end{equation*}
+</div>
+<p>where \(L/F\) is finite. There are many such representations.</p>
+<article class="theorem-like" id="conjecture-1"><h6 class="heading">
+<span class="type">Conjecture</span> <span class="codenumber">2.5</span>.</h6>
+<p id="p-43">Every finite group is a quotient of \(G_\QQ\text{.}\)</p></article><article class="example-like" id="example-2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.6</span>.</h6>
+<div class="displaymath" id="p-44">
+\begin{equation*}
+F= \QQ
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+L = \QQ(\sqrt[4]{2}, i)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Gal L \QQ \simeq D_4
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+G_\QQ \to \Gal L \QQ \xrightarrow\rho  \GL_2(\CC)
+\end{equation*}
+</div>
+<p>with \(\rho \) the unique irreducible 2-dimensional representation of \(D_4\text{.}\)</p></article><article class="example-like" id="example-3"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.7</span>.</h6>
+<p id="p-45">Let \(E/\QQ\) be an elliptic curve</p>
+<div class="displaymath">
+\begin{equation*}
+G_\QQ \acts E\lb  p\rb \simeq \ZZ/p \oplus \ZZ/p
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\rho _{E,p} \colon  G_\QQ \to \Aut(E\lb p\rb ) \simeq \GL_2(\FF_p)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\rho _{E,p^n} \colon  G_\QQ \to \Aut(E\lb p^n\rb ) \simeq \GL_2(\ZZ/p^n)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\rho _{E,p^\infty} \colon  G_\QQ \to \Aut(E\lb p^\infty\rb ) \simeq \GL_2(\ZZ/p^\infty)\text{.}
+\end{equation*}
+</div></article><article class="theorem-like" id="fact-3"><h6 class="heading">
+<span class="type">Fact</span> <span class="codenumber">2.8</span>.</h6>
+<p id="p-46">\(\rho _{E,p^\infty}\) has finite image.</p></article><article class="exercise-like" id="exercise-2"><a data-knowl="" class="id-ref" data-refid="hk-exercise-2"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">2.9</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise-like"><p id="p-47">Prove this.</p></article></div>
+<article class="example-like" id="example-4"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.10</span>.</h6>
+<p id="p-48">Let \(F = \QQ_\ell\text{,}\) \(A= \QQ_p\)</p>
+<div class="displaymath">
+\begin{equation*}
+\rho \colon  G_{\QQ_\ell} \to  \GL_d(\QQ_p)\text{.}
+\end{equation*}
+</div></article><p id="p-49">The Galois theory of local fields looks like</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{
+\overline{\QQ}_\ell \ar@{-}[d]^{I_{\ell}^w} \ar@{-}@/_3pc/[ddd]_{\mathrm{G}_\ell} \ar@{-}@/_1.75pc/[dd]^{I_{\ell}} &amp;       \\
+\QQ_\ell^\mathrm{tr} \ar@{-}[d]^{\prod_{q\ne \ell} \ZZ_q(1)}                                                                       &amp; \QQ_\ell^\ab     \\
+\QQ_\ell^\ur   \ar@{-}[d]^{\widehat \ZZ} \ar@{-}@/_1.5pc/[ur]_{\ZZ_\ell^*}                                                                  &amp;     \\
+\QQ_\ell                    &amp;
+}
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+\QQ_\ell^\mathrm{tr}= \QQ_\ell(\{\sqrt[n]{\ell}\}_{\ell\nmid n})
+\end{equation*}
+</div>
+<p>the maximal tamely ramified extension</p>
+<div class="displaymath">
+\begin{equation*}
+\QQ_\ell^\ur = \QQ_\ell(\{\mu _{n}\}_{\ell\nmid n})
+\end{equation*}
+</div>
+<p>the maximal unramified extension</p>
+<div class="displaymath">
+\begin{equation*}
+\QQ_\ell^\ab = \QQ_\ell^\un(\mu _{\ell^\infty })
+\end{equation*}
+</div>
+<p>the maximal abelian extension.</p>
+<div class="displaymath">
+\begin{equation*}
+I_\ell = \Gal { \overline \QQ_\ell}{\QQ_\ell^\ur}
+\end{equation*}
+</div>
+<p>the intertia group</p>
+<div class="displaymath">
+\begin{equation*}
+I^w_\ell = \Gal { \overline \QQ_\ell}{\QQ_\ell^\tamer}
+\end{equation*}
+</div>
+<p>the wild intertia group</p>
+<p id="p-50">We say</p>
+<div class="displaymath">
+\begin{equation*}
+\rho \colon  G_{\QQ_\ell} \to  \GL_d(\QQ_p)
+\end{equation*}
+</div>
+<p>is unramified if</p>
+<div class="displaymath">
+\begin{equation*}
+\rho (I_\ell) = \{1\}
+\end{equation*}
+</div>
+<p>is tamely ramified if</p>
+<div class="displaymath">
+\begin{equation*}
+\rho (I_\ell^w) = \{1\}\text{.}
+\end{equation*}
+</div>
+<p id="p-51">In the first case \(\rho \) is completely determined by \(\rho (\Frob_\ell)\text{.}\) In the second case \(\rho \) is completely determined by \(\rho (\Frob_\ell)\) and its value on a generator of</p>
+<div class="displaymath">
+\begin{equation*}
+\Gal {  \QQ_\ell^\tamer}{\QQ_\ell^\ur}\text{.}
+\end{equation*}
+</div>
+<p id="p-52">The wild part: \(I_\ell^w\) is pro-\(\ell\text{,}\) \(\GL_d(\ZZ_p)\) is almost pro-\(p\) (it has a finite index pro-\(p\) subgroup).</p>
+<article class="exercise-like" id="exercise-3"><a data-knowl="" class="id-ref" data-refid="hk-exercise-3"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">2.11</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise-like"><p id="p-53">Prove this.</p></article></div>
+<article class="example-like" id="example-5"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.12</span>.</h6>
+<p id="p-54">For \(d= 1\)</p>
+<div class="displaymath">
+\begin{equation*}
+\ZZ_p^* = \FF_p^* \times (1 + p\ZZ_p)\text{.}
+\end{equation*}
+</div></article><p id="p-55">Thus if \(\ell \ne p\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\rho (I_\ell^w)\subseteq \GL_d(\QQ_p)
+\end{equation*}
+</div>
+<p>is finite.</p>
+<article class="exercise-like" id="exercise-4"><a data-knowl="" class="id-ref" data-refid="hk-exercise-4"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">2.13</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise-like"><p id="p-56">Prove this.</p></article></div>
+<p id="p-57">If \(\ell = p\) then this is handled by \(p\)-adic Hodge theory.</p>
+<p id="p-58">The connection to global representations is then that</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{ \overline \QQ \ar[r] &amp; \overline \QQ_\ell \\
+\QQ \ar[r]\ar[u] &amp;  \QQ_\ell\ar[u]}
+\end{equation*}
+</div>
+<p id="p-59">So</p>
+<div class="displaymath">
+\begin{equation*}
+G_{\QQ_\ell} \hookrightarrow G_\QQ
+\end{equation*}
+</div>
+<p>via restriction to \(\overline \QQ\text{.}\)</p>
+<p id="p-60">The image of this map is the <dfn class="terminology">decomposition group</dfn> at \(\ell\text{.}\)</p>
+<div class="displaymath" id="p-61">
+\begin{equation*}
+\rho \colon G_\QQ \to \GL_d(A)\text{,}
+\end{equation*}
+</div>
+<p>we say that \(\rho \) is unramified at \(\ell\) if</p>
+<div class="displaymath">
+\begin{equation*}
+\rho (I_\ell) = \{1\}\text{.}
+\end{equation*}
+</div>
+<p id="p-62">In which case</p>
+<div class="displaymath">
+\begin{equation*}
+\operatorname{charpoly}(\rho (\Frob_\ell))
+\end{equation*}
+</div>
+<p>is well-defined.</p>
+<p id="p-63">Returning to</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _{E,p^\infty} \colon  G_\QQ \to \GL_2(\QQ_p)
+\end{equation*}
+</div>
+<p>now.</p>
+<article class="theorem-like" id="fact-4"><h6 class="heading">
+<span class="type">Fact</span> <span class="codenumber">2.14</span>.</h6>
+<p id="p-64">\(\rho _{E,p^\infty}\) is unramified  outside of \(N_E\cdot p\) (\(N_E\) is the conductor of \(E\)). i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _{E,p^\infty}
+\end{equation*}
+</div>
+<p>is unramified at \(\ell\) if and only if \(\ell \ne p\) and \(\ell\) is a prime of good reduction for \(E\text{.}\)</p></article><p id="p-65">So \(\rho _{E,p^\infty} \) sees bad reduction.</p>
+<p id="p-66">From \(\rho _{E,p^\infty} \)  you can recover \(E\) up to isogeny (Faltings).</p>
+<article class="example-like" id="example-6"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.15</span>.</h6>
+<div class="displaymath" id="p-67">
+\begin{equation*}
+G_\QQ\acts \mu _{p^n}
+\end{equation*}
+</div>
+<p>so we get</p>
+<div class="displaymath">
+\begin{equation*}
+G_\QQ \to \Aut(\mu _{p^n} \simeq (\ZZ/p^n\ZZ)^* \simeq \GL_1(\ZZ/p^n)
+\end{equation*}
+</div>
+<p>taking the inverse limit we get</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{
+G_\QQ \ar[rr]^{\epsilon _p} \ar[dr] &amp; &amp; \ZZ_p^*\\
+&amp;  \Gal {\QQ(\mu _{p^\infty })} \QQ  \ar[ur]_{\sim} &amp; 
+}
+\end{equation*}
+</div>
+<p>this \(\epsilon _p\) is known as the \(p\)-adic cyclotomic character. This is unramified outside \(p\) and</p>
+<div class="displaymath">
+\begin{equation*}
+\epsilon _p (\Frob_\ell) = \ell
+\end{equation*}
+</div>
+<p>for \(\ell \ne p\text{.}\)</p></article><article class="remark-like" id="remark-1"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">2.16</span>.</h6>
+<div class="displaymath" id="p-68">
+\begin{equation*}
+\det(\rho _{E,p^\infty}) =  \epsilon _p\text{.}
+\end{equation*}
+</div></article><article class="example-like" id="example-7"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.17</span>.</h6>
+<div class="displaymath" id="p-69">
+\begin{equation*}
+f = \sum a_nq^n \in S_2(\Gamma _0(N), \QQ)
+\end{equation*}
+</div>
+<p>a weight 2 eigenform on \(\Gamma _0(N)\text{,}\) with rational fourier coefficients. Eichler-Shimura gives \(E_f/\QQ\) an elliptic curve. Define</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _f = \rho _{E,p^\infty }\colon G_\QQ \to \GL_2(\QQ_p)
+\end{equation*}
+</div>
+<p>unramified outside \(Np\)</p>
+<div class="displaymath">
+\begin{equation*}
+\trace(\rho (\Frob_\ell)) = a_\ell
+\end{equation*}
+</div>
+<p>for \(\ell\nmid Np\text{.}\) More generally</p>
+<div class="displaymath">
+\begin{equation*}
+f  \in S_2(\Gamma _0(N))
+\end{equation*}
+</div>
+<p>an eigenform, Eichler-Shimura gives</p>
+<div class="displaymath">
+\begin{equation*}
+A_f/\QQ
+\end{equation*}
+</div>
+<p>an abelian variety which leads to</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _f \colon G_\QQ \to \GL_2(K)
+\end{equation*}
+</div>
+<p>\(K/\QQ_p\) finite.</p></article></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2</span> <span class="title">Congruences and elliptic curves</span>
+</h3>
+<p id="p-70">Let</p>
+<div class="displaymath">
+\begin{equation*}
+E_1\colon  y^2 = x^3 + x - 10
+\end{equation*}
+</div>
+<p>conductor \(2^2 \cdot13\text{,}\) <a class="external" href="https://www.lmfdb.org/EllipticCurve/Q/52a1/" target="_blank"><code class="code-inline tex2jax_ignore">https://www.lmfdb.org/EllipticCurve/Q/52a1/</code></a></p>
+<div class="displaymath">
+\begin{equation*}
+E_2\colon  y^2 = x^3 -584 x + 5444
+\end{equation*}
+</div>
+<p>conductor \(2^2 \cdot7\cdot13\text{,}\) <a class="external" href="https://www.lmfdb.org/EllipticCurve/Q/364a1/" target="_blank"><code class="code-inline tex2jax_ignore">https://www.lmfdb.org/EllipticCurve/Q/364a1/</code></a>.</p>
+<figure class="figure-like" id="table-1"><table>
+<tr>
+<td class="l m b1 r1 l3 t3 lines">\(p\)</td>
+<td class="l m b1 r3 l0 t3 lines">\(2\)</td>
+<td class="l m b1 r3 l0 t3 lines">\(3\)</td>
+<td class="l m b1 r3 l0 t3 lines">\(5\)</td>
+<td class="l m b1 r3 l0 t3 lines">\(7\)</td>
+<td class="l m b1 r3 l0 t3 lines">\(11\)</td>
+<td class="l m b1 r3 l0 t3 lines">\(13\)</td>
+<td class="l m b1 r3 l0 t3 lines">\(17\)</td>
+<td class="l m b1 r3 l0 t3 lines">\(19\)</td>
+<td class="l m b1 r3 l0 t3 lines">\(23\)</td>
+<td class="l m b1 r3 l0 t3 lines">\(29\)</td>
+</tr>
+<tr>
+<td class="l m b3 r1 l3 t0 lines">\(a_p(E_1)\)</td>
+<td class="l m b3 r3 l0 t0 lines">0</td>
+<td class="l m b3 r3 l0 t0 lines">\(0\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(2\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(-2\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(-2\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(-1\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(6\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(-6\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(8\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(2\)</td>
+</tr>
+<tr>
+<td class="l m b3 r1 l3 t0 lines">\(a_p(E_2)\)</td>
+<td class="l m b3 r3 l0 t0 lines">0</td>
+<td class="l m b3 r3 l0 t0 lines">\(0\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(-3\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(1\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(-2\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(-1\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(-4\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(-1\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(-7\)</td>
+<td class="l m b3 r3 l0 t0 lines">\(7\)</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span> <span class="codenumber">2.18.</span> Images</figcaption></figure><p id="p-71">Note that</p>
+<div class="displaymath">
+\begin{equation*}
+a_\ell(E_1) \equiv  a_\ell(E_2) \pmod 5,\,\forall \ell \ne 7
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\implies \rho _{E_1, 5} \simeq\rho _{E_2, 5} ( = \bar \rho )
+\end{equation*}
+</div>
+<p>as Galois representations.</p>
+<article class="exercise-like" id="exercise-5"><a data-knowl="" class="id-ref" data-refid="hk-exercise-5"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">2.19</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise-like"><p id="p-72">Prove this.</p></article></div>
+<p id="p-73">How common is this? We have 2 lifts of \(\bar \rho \)</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _{E_1, 5^\infty } \simeq\rho _{E_2, 5^\infty }
+\end{equation*}
+</div>
+<p>how many other such?</p></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3</span> <span class="title">Hida theory</span>
+</h3>
+<div class="displaymath" id="p-74">
+\begin{equation*}
+\sum a_n(f) q^n = f \in S_{k_0} (\Gamma _0(N))
+\end{equation*}
+</div>
+<p>an eigenform.</p>
+<div class="displaymath">
+\begin{equation*}
+a_p(f)
+\end{equation*}
+</div>
+<p>a \(p\)-adic unit.</p>
+<div class="displaymath">
+\begin{equation*}
+\mathscr F =  \sum_{n=1}^\infty  a_n(k) q^n
+\end{equation*}
+</div>
+<p>with \(a_n\) a \(p\)-adic analytic function in \(k\text{.}\) The whole family gives Galois representations that reduce to the same \(\bar\rho \text{.}\)</p>
+<p id="p-75">Specialise \(k\) to some integer \(w\)</p>
+<div class="displaymath">
+\begin{equation*}
+\mathscr F = \sum a_n(w) q^n  \in S_w (\Gamma _0(N))
+\end{equation*}
+</div>
+<p>take \(w= k_0\) to recover \(f\text{.}\)</p>
+<p id="p-76">Hida constructs</p>
+<div class="displaymath">
+\begin{equation*}
+\rho ^{Hida}\colon G_\QQ \to \GL_2(\ZZ_p\lb \lb x\rb \rb )
+\end{equation*}
+</div>
+<p>unramified outside \(Np\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\ell \nmid Np \implies \tr(\rho^{Hida} (\Frob_\ell)) = a_\ell(x)\text{.}
+\end{equation*}
+</div></section></section></div></main>
+</div>
+<!--Start: Google Classic code-->
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-48250536-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<!--End: Google Classic code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
+</body>
+</html>

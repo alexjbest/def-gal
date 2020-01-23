@@ -16,7 +16,7 @@ docs/def-gal.pdf:	def-gal.tex
 
 docs/images/:	docs def-gal-wrapper.xml
 	mkdir -p docs/images
-	../mathbook/script/mbx -vv -c latex-image -f svg -d ~/def-gal/docs/images ~/def-gal/def-gal-wrapper.xml
+	../pretext/script/mbx -vv -c latex-image -f svg -d ~/def-gal/docs/images ~/def-gal/def-gal-wrapper.xml
 
 def-gal-wrapper.xml:	*.pug pug-plugin.json
 	pug -O pug-plugin.json --extension xml def-gal-wrapper.pug
@@ -36,9 +36,9 @@ debug:	*.pug pug-plugin.json
 	pug -O pug-plugin.json --pretty --extension xml def-gal-wrapper.pug
 
 check:	def-gal-pretty.xml
-	jing ../mathbook/schema/pretext.rng def-gal-pretty.xml
-	#xmllint --xinclude --postvalid --noout --dtdvalid ../mathbook/schema/dtd/mathbook.dtd def-gal-pretty.xml
-	$(XSLTPROC) ../mathbook/schema/pretext-schematron.xsl def-gal-pretty.xml
+	jing ../pretext/schema/pretext.rng def-gal-pretty.xml
+	#xmllint --xinclude --postvalid --noout --dtdvalid ../pretext/schema/dtd/mathbook.dtd def-gal-pretty.xml
+	$(XSLTPROC) ../pretext/schema/pretext-schematron.xsl def-gal-pretty.xml
 
 clean-html:
 	rm -rf docs

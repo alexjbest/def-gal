@@ -7,8 +7,8 @@ introduction
     aside: p Lecture 1 21/1/2018
 
 
-section#sec-def-gal-background
-    title Background
+section#sec-def-gal-motivation
+    title Motivation
 
     introduction
         p
@@ -172,3 +172,276 @@ section#sec-def-gal-background
         p
             | Universal pseudodeformation rings always exist.
             | Wake and Wang-Erickson use #[m R^{\mathrm{univ}} =] universal pseudodeformation ring.
+
+section#sec-def-gal-defs
+    title Definitions
+
+
+    subsection
+        title Representations
+        aside: p Lecture 2 23/1/2018
+
+        definition#def-def-gal-rep
+            title Representations
+            statement: p
+                | Let #[m G] be a finite group and  #[m V] a finite dimensional vector space over #[m \CC] of dimension #[m d].
+                | A #[term representation] of  #[m G] is a homomorphism
+                me G \xrightarrow\rho \Aut(V) \simeq \GL_d(\CC)
+                | , #[m G] acts linearly on #[m V].
+
+
+        p
+            | Galois representations:
+            | Let #[m G] be  a Galois group, possibly infinite.
+            | #[m F] be a field,
+            me G_F = \absgal F = \varprojlim_{L/F,\text{ fin. gal.}} \Gal L F
+            | profinite compact and totally disconnected.
+
+        p
+            | Replace #[m V] with a finite free module over some topological ring #[m A]
+            me \rho \colon G_F \to \GL_d(A)
+            | a continuous homomorphism.
+        example
+            statement: p
+                | #[m A = \CC] with the complex topology.
+        fact
+            statement: p
+                | In this case #[m \im(\rho )] is finite.
+
+        exercise
+            statement: p
+                | Prove this.
+
+
+        p
+            | Then we can write
+            me.
+                \xymatrix{
+                G_F \ar[rr]^{\rho} \ar[dr] &amp; &amp; \GL_d(\CC) \\
+                    &amp;  \Gal L F \ar[ur] &amp; 
+                }
+            | where #[m L/F] is finite.
+            | There are many such representations.
+
+        conjecture
+            statement: p
+                | Every finite group is a quotient of #[m G_\QQ].
+        example
+            statement: p
+                me F= \QQ
+                me L = \QQ(\sqrt[4]{2}, i)
+                me \Gal L \QQ \simeq D_4
+                me G_\QQ \to \Gal L \QQ \xrightarrow\rho  \GL_2(\CC)
+                | with #[m \rho ] the unique irreducible 2-dimensional representation of #[m D_4].
+
+        example
+            statement: p
+                | Let #[m E/\QQ] be an elliptic curve
+                me G_\QQ \acts E\lb  p\rb \simeq \ZZ/p \oplus \ZZ/p
+                me \rho _{E,p} \colon  G_\QQ \to \Aut(E\lb p\rb ) \simeq \GL_2(\FF_p)
+                me \rho _{E,p^n} \colon  G_\QQ \to \Aut(E\lb p^n\rb ) \simeq \GL_2(\ZZ/p^n)
+                me \rho _{E,p^\infty} \colon  G_\QQ \to \Aut(E\lb p^\infty\rb ) \simeq \GL_2(\ZZ/p^\infty)
+                | .
+
+        fact
+            statement: p
+                | #[m \rho _{E,p^\infty}] has finite image.
+
+        exercise
+            statement: p
+                | Prove this.
+
+        example
+            statement: p
+                | Let #[m F = \QQ_\ell], #[m A= \QQ_p]
+                me \rho \colon  G_{\QQ_\ell} \to  \GL_d(\QQ_p)
+                |.
+
+        p
+            | The Galois theory of local fields looks like
+            me.
+                \xymatrix{
+                \overline{\QQ}_\ell \ar@{-}[d]^{I_{\ell}^w} \ar@{-}@/_3pc/[ddd]_{\mathrm{G}_\ell} \ar@{-}@/_1.75pc/[dd]^{I_{\ell}} &amp;       \\
+                \QQ_\ell^\mathrm{tr} \ar@{-}[d]^{\prod_{q\ne \ell} \ZZ_q(1)}                                                                       &amp; \QQ_\ell^\ab     \\
+                \QQ_\ell^\ur   \ar@{-}[d]^{\widehat \ZZ} \ar@{-}@/_1.5pc/[ur]_{\ZZ_\ell^*}                                                                  &amp;     \\
+                \QQ_\ell                    &amp;
+                }
+            | where
+            me \QQ_\ell^\mathrm{tr}= \QQ_\ell(\{\sqrt[n]{\ell}\}_{\ell\nmid n})
+            | the maximal tamely ramified extension
+            me \QQ_\ell^\ur = \QQ_\ell(\{\mu _{n}\}_{\ell\nmid n})
+            | the maximal unramified extension
+            me \QQ_\ell^\ab = \QQ_\ell^\un(\mu _{\ell^\infty })
+            | the maximal abelian extension.
+            me I_\ell = \Gal { \overline \QQ_\ell}{\QQ_\ell^\ur}
+            | the intertia group
+            me I^w_\ell = \Gal { \overline \QQ_\ell}{\QQ_\ell^\tamer}
+            | the wild intertia group
+
+        p
+            | We say
+            me \rho \colon  G_{\QQ_\ell} \to  \GL_d(\QQ_p)
+            | is unramified if
+            me \rho (I_\ell) = \{1\}
+            | is tamely ramified if
+            me \rho (I_\ell^w) = \{1\}
+            | .
+        p
+            | In the first case #[m \rho ] is completely determined by #[m \rho (\Frob_\ell)].
+            | In the second case #[m \rho ] is completely determined by #[m \rho (\Frob_\ell)] and its value on a generator of
+            me \Gal {  \QQ_\ell^\tamer}{\QQ_\ell^\ur}
+            |.
+        p
+            | The wild part:
+            | #[m I_\ell^w] is pro-#[m \ell], #[m \GL_d(\ZZ_p)] is almost pro-#[m p] (it has a finite index pro-#[m p] subgroup).
+
+        exercise
+            statement: p
+                | Prove this.
+        example
+            statement: p
+                | For #[m d= 1]
+                me \ZZ_p^* = \FF_p^* \times (1 + p\ZZ_p)
+                |.
+        p
+            | Thus if #[m \ell \ne p] then
+            me \rho (I_\ell^w)\subseteq \GL_d(\QQ_p)
+            | is finite.
+
+        exercise
+            statement: p
+                | Prove this.
+
+        p
+            | If #[m \ell = p] then this is handled by #[m p]-adic Hodge theory.
+
+        p
+            | The connection to global representations is then that
+            me.
+                \xymatrix{ \overline \QQ \ar[r] &amp; \overline \QQ_\ell \\
+                    \QQ \ar[r]\ar[u] &amp;  \QQ_\ell\ar[u]}
+        p
+            | So
+            me G_{\QQ_\ell} \hookrightarrow G_\QQ
+            | via restriction to #[m \overline \QQ].
+
+        p
+            | The image of this map is the #[term decomposition group] at #[m \ell].
+        p
+            me \rho \colon G_\QQ \to \GL_d(A)
+            | , we say that #[m \rho ] is unramified at #[m \ell] if
+            me \rho (I_\ell) = \{1\}
+            | .
+        p
+            | In which case
+            me \operatorname{charpoly}(\rho (\Frob_\ell))
+            | is well-defined.
+
+        p
+            | Returning to
+            me \rho _{E,p^\infty} \colon  G_\QQ \to \GL_2(\QQ_p)
+            | now.
+        fact
+            statement: p
+                | #[m \rho _{E,p^\infty}] is unramified  outside of #[m N_E\cdot p] (#[m N_E] is the conductor of #[m E]).
+                | i.e.
+                me \rho _{E,p^\infty}
+                | is unramified at #[m \ell] if and only if #[m \ell \ne p] and #[m \ell] is a prime of good reduction for #[m E].
+        p
+            | So #[m \rho _{E,p^\infty} ] sees bad reduction.
+
+        p
+            | From #[m \rho _{E,p^\infty} ]  you can recover #[m E] up to isogeny (Faltings).
+
+        example
+            statement: p
+                me G_\QQ\acts \mu _{p^n}
+                | so we get
+                me G_\QQ \to \Aut(\mu _{p^n} \simeq (\ZZ/p^n\ZZ)^* \simeq \GL_1(\ZZ/p^n)
+                | taking the inverse limit we get
+                me.
+                    \xymatrix{
+                    G_\QQ \ar[rr]^{\epsilon _p} \ar[dr] &amp; &amp; \ZZ_p^*\\
+                        &amp;  \Gal {\QQ(\mu _{p^\infty })} \QQ  \ar[ur]_{\sim} &amp; 
+                    }
+                | this #[m \epsilon _p] is known as the #[m p]-adic cyclotomic character.
+                | This is unramified outside #[m p] and
+                me \epsilon _p (\Frob_\ell) = \ell
+                | for #[m \ell \ne p].
+        remark
+            p
+                me \det(\rho _{E,p^\infty}) =  \epsilon _p
+                |.
+
+        example
+            statement: p
+                me f = \sum a_nq^n \in S_2(\Gamma _0(N), \QQ)
+                | a weight 2 eigenform on #[m \Gamma _0(N)], with rational fourier coefficients.
+                | Eichler-Shimura gives #[m E_f/\QQ] an elliptic curve.
+                | Define
+                me \rho _f = \rho _{E,p^\infty }\colon G_\QQ \to \GL_2(\QQ_p)
+                | unramified outside #[m Np]
+                me \trace(\rho (\Frob_\ell)) = a_\ell
+                | for #[m \ell\nmid Np].
+                | More generally
+                me f  \in S_2(\Gamma _0(N))
+                | an eigenform, Eichler-Shimura gives
+                me A_f/\QQ
+                |an abelian variety which leads to
+                me \rho _f \colon G_\QQ \to \GL_2(K)
+                | #[m K/\QQ_p] finite.
+
+    subsection
+        title Congruences and elliptic curves
+        p
+            | Let
+            me E_1\colon  y^2 = x^3 + x - 10
+            | conductor #[m 2^2 \cdot13], #[url(href="https://www.lmfdb.org/EllipticCurve/Q/52a1/")/]
+            me E_2\colon  y^2 = x^3 -584 x + 5444
+            | conductor #[m 2^2 \cdot7\cdot13], #[url(href="https://www.lmfdb.org/EllipticCurve/Q/364a1/")/].
+        table
+            title Images
+            tabular(top="major",left="major",right="major",bottom="major")
+                | #[col(right="minor")/] #[col/]      #[col/]      #[col/]      #[col/]      #[col/]      #[col/]       #[col/]       #[col/]      #[col/]        #[col/]       #[col/]
+                row(bottom="minor")      #[cell: m p] #[cell: m 2] #[cell: m 3] #[cell: m 5] #[cell: m 7] #[cell: m 11] #[cell: m 13] #[cell: m 17] #[cell: m 19] #[cell: m 23] #[cell: m 29]
+                row #[cell: m a_p(E_1)] #[cell 0] #[cell: m 0] #[cell: m 2] #[cell: m -2] #[cell: m -2] #[cell: m -1] #[cell: m 6] #[cell: m -6] #[cell: m 8] #[cell: m 2]
+                row #[cell: m a_p(E_2)] #[cell 0] #[cell: m 0] #[cell: m -3] #[cell: m 1] #[cell: m -2] #[cell: m -1] #[cell: m -4] #[cell: m -1] #[cell: m -7] #[cell: m 7]
+
+        p
+            | Note that
+            me a_\ell(E_1) \equiv  a_\ell(E_2) \pmod 5,\,\forall \ell \ne 7
+            me \implies \rho _{E_1, 5} \simeq\rho _{E_2, 5} ( = \bar \rho )
+            | as Galois representations.
+        exercise: statement: p Prove this.
+
+        p
+            | How common is this?
+            | We have 2 lifts of #[m \bar \rho ]
+            me \rho _{E_1, 5^\infty } \simeq\rho _{E_2, 5^\infty }
+            | how many other such?
+
+
+    subsection
+        title Hida theory
+
+        p
+            me \sum a_n(f) q^n = f \in S_{k_0} (\Gamma _0(N))
+            | an eigenform.
+            me a_p(f)
+            | a #[m p]-adic unit.
+
+            me \mathscr F =  \sum_{n=1}^\infty  a_n(k) q^n
+            | with #[m a_n] a #[m p]-adic analytic function in #[m k].
+            | The whole family gives Galois representations that reduce to the same #[m \bar\rho ].
+
+        p
+            | Specialise #[m k] to some integer #[m w]
+            me \mathscr F = \sum a_n(w) q^n  \in S_w (\Gamma _0(N))
+            | take #[m w= k_0] to recover #[m f].
+
+        p
+            | Hida constructs
+            me \rho ^{Hida}\colon G_\QQ \to \GL_2(\ZZ_p\lb \lb x\rb \rb )
+            | unramified outside #[m Np].
+            me \ell \nmid Np \implies \tr(\rho^{Hida} (\Frob_\ell)) = a_\ell(x)
+            |.

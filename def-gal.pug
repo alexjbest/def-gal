@@ -15,7 +15,7 @@ section#sec-def-gal-motivation
             | Let #[m E_k] denote the Eisenstein series of weight #[m k], #[m k\gt 2].
             me E_k = \frac{-B_{k}}{2k} + \sum_{n=1}^\infty \sigma _{k-1} (n) q^n \in M_k(\SL_2(\ZZ))
             | . Where #[m B_k] are the Bernoulli numbers and
-            me \sigma _{k-1} (n)  = \sum_{d|n,\, d\gt 0} d
+            me \sigma _{k-1} (n)  = \sum_{d|n,\, d\gt 0} d^{k-1}
             | .
         p
             | #[m E_2] however is not holomorphic, so not a modular form.
@@ -31,7 +31,7 @@ section#sec-def-gal-motivation
             | Then #[m p | ((N-1)/12)], so #[m E_2^{(N)}] #[q looks cuspidal].
         p
             | Then we hope that there exists a cuspidal eigenform #[m f \in S_2(\Gamma _0(N))] such that
-            me f \equiv  E_2^{(N)} \qquad``\mod p ''
+            me f \equiv  E_2^{(N)} \qquad``{\mod p} ''
             | .
         p
             | This is in fact true, due to Koike in the 70's, there exists #[m f \in S_2(\Gamma _0(N))] such that
@@ -110,7 +110,7 @@ section#sec-def-gal-motivation
             | an eigenform leads to
             me \rho _f \colon G_\QQ \to \GL_2(K),\,K/\QQ_p \text{ finite}
             | with the property that for all #[m \ell \nmid Np] we have
-            me \trace(\rho _f(Frob_\ell)) = a_\ell
+            me \trace(\rho _f(\Frob_\ell)) = a_\ell
             | .
         p
             | Modular forms can be congruent
@@ -240,7 +240,7 @@ section#sec-def-gal-defs
                 me G_\QQ \acts E\lb  p\rb \simeq \ZZ/p \oplus \ZZ/p
                 me \rho _{E,p} \colon  G_\QQ \to \Aut(E\lb p\rb ) \simeq \GL_2(\FF_p)
                 me \rho _{E,p^n} \colon  G_\QQ \to \Aut(E\lb p^n\rb ) \simeq \GL_2(\ZZ/p^n)
-                me \rho _{E,p^\infty} \colon  G_\QQ \to \Aut(E\lb p^\infty\rb ) \simeq \GL_2(\ZZ/p^\infty)
+                me \rho _{E,p^\infty} \colon  G_\QQ \to \Aut(E\lb p^\infty\rb ) \simeq \GL_2(\ZZ_p)
                 | .
 
         fact
@@ -281,9 +281,9 @@ section#sec-def-gal-defs
         p
             | We say
             me \rho \colon  G_{\QQ_\ell} \to  \GL_d(\QQ_p)
-            | is unramified if
+            | is #[term unramified] if
             me \rho (I_\ell) = \{1\}
-            | is tamely ramified if
+            | is #[term tamely ramified] if
             me \rho (I_\ell^w) = \{1\}
             | .
         p
@@ -329,7 +329,7 @@ section#sec-def-gal-defs
             | The image of this map is the #[term decomposition group] at #[m \ell].
         p
             me \rho \colon G_\QQ \to \GL_d(A)
-            | , we say that #[m \rho ] is unramified at #[m \ell] if
+            | , we say that #[m \rho ] is #[term unramified at] #[m \ell] if
             me \rho (I_\ell) = \{1\}
             | .
         p
@@ -357,7 +357,7 @@ section#sec-def-gal-defs
             statement: p
                 me G_\QQ\acts \mu _{p^n}
                 | so we get
-                me G_\QQ \to \Aut(\mu _{p^n} \simeq (\ZZ/p^n\ZZ)^* \simeq \GL_1(\ZZ/p^n)
+                me G_\QQ \to \Aut(\mu _{p^n}) \simeq (\ZZ/p^n\ZZ)^* \simeq \GL_1(\ZZ/p^n)
                 | taking the inverse limit we get
                 me.
                     \xymatrix{
@@ -400,7 +400,7 @@ section#sec-def-gal-defs
             me E_2\colon  y^2 = x^3 -584 x + 5444
             | conductor #[m 2^2 \cdot7\cdot13], #[url(href="https://www.lmfdb.org/EllipticCurve/Q/364a1/")/].
         table
-            title Images
+            title #[m a_p]'s for #[m E_1,E_2]
             tabular(top="major",left="major",right="major",bottom="major")
                 | #[col(right="minor")/] #[col/]      #[col/]      #[col/]      #[col/]      #[col/]      #[col/]       #[col/]       #[col/]      #[col/]        #[col/]       #[col/]
                 row(bottom="minor")      #[cell: m p] #[cell: m 2] #[cell: m 3] #[cell: m 5] #[cell: m 7] #[cell: m 11] #[cell: m 13] #[cell: m 17] #[cell: m 19] #[cell: m 23] #[cell: m 29]

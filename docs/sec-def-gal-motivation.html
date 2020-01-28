@@ -42,21 +42,24 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="https://alexjbest.github.io/css/pretext.css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
 <script>var logged_in = false;
 var role = 'student';
 var guest_access = true;
 var login_required = false;
-var js_version = 0.12;
+var js_version = 0.13;
 </script>
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
@@ -307,6 +310,8 @@ var js_version = 0.12;
 <li><a href="sec-def-gal-defs.html#subsection-4" data-scroll="subsection-4">Representations</a></li>
 <li><a href="sec-def-gal-defs.html#subsection-5" data-scroll="subsection-5">Congruences and elliptic curves</a></li>
 <li><a href="sec-def-gal-defs.html#subsection-6" data-scroll="subsection-6">Hida theory</a></li>
+<li><a href="sec-def-gal-defs.html#subsection-7" data-scroll="subsection-7">More examples of Galois representations in families</a></li>
+<li><a href="sec-def-gal-defs.html#subsection-8" data-scroll="subsection-8">Deformation theory</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/def-gal/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -320,7 +325,7 @@ var js_version = 0.12;
 E_k = \frac{-B_{k}}{2k} + \sum_{n=1}^\infty \sigma _{k-1} (n) q^n \in M_k(\SL_2(\ZZ))\text{.}
 \end{equation*}
 </div>
-<p>Where \(B_k\) are the Bernoulli numbers and</p>
+<p data-braille="continuation">Where \(B_k\) are the Bernoulli numbers and</p>
 <div class="displaymath">
 \begin{equation*}
 \sigma _{k-1} (n)  = \sum_{d|n,\, d\gt 0} d^{k-1}\text{.}
@@ -347,9 +352,10 @@ f \equiv  E_2^{(N)} \qquad``{\mod p} ''\text{.}
 a_\ell (f) \equiv  1+ \ell \pmod p
 \end{equation*}
 </div>
-<p>for all \(\ell \ne N,p\text{.}\)</p>
-<article class="example-like" id="question-1"><h6 class="heading">
-<span class="type">Question</span> <span class="codenumber">1.1</span>.</h6>
+<p data-braille="continuation">for all \(\ell \ne N,p\text{.}\)</p>
+<article class="question example-like" id="question-1"><h6 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
+</h6>
 <p id="p-11">How many such \(f\) are there?</p></article><p id="p-12">Merel '96:</p>
 <div class="displaymath">
 \begin{equation*}
@@ -366,25 +372,25 @@ f \text{ is unique} \iff \prod_{i=1}^{(N-1)/2} i^i  \text{ is not a }p\text{-th 
 G_{\QQ} = \absgal{\QQ} = \varprojlim_{F/\QQ,\text{fin. galois}} \Gal F\QQ
 \end{equation*}
 </div>
-<p>a profinite group.</p>
+<p data-braille="continuation">a profinite group.</p>
 <div class="displaymath" id="p-16">
 \begin{equation*}
 \rho  \colon  G_{\QQ} \to \GL_2 (\QQ_p)
 \end{equation*}
 </div>
-<p>a continuous homomorphism. Then view \(\GL_2(\QQ_p)\) as  \(\Aut(V)\) for a 2-dimensional \(\QQ_p\) vector space and fix a  2-dimensional \(\ZZ_p\)-lattice</p>
+<p data-braille="continuation">a continuous homomorphism. Then view \(\GL_2(\QQ_p)\) as  \(\Aut(V)\) for a 2-dimensional \(\QQ_p\) vector space and fix a  2-dimensional \(\ZZ_p\)-lattice</p>
 <div class="displaymath">
 \begin{equation*}
 T \subseteq V
 \end{equation*}
 </div>
-<p>which is \(G_{\QQ}\) stable. Then we can take</p>
+<p data-braille="continuation">which is \(G_{\QQ}\) stable. Then we can take</p>
 <div class="displaymath">
 \begin{equation*}
 \bar \rho \colon G_\QQ \to \GL_2(\FF_p)
 \end{equation*}
 </div>
-<p>this is unique (w.r.t. the choice of \(T\)) only up to semisimplification.</p>
+<p data-braille="continuation">this is unique (w.r.t. the choice of \(T\)) only up to semisimplification.</p>
 <p id="p-17">So we say two Galois representations \(\rho _1,\rho _2\) are congruent if</p>
 <div class="displaymath">
 \begin{equation*}
@@ -397,14 +403,14 @@ T \subseteq V
 \bar \rho _1= \bar \rho _2
 \end{equation*}
 </div>
-<p>(imagine this is reducible).</p>
+<p data-braille="continuation">(imagine this is reducible).</p>
 <p id="p-19">Start with</p>
 <div class="displaymath">
 \begin{equation*}
 \bar \rho  \colon G_\QQ \to \GL_2(\FF_p)
 \end{equation*}
 </div>
-<p>consider “all” deformations of \(\bar\rho  \) in good cases there exists a “universal” deformation of \(\bar \rho \text{.}\)</p>
+<p data-braille="continuation">consider “all” deformations of \(\bar\rho  \) in good cases there exists a “universal” deformation of \(\bar \rho \text{.}\)</p>
 <p id="p-20">\(R^{\mathrm{univ}}\) a local ring with maximal ideal \(\ideal m_R\) such that</p>
 <div class="displaymath">
 \begin{equation*}
@@ -416,13 +422,13 @@ R/\ideal m_R = \FF_p\text{.}
 \rho ^{\mathrm{univ}} \colon G_\QQ \to \GL_2(R^{\mathrm{univ}})
 \end{equation*}
 </div>
-<p>such that if \(\rho  \colon  G_\QQ \to GL_2(R)\) is a deformation of \(\bar \rho \) then there exists</p>
+<p data-braille="continuation">such that if \(\rho  \colon  G_\QQ \to GL_2(R)\) is a deformation of \(\bar \rho \) then there exists</p>
 <div class="displaymath">
 \begin{equation*}
 R^{\mathrm{univ}} \to R
 \end{equation*}
 </div>
-<p>such that</p>
+<p data-braille="continuation">such that</p>
 <div class="displaymath">
 \begin{equation*}
 \xymatrix{
@@ -438,13 +444,13 @@ G_\QQ \ar[r]^{\rho ^{\mathrm{univ}}} \ar[dr]_\rho &amp; \GL_2(R^{\mathrm{univ}})
 f = \sum a_n q^n \in S_k(\Gamma _0(N))
 \end{equation*}
 </div>
-<p>an eigenform leads to</p>
+<p data-braille="continuation">an eigenform leads to</p>
 <div class="displaymath">
 \begin{equation*}
 \rho _f \colon G_\QQ \to \GL_2(K),\,K/\QQ_p \text{ finite}
 \end{equation*}
 </div>
-<p>with the property that for all \(\ell \nmid Np\) we have</p>
+<p data-braille="continuation">with the property that for all \(\ell \nmid Np\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 \trace(\rho _f(\Frob_\ell)) = a_\ell\text{.}
@@ -472,7 +478,7 @@ a_\ell (f_1) \equiv  a_\ell(f_2) \pmod p \text{ for all but finitely many } \ell
 f \leadsto \rho _f \implies R^{\mathrm{univ}} \to \mathbf T
 \end{equation*}
 </div>
-<p>so hope</p>
+<p data-braille="continuation">so hope</p>
 <div class="displaymath">
 \begin{equation*}
 R^{\mathrm{univ}} \simeq \mathbf T\text{.}
@@ -496,7 +502,7 @@ a_\ell(f) \equiv  1+ \ell \pmod p
 \implies \bar \rho ^\semis = \mathbf 1 \oplus \mathbf \mu _p
 \end{equation*}
 </div>
-<p>but there does not exist \(R^{\mathrm{univ}}\) in this context.</p>
+<p data-braille="continuation">but there does not exist \(R^{\mathrm{univ}}\) in this context.</p>
 <p id="p-29">The fix is to use pseudorepresentations instead of representations.</p></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.3</span> <span class="title">Pseudorepresentations</span>
 </h3>
@@ -507,7 +513,7 @@ a_\ell(f) \equiv  1+ \ell \pmod p
 T\colon G \to A
 \end{equation*}
 </div>
-<p>for \(A\) a ring satisfying</p>
+<p data-braille="continuation">for \(A\) a ring satisfying</p>
 <ol class="decimal">
 <li id="li-1"><div class="displaymath">
 \begin{equation*}
@@ -520,9 +526,10 @@ T(x)T(y)T(z) - T(x)T(yz) - T(y)T(xz) - T(z)T(xy) + T(xyz) + T(xzy) = 0
 \end{equation*}
 </div></li>
 </ol>
-<p>and the analogous formulae for higher dimensions.</p>
-<article class="theorem-like" id="fact-1"><h6 class="heading">
-<span class="type">Fact</span> <span class="codenumber">1.2</span>.</h6>
+<p data-braille="continuation">and the analogous formulae for higher dimensions.</p>
+<article class="fact theorem-like" id="fact-1"><h6 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
+</h6>
 <p id="p-32">If \(A\) is an algebraically closed field of characteristic \(\ne 2\text{.}\) Then for a given pseudorepresentation \(T\) there exists a true representation \(\rho \) such that</p>
 <div class="displaymath">
 \begin{equation*}
@@ -544,6 +551,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 </script>
 <!--End: Google Classic code-->
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

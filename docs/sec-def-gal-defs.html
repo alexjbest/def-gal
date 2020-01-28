@@ -42,21 +42,24 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="https://alexjbest.github.io/css/pretext.css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
 <script>var logged_in = false;
 var role = 'student';
 var guest_access = true;
 var login_required = false;
-var js_version = 0.12;
+var js_version = 0.13;
 </script>
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
@@ -307,6 +310,8 @@ var js_version = 0.12;
 <li><a href="sec-def-gal-defs.html#subsection-4" data-scroll="subsection-4">Representations</a></li>
 <li><a href="sec-def-gal-defs.html#subsection-5" data-scroll="subsection-5">Congruences and elliptic curves</a></li>
 <li><a href="sec-def-gal-defs.html#subsection-6" data-scroll="subsection-6">Hida theory</a></li>
+<li><a href="sec-def-gal-defs.html#subsection-7" data-scroll="subsection-7">More examples of Galois representations in families</a></li>
+<li><a href="sec-def-gal-defs.html#subsection-8" data-scroll="subsection-8">Deformation theory</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/def-gal/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -317,8 +322,8 @@ var js_version = 0.12;
 <a href="sec-def-gal-defs.html" class="permalink">¶</a><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1</span> <span class="title">Representations</span>
 </h3>
-<aside class="aside-like" id="aside-2"><p id="p-35">Lecture 2 23/1/2018</p></aside><article class="definition-like" id="def-def-gal-rep"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.1</span>. <span class="title">Representations.</span>
+<aside class="aside aside-like" id="aside-2"><p id="p-35">Lecture 2 23/1/2018</p></aside><article class="definition definition-like" id="def-def-gal-rep"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Representations.</span>
 </h6>
 <p id="p-36">Let \(G\) be a finite group and  \(V\) a finite dimensional vector space over \(\CC\) of dimension \(d\text{.}\) A <dfn class="terminology">representation</dfn> of  \(G\) is a homomorphism</p>
 <div class="displaymath">
@@ -326,26 +331,29 @@ var js_version = 0.12;
 G \xrightarrow\rho \Aut(V) \simeq \GL_d(\CC)\text{,}
 \end{equation*}
 </div>
-<p>\(G\) acts linearly on \(V\text{.}\)</p></article><p id="p-37">Galois representations: Let \(G\) be  a Galois group, possibly infinite. \(F\) be a field,</p>
+<p data-braille="continuation">\(G\) acts linearly on \(V\text{.}\)</p></article><p id="p-37">Galois representations: Let \(G\) be  a Galois group, possibly infinite. \(F\) be a field,</p>
 <div class="displaymath">
 \begin{equation*}
 G_F = \absgal F = \varprojlim_{L/F,\text{ fin. gal.}} \Gal L F
 \end{equation*}
 </div>
-<p>profinite compact and totally disconnected.</p>
+<p data-braille="continuation">profinite compact and totally disconnected.</p>
 <p id="p-38">Replace \(V\) with a finite free module over some topological ring \(A\)</p>
 <div class="displaymath">
 \begin{equation*}
 \rho \colon G_F \to \GL_d(A)
 \end{equation*}
 </div>
-<p>a continuous homomorphism.</p>
-<article class="example-like" id="example-1"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.2</span>.</h6>
-<p id="p-39">\(A = \CC\) with the complex topology.</p></article><article class="theorem-like" id="fact-2"><h6 class="heading">
-<span class="type">Fact</span> <span class="codenumber">2.3</span>.</h6>
-<p id="p-40">In this case \(\im(\rho )\) is finite.</p></article><article class="exercise-like" id="exercise-1"><a data-knowl="" class="id-ref" data-refid="hk-exercise-1"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.4</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise-like"><p id="p-41">Prove this.</p></article></div>
+<p data-braille="continuation">a continuous homomorphism.</p>
+<article class="example example-like" id="example-1"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
+</h6>
+<p id="p-39">\(A = \CC\) with the complex topology.</p></article><article class="fact theorem-like" id="fact-2"><h6 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span>
+</h6>
+<p id="p-40">In this case \(\im(\rho )\) is finite.</p></article><article class="exercise exercise-like" id="exercise-1"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-1"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><p id="p-41">Prove this.</p></article></div>
 <p id="p-42">Then we can write</p>
 <div class="displaymath">
 \begin{equation*}
@@ -355,11 +363,13 @@ G_F \ar[rr]^{\rho} \ar[dr] &amp; &amp; \GL_d(\CC) \\
 }
 \end{equation*}
 </div>
-<p>where \(L/F\) is finite. There are many such representations.</p>
-<article class="theorem-like" id="conjecture-1"><h6 class="heading">
-<span class="type">Conjecture</span> <span class="codenumber">2.5</span>.</h6>
-<p id="p-43">Every finite group is a quotient of \(G_\QQ\text{.}\)</p></article><article class="example-like" id="example-2"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.6</span>.</h6>
+<p data-braille="continuation">where \(L/F\) is finite. There are many such representations.</p>
+<article class="conjecture theorem-like" id="conjecture-1"><h6 class="heading">
+<span class="type">Conjecture</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span>
+</h6>
+<p id="p-43">Every finite group is a quotient of \(G_\QQ\text{.}\)</p></article><article class="example example-like" id="example-2"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span>
+</h6>
 <div class="displaymath" id="p-44">
 \begin{equation*}
 F= \QQ
@@ -380,8 +390,9 @@ L = \QQ(\sqrt[4]{2}, i)
 G_\QQ \to \Gal L \QQ \xrightarrow\rho  \GL_2(\CC)
 \end{equation*}
 </div>
-<p>with \(\rho \) the unique irreducible 2-dimensional representation of \(D_4\text{.}\)</p></article><article class="example-like" id="example-3"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.7</span>.</h6>
+<p data-braille="continuation">with \(\rho \) the unique irreducible 2-dimensional representation of \(D_4\text{.}\)</p></article><article class="example example-like" id="example-3"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span>
+</h6>
 <p id="p-45">Let \(E/\QQ\) be an elliptic curve</p>
 <div class="displaymath">
 \begin{equation*}
@@ -402,12 +413,15 @@ G_\QQ \acts E\lb  p\rb \simeq \ZZ/p \oplus \ZZ/p
 \begin{equation*}
 \rho _{E,p^\infty} \colon  G_\QQ \to \Aut(E\lb p^\infty\rb ) \simeq \GL_2(\ZZ_p)\text{.}
 \end{equation*}
-</div></article><article class="theorem-like" id="fact-3"><h6 class="heading">
-<span class="type">Fact</span> <span class="codenumber">2.8</span>.</h6>
-<p id="p-46">\(\rho _{E,p^\infty}\) has finite image.</p></article><article class="exercise-like" id="exercise-2"><a data-knowl="" class="id-ref" data-refid="hk-exercise-2"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.9</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise-like"><p id="p-47">Prove this.</p></article></div>
-<article class="example-like" id="example-4"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.10</span>.</h6>
+</div></article><article class="fact theorem-like" id="fact-3"><h6 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span>
+</h6>
+<p id="p-46">\(\rho _{E,p^\infty}\) has finite image.</p></article><article class="exercise exercise-like" id="exercise-2"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-2"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-47">Prove this.</p></article></div>
+<article class="example example-like" id="example-4"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span>
+</h6>
 <p id="p-48">Let \(F = \QQ_\ell\text{,}\) \(A= \QQ_p\)</p>
 <div class="displaymath">
 \begin{equation*}
@@ -424,50 +438,50 @@ G_\QQ \acts E\lb  p\rb \simeq \ZZ/p \oplus \ZZ/p
 }
 \end{equation*}
 </div>
-<p>where</p>
+<p data-braille="continuation">where</p>
 <div class="displaymath">
 \begin{equation*}
 \QQ_\ell^\mathrm{tr}= \QQ_\ell(\{\sqrt[n]{\ell}\}_{\ell\nmid n})
 \end{equation*}
 </div>
-<p>the maximal tamely ramified extension</p>
+<p data-braille="continuation">the maximal tamely ramified extension</p>
 <div class="displaymath">
 \begin{equation*}
 \QQ_\ell^\ur = \QQ_\ell(\{\mu _{n}\}_{\ell\nmid n})
 \end{equation*}
 </div>
-<p>the maximal unramified extension</p>
+<p data-braille="continuation">the maximal unramified extension</p>
 <div class="displaymath">
 \begin{equation*}
 \QQ_\ell^\ab = \QQ_\ell^\un(\mu _{\ell^\infty })
 \end{equation*}
 </div>
-<p>the maximal abelian extension.</p>
+<p data-braille="continuation">the maximal abelian extension.</p>
 <div class="displaymath">
 \begin{equation*}
 I_\ell = \Gal { \overline \QQ_\ell}{\QQ_\ell^\ur}
 \end{equation*}
 </div>
-<p>the intertia group</p>
+<p data-braille="continuation">the intertia group</p>
 <div class="displaymath">
 \begin{equation*}
 I^w_\ell = \Gal { \overline \QQ_\ell}{\QQ_\ell^\tamer}
 \end{equation*}
 </div>
-<p>the wild intertia group</p>
+<p data-braille="continuation">the wild intertia group</p>
 <p id="p-50">We say</p>
 <div class="displaymath">
 \begin{equation*}
 \rho \colon  G_{\QQ_\ell} \to  \GL_d(\QQ_p)
 \end{equation*}
 </div>
-<p>is <dfn class="terminology">unramified</dfn> if</p>
+<p data-braille="continuation">is <dfn class="terminology">unramified</dfn> if</p>
 <div class="displaymath">
 \begin{equation*}
 \rho (I_\ell) = \{1\}
 \end{equation*}
 </div>
-<p>is <dfn class="terminology">tamely ramified</dfn> if</p>
+<p data-braille="continuation">is <dfn class="terminology">tamely ramified</dfn> if</p>
 <div class="displaymath">
 \begin{equation*}
 \rho (I_\ell^w) = \{1\}\text{.}
@@ -480,10 +494,12 @@ I^w_\ell = \Gal { \overline \QQ_\ell}{\QQ_\ell^\tamer}
 \end{equation*}
 </div>
 <p id="p-52">The wild part: \(I_\ell^w\) is pro-\(\ell\text{,}\) \(\GL_d(\ZZ_p)\) is almost pro-\(p\) (it has a finite index pro-\(p\) subgroup).</p>
-<article class="exercise-like" id="exercise-3"><a data-knowl="" class="id-ref" data-refid="hk-exercise-3"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.11</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise-like"><p id="p-53">Prove this.</p></article></div>
-<article class="example-like" id="example-5"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.12</span>.</h6>
+<article class="exercise exercise-like" id="exercise-3"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-3"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.11</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><p id="p-53">Prove this.</p></article></div>
+<article class="example example-like" id="example-5"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span>
+</h6>
 <p id="p-54">For \(d= 1\)</p>
 <div class="displaymath">
 \begin{equation*}
@@ -495,9 +511,10 @@ I^w_\ell = \Gal { \overline \QQ_\ell}{\QQ_\ell^\tamer}
 \rho (I_\ell^w)\subseteq \GL_d(\QQ_p)
 \end{equation*}
 </div>
-<p>is finite.</p>
-<article class="exercise-like" id="exercise-4"><a data-knowl="" class="id-ref" data-refid="hk-exercise-4"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.13</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise-like"><p id="p-56">Prove this.</p></article></div>
+<p data-braille="continuation">is finite.</p>
+<article class="exercise exercise-like" id="exercise-4"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-4"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.13</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-56">Prove this.</p></article></div>
 <p id="p-57">If \(\ell = p\) then this is handled by \(p\)-adic Hodge theory.</p>
 <p id="p-58">The connection to global representations is then that</p>
 <div class="displaymath">
@@ -512,14 +529,14 @@ I^w_\ell = \Gal { \overline \QQ_\ell}{\QQ_\ell^\tamer}
 G_{\QQ_\ell} \hookrightarrow G_\QQ
 \end{equation*}
 </div>
-<p>via restriction to \(\overline \QQ\text{.}\)</p>
+<p data-braille="continuation">via restriction to \(\overline \QQ\text{.}\)</p>
 <p id="p-60">The image of this map is the <dfn class="terminology">decomposition group</dfn> at \(\ell\text{.}\)</p>
 <div class="displaymath" id="p-61">
 \begin{equation*}
 \rho \colon G_\QQ \to \GL_d(A)\text{,}
 \end{equation*}
 </div>
-<p>we say that \(\rho \) is <dfn class="terminology">unramified at</dfn> \(\ell\) if</p>
+<p data-braille="continuation">we say that \(\rho \) is <dfn class="terminology">unramified at</dfn> \(\ell\) if</p>
 <div class="displaymath">
 \begin{equation*}
 \rho (I_\ell) = \{1\}\text{.}
@@ -531,38 +548,40 @@ G_{\QQ_\ell} \hookrightarrow G_\QQ
 \operatorname{charpoly}(\rho (\Frob_\ell))
 \end{equation*}
 </div>
-<p>is well-defined.</p>
+<p data-braille="continuation">is well-defined.</p>
 <p id="p-63">Returning to</p>
 <div class="displaymath">
 \begin{equation*}
 \rho _{E,p^\infty} \colon  G_\QQ \to \GL_2(\QQ_p)
 \end{equation*}
 </div>
-<p>now.</p>
-<article class="theorem-like" id="fact-4"><h6 class="heading">
-<span class="type">Fact</span> <span class="codenumber">2.14</span>.</h6>
+<p data-braille="continuation">now.</p>
+<article class="fact theorem-like" id="fact-4"><h6 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">2.14</span><span class="period">.</span>
+</h6>
 <p id="p-64">\(\rho _{E,p^\infty}\) is unramified  outside of \(N_E\cdot p\) (\(N_E\) is the conductor of \(E\)). i.e.</p>
 <div class="displaymath">
 \begin{equation*}
 \rho _{E,p^\infty}
 \end{equation*}
 </div>
-<p>is unramified at \(\ell\) if and only if \(\ell \ne p\) and \(\ell\) is a prime of good reduction for \(E\text{.}\)</p></article><p id="p-65">So \(\rho _{E,p^\infty} \) sees bad reduction.</p>
+<p data-braille="continuation">is unramified at \(\ell\) if and only if \(\ell \ne p\) and \(\ell\) is a prime of good reduction for \(E\text{.}\)</p></article><p id="p-65">So \(\rho _{E,p^\infty} \) sees bad reduction.</p>
 <p id="p-66">From \(\rho _{E,p^\infty} \)  you can recover \(E\) up to isogeny (Faltings).</p>
-<article class="example-like" id="example-6"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.15</span>.</h6>
+<article class="example example-like" id="example-6"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.15</span><span class="period">.</span>
+</h6>
 <div class="displaymath" id="p-67">
 \begin{equation*}
 G_\QQ\acts \mu _{p^n}
 \end{equation*}
 </div>
-<p>so we get</p>
+<p data-braille="continuation">so we get</p>
 <div class="displaymath">
 \begin{equation*}
 G_\QQ \to \Aut(\mu _{p^n}) \simeq (\ZZ/p^n\ZZ)^* \simeq \GL_1(\ZZ/p^n)
 \end{equation*}
 </div>
-<p>taking the inverse limit we get</p>
+<p data-braille="continuation">taking the inverse limit we get</p>
 <div class="displaymath">
 \begin{equation*}
 \xymatrix{
@@ -571,56 +590,58 @@ G_\QQ \ar[rr]^{\epsilon _p} \ar[dr] &amp; &amp; \ZZ_p^*\\
 }
 \end{equation*}
 </div>
-<p>this \(\epsilon _p\) is known as the \(p\)-adic cyclotomic character. This is unramified outside \(p\) and</p>
+<p data-braille="continuation">this \(\epsilon _p\) is known as the \(p\)-adic cyclotomic character. This is unramified outside \(p\) and</p>
 <div class="displaymath">
 \begin{equation*}
 \epsilon _p (\Frob_\ell) = \ell
 \end{equation*}
 </div>
-<p>for \(\ell \ne p\text{.}\)</p></article><article class="remark-like" id="remark-1"><h6 class="heading">
-<span class="type">Remark</span> <span class="codenumber">2.16</span>.</h6>
+<p data-braille="continuation">for \(\ell \ne p\text{.}\)</p></article><article class="remark remark-like" id="remark-1"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.16</span><span class="period">.</span>
+</h6>
 <div class="displaymath" id="p-68">
 \begin{equation*}
 \det(\rho _{E,p^\infty}) =  \epsilon _p\text{.}
 \end{equation*}
-</div></article><article class="example-like" id="example-7"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.17</span>.</h6>
+</div></article><article class="example example-like" id="example-7"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.17</span><span class="period">.</span>
+</h6>
 <div class="displaymath" id="p-69">
 \begin{equation*}
 f = \sum a_nq^n \in S_2(\Gamma _0(N), \QQ)
 \end{equation*}
 </div>
-<p>a weight 2 eigenform on \(\Gamma _0(N)\text{,}\) with rational fourier coefficients. Eichler-Shimura gives \(E_f/\QQ\) an elliptic curve. Define</p>
+<p data-braille="continuation">a weight 2 eigenform on \(\Gamma _0(N)\text{,}\) with rational fourier coefficients. Eichler-Shimura gives \(E_f/\QQ\) an elliptic curve. Define</p>
 <div class="displaymath">
 \begin{equation*}
 \rho _f = \rho _{E,p^\infty }\colon G_\QQ \to \GL_2(\QQ_p)
 \end{equation*}
 </div>
-<p>unramified outside \(Np\)</p>
+<p data-braille="continuation">unramified outside \(Np\)</p>
 <div class="displaymath">
 \begin{equation*}
 \trace(\rho (\Frob_\ell)) = a_\ell
 \end{equation*}
 </div>
-<p>for \(\ell\nmid Np\text{.}\) More generally</p>
+<p data-braille="continuation">for \(\ell\nmid Np\text{.}\) More generally</p>
 <div class="displaymath">
 \begin{equation*}
 f  \in S_2(\Gamma _0(N))
 \end{equation*}
 </div>
-<p>an eigenform, Eichler-Shimura gives</p>
+<p data-braille="continuation">an eigenform, Eichler-Shimura gives</p>
 <div class="displaymath">
 \begin{equation*}
 A_f/\QQ
 \end{equation*}
 </div>
-<p>an abelian variety which leads to</p>
+<p data-braille="continuation">an abelian variety which leads to</p>
 <div class="displaymath">
 \begin{equation*}
 \rho _f \colon G_\QQ \to \GL_2(K)
 \end{equation*}
 </div>
-<p>\(K/\QQ_p\) finite.</p></article></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<p data-braille="continuation">\(K/\QQ_p\) finite.</p></article></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2</span> <span class="title">Congruences and elliptic curves</span>
 </h3>
 <p id="p-70">Let</p>
@@ -629,14 +650,14 @@ A_f/\QQ
 E_1\colon  y^2 = x^3 + x - 10
 \end{equation*}
 </div>
-<p>conductor \(2^2 \cdot13\text{,}\) <a class="external" href="https://www.lmfdb.org/EllipticCurve/Q/52a1/" target="_blank"><code class="code-inline tex2jax_ignore">https://www.lmfdb.org/EllipticCurve/Q/52a1/</code></a></p>
+<p data-braille="continuation">conductor \(2^2 \cdot13\text{,}\) <a class="external" href="https://www.lmfdb.org/EllipticCurve/Q/52a1/" target="_blank"><code class="code-inline tex2jax_ignore">https://www.lmfdb.org/EllipticCurve/Q/52a1/</code></a></p>
 <div class="displaymath">
 \begin{equation*}
 E_2\colon  y^2 = x^3 -584 x + 5444
 \end{equation*}
 </div>
-<p>conductor \(2^2 \cdot7\cdot13\text{,}\) <a class="external" href="https://www.lmfdb.org/EllipticCurve/Q/364a1/" target="_blank"><code class="code-inline tex2jax_ignore">https://www.lmfdb.org/EllipticCurve/Q/364a1/</code></a>.</p>
-<figure class="figure-like" id="table-1"><table>
+<p data-braille="continuation">conductor \(2^2 \cdot7\cdot13\text{,}\) <a class="external" href="https://www.lmfdb.org/EllipticCurve/Q/364a1/" target="_blank"><code class="code-inline tex2jax_ignore">https://www.lmfdb.org/EllipticCurve/Q/364a1/</code></a>.</p>
+<figure class="table figure-like" id="table-1"><table>
 <tr>
 <td class="l m b1 r1 l3 t3 lines">\(p\)</td>
 <td class="l m b1 r3 l0 t3 lines">\(2\)</td>
@@ -648,7 +669,7 @@ E_2\colon  y^2 = x^3 -584 x + 5444
 <td class="l m b1 r3 l0 t3 lines">\(17\)</td>
 <td class="l m b1 r3 l0 t3 lines">\(19\)</td>
 <td class="l m b1 r3 l0 t3 lines">\(23\)</td>
-<td class="l m b1 r3 l0 t3 lines">\(29\)</td>
+<td class="l m b1 r3 l0 t3 lines" data-braille="last-cell">\(29\)</td>
 </tr>
 <tr>
 <td class="l m b3 r1 l3 t0 lines">\(a_p(E_1)\)</td>
@@ -661,7 +682,7 @@ E_2\colon  y^2 = x^3 -584 x + 5444
 <td class="l m b3 r3 l0 t0 lines">\(6\)</td>
 <td class="l m b3 r3 l0 t0 lines">\(-6\)</td>
 <td class="l m b3 r3 l0 t0 lines">\(8\)</td>
-<td class="l m b3 r3 l0 t0 lines">\(2\)</td>
+<td class="l m b3 r3 l0 t0 lines" data-braille="last-cell">\(2\)</td>
 </tr>
 <tr>
 <td class="l m b3 r1 l3 t0 lines">\(a_p(E_2)\)</td>
@@ -674,10 +695,10 @@ E_2\colon  y^2 = x^3 -584 x + 5444
 <td class="l m b3 r3 l0 t0 lines">\(-4\)</td>
 <td class="l m b3 r3 l0 t0 lines">\(-1\)</td>
 <td class="l m b3 r3 l0 t0 lines">\(-7\)</td>
-<td class="l m b3 r3 l0 t0 lines">\(7\)</td>
+<td class="l m b3 r3 l0 t0 lines" data-braille="last-cell">\(7\)</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.18.</span> \(a_p\)'s for \(E_1,E_2\)</figcaption></figure><p id="p-71">Note that</p>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.18<span class="period">.</span></span><span class="space"> </span>\(a_p\)'s for \(E_1,E_2\)</figcaption></figure><p id="p-71">Note that</p>
 <div class="displaymath">
 \begin{equation*}
 a_\ell(E_1) \equiv  a_\ell(E_2) \pmod 5,\,\forall \ell \ne 7
@@ -688,16 +709,17 @@ a_\ell(E_1) \equiv  a_\ell(E_2) \pmod 5,\,\forall \ell \ne 7
 \implies \rho _{E_1, 5} \simeq\rho _{E_2, 5} ( = \bar \rho )
 \end{equation*}
 </div>
-<p>as Galois representations.</p>
-<article class="exercise-like" id="exercise-5"><a data-knowl="" class="id-ref" data-refid="hk-exercise-5"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.19</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise-like"><p id="p-72">Prove this.</p></article></div>
+<p data-braille="continuation">as Galois representations.</p>
+<article class="exercise exercise-like" id="exercise-5"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-5"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.19</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><p id="p-72">Prove this.</p></article></div>
 <p id="p-73">How common is this? We have 2 lifts of \(\bar \rho \)</p>
 <div class="displaymath">
 \begin{equation*}
 \rho _{E_1, 5^\infty } \simeq\rho _{E_2, 5^\infty }
 \end{equation*}
 </div>
-<p>how many other such?</p></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<p data-braille="continuation">how many other such?</p></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3</span> <span class="title">Hida theory</span>
 </h3>
 <div class="displaymath" id="p-74">
@@ -705,38 +727,374 @@ a_\ell(E_1) \equiv  a_\ell(E_2) \pmod 5,\,\forall \ell \ne 7
 \sum a_n(f) q^n = f \in S_{k_0} (\Gamma _0(N))
 \end{equation*}
 </div>
-<p>an eigenform.</p>
+<p data-braille="continuation">an eigenform.</p>
 <div class="displaymath">
 \begin{equation*}
 a_p(f)
 \end{equation*}
 </div>
-<p>a \(p\)-adic unit.</p>
+<p data-braille="continuation">a \(p\)-adic unit.</p>
 <div class="displaymath">
 \begin{equation*}
 \mathscr F =  \sum_{n=1}^\infty  a_n(k) q^n
 \end{equation*}
 </div>
-<p>with \(a_n\) a \(p\)-adic analytic function in \(k\text{.}\) The whole family gives Galois representations that reduce to the same \(\bar\rho \text{.}\)</p>
+<p data-braille="continuation">with \(a_n\) a \(p\)-adic analytic function in \(k\text{.}\) The whole family gives Galois representations that reduce to the same \(\bar\rho \text{.}\)</p>
 <p id="p-75">Specialise \(k\) to some integer \(w\)</p>
 <div class="displaymath">
 \begin{equation*}
 \mathscr F = \sum a_n(w) q^n  \in S_w (\Gamma _0(N))
 \end{equation*}
 </div>
-<p>take \(w= k_0\) to recover \(f\text{.}\)</p>
+<p data-braille="continuation">take \(w= k_0\) to recover \(f\text{.}\)</p>
 <p id="p-76">Hida constructs</p>
 <div class="displaymath">
 \begin{equation*}
 \rho ^{Hida}\colon G_\QQ \to \GL_2(\ZZ_p\lb \lb x\rb \rb )
 \end{equation*}
 </div>
-<p>unramified outside \(Np\text{.}\)</p>
+<p data-braille="continuation">unramified outside \(Np\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \ell \nmid Np \implies \tr(\rho^{Hida} (\Frob_\ell)) = a_\ell(x)\text{.}
 \end{equation*}
-</div></section></section></div></main>
+</div></section><aside class="aside aside-like" id="aside-3"><p id="p-77">Lecture 3 28/1/2018</p></aside><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4</span> <span class="title">More examples of Galois representations in families</span>
+</h3>
+<article class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">A 1-dimensional family.</span></h5>
+<p id="p-78">let</p>
+<div class="displaymath">
+\begin{equation*}
+\epsilon _p = \text{cyclotomic character}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\epsilon _p\colon  G_\QQ \to \Gal{\QQ(\mu _{p^\infty })}{\QQ} \simeq \ZZ_p^* \simeq \FF_p^* \times (1+p\ZZ_p)
+\end{equation*}
+</div>
+<p id="p-79">If we have \(k \in \ZZ\) we can take</p>
+<div class="displaymath">
+\begin{equation*}
+\epsilon _p^k
+\end{equation*}
+</div>
+<p data-braille="continuation">its power.</p>
+<p id="p-80">Note that when \(k_1,k_2\in \ZZ\) with</p>
+<div class="displaymath">
+\begin{equation*}
+k_1\equiv k_2 \pmod{p-1}
+\end{equation*}
+</div>
+<p data-braille="continuation">then</p>
+<div class="displaymath">
+\begin{equation*}
+\epsilon _p^{k_1} \equiv   \epsilon _p^{k_2} \pmod{p}
+\end{equation*}
+</div>
+<p data-braille="continuation">moreover if</p>
+<div class="displaymath">
+\begin{equation*}
+k_1\equiv k_2 \pmod{(p-1)p^N}
+\end{equation*}
+</div>
+<p data-braille="continuation">we havee</p>
+<div class="displaymath">
+\begin{equation*}
+\epsilon _p^{k_1} \equiv   \epsilon _p^{k_2} \pmod{p^{N+1}}\text{.}
+\end{equation*}
+</div>
+<p id="p-81">Set</p>
+<div class="displaymath">
+\begin{equation*}
+\Lambda = \ZZ_p\lb \lb \ZZ_p^*\rb \rb  = \varprojlim \ZZ_p\lb (\ZZ/p^N)^*\rb 
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\epsilon _p^{univ}\colon G_\QQ \to \Lambda ^* = \GL_1(\Lambda )
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sigma \mapsto \lb  epsilon _p(\sigma ) \rb 
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Lambda  \xrightarrow{wt_k} \ZZ_p
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+wt_k \circ \epsilon _p^{univ}
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(wt_k\) is defined by</p>
+<div class="displaymath">
+\begin{equation*}
+\ZZ_p^* \to \ZZ_p^* \subseteq \ZZ_p
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+x \mapsto x^k
+\end{equation*}
+</div>
+<p data-braille="continuation">gives</p>
+<div class="displaymath">
+\begin{equation*}
+\Lambda  \xrightarrow{wt_k} \ZZ_p\text{.}
+\end{equation*}
+</div>
+<p id="p-82">Take any</p>
+<div class="displaymath">
+\begin{equation*}
+\phi \in \Hom_{cts}(\Lambda , \CC_p)\simeq \Hom_{cts}(\ZZ_p^*, \CC_p)
+\end{equation*}
+</div>
+<p data-braille="continuation">induces</p>
+<div class="displaymath">
+\begin{equation*}
+G_\QQ \to \CC_p^*
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\phi \circ \epsilon _p^{univ}\text{.}
+\end{equation*}
+</div>
+<div class="displaymath" id="p-83">
+\begin{equation*}
+\Hom_{cts}(\ZZ_p^*, \CC_p)
+\end{equation*}
+</div>
+<p data-braille="continuation">is a union of \(p-1\) open disks as</p>
+<div class="displaymath">
+\begin{equation*}
+\ZZ_p^* \simeq \FF_p^* \times (1+p\ZZ_p)
+\end{equation*}
+</div>
+<p data-braille="continuation">the rightmost factor is topologically generated by \(1+p\text{.}\) So</p>
+<div class="displaymath">
+\begin{equation*}
+\phi \colon  \ZZ_p^* \to \CC_p^*
+\end{equation*}
+</div>
+<p data-braille="continuation">is determined by</p>
+<div class="displaymath">
+\begin{equation*}
+\phi |_{\FF_p^*}
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+\phi (\gamma ) \text{ for any } \gamma  \text{ a top. gen.}\text{.}
+\end{equation*}
+</div>
+<p id="p-84">We need</p>
+<div class="displaymath">
+\begin{equation*}
+|\phi (\gamma )-1|_p \lt   1\text{.}
+\end{equation*}
+</div>
+<p id="p-85">We have \(p-1\) disks labelled by characters of \(\FF_p^*\text{.}\) On each disk of \(\phi \in \Hom(\ZZ_p^*, \CC_p^*)\) the reduction of</p>
+<div class="displaymath">
+\begin{equation*}
+\phi \circ \epsilon _p^{univ} \colon G_\QQ \to \CC_p^*
+\end{equation*}
+</div>
+<p data-braille="continuation">is the same.</p></article><article class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">A 2-d example.</span></h5>
+<p id="p-86">Let \(E/\QQ\) be a CM elliptic curve.</p>
+<div class="displaymath">
+\begin{equation*}
+\rho_{E,p^\infty } \colon G_\QQ \to \GL_2(\ZZ_p)
+\end{equation*}
+</div>
+<p data-braille="continuation">then there exists \(K/\QQ\) quadratic imaginary field and , \(p\)-ordinary</p>
+<div class="displaymath">
+\begin{equation*}
+\psi \colon G_K \to \ZZ_p^*
+\end{equation*}
+</div>
+<p data-braille="continuation">s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+\rho_{E,p^\infty } \simeq \Ind_K^\QQ(\psi )\text{.}
+\end{equation*}
+</div>
+<p id="p-87">So we get a “family”</p>
+<div class="displaymath">
+\begin{equation*}
+\Ind_K^\QQ(\psi ^k)\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">more generally can make</p>
+<div class="displaymath">
+\begin{equation*}
+\psi ^{univ} \colon G_K \to \Lambda ^*
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Ind \psi ^{univ} \colon G_K \to \GL_2(\Lambda )\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">CM Hida family.</p></article></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.5</span> <span class="title">Deformation theory</span>
+</h3>
+<p id="p-88">\(G\) a profinite group, \(k\) a finite field of characteristic \(p\) (simpler \(k = \FF_p\)).</p>
+<div class="displaymath">
+\begin{equation*}
+\bar \rho \colon G \to \GL_d(k)
+\end{equation*}
+</div>
+<p data-braille="continuation">a continuous homomorphism.</p>
+<p id="p-89">To lift \(\bar \rho  \) to be \(A\)-valued, we need a homomorphism</p>
+<div class="displaymath">
+\begin{equation*}
+A \twoheadrightarrow k
+\end{equation*}
+</div>
+<p data-braille="continuation">we may as well assume \(A \) is local so it lifts to \(GL_d(A)\text{.}\) We then only have one residual representation. Localize it at</p>
+<div class="displaymath">
+\begin{equation*}
+\ker(A\to k)\text{.}
+\end{equation*}
+</div>
+<p id="p-90">If \(A\) is a local ring then \(A\) has a natural topology. Letting \(\ideal m _A\) be the maximal ideal</p>
+<div class="displaymath">
+\begin{equation*}
+\{\ideal m_A^j\}
+\end{equation*}
+</div>
+<p data-braille="continuation">is a neighborhood base at 0, this is the \(\ideal m\)-adic topology.</p>
+<p id="p-91">So we have \(A\) local, \(\ideal m_A\) maximal \(A/\ideal m_A \simeq k\text{,}\) we need to fix this identification to ensure we don't have automorphisms.</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{
+G \ar[r]^{\rho } \ar[dr]_{\bar\rho }&amp; \GL_d(A)\ar[d]\\
+&amp; \GL_d(k)
+}\text{.}
+\end{equation*}
+</div>
+<article class="note remark-like" id="note-1"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">2.20</span><span class="period">.</span>
+</h6>
+<p id="p-92">If we have \(M\in \GL_d(A)\)  s.t. \(M\equiv 1 \pmod {\ideal m_A}\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+M\rho M\inv
+\end{equation*}
+</div>
+<p data-braille="continuation">lifts \(\bar\rho \) also.</p></article><article class="definition definition-like" id="definition-2"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.21</span><span class="period">.</span>
+</h6>
+<p id="p-93">Call \(\rho \) and \(M \rho M\inv \) <dfn class="terminology">strictly equivalent</dfn>.</p></article><article class="definition definition-like" id="definition-3"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.22</span><span class="period">.</span>
+</h6>
+<p id="p-94">A <dfn class="terminology">deformation of \(\bar\rho\) to A</dfn> is a strict equivalence class of continuous homomorphisms</p>
+<div class="displaymath">
+\begin{equation*}
+G \xrightarrow{\rho } \GL_d(A)
+\end{equation*}
+</div>
+<p data-braille="continuation">lifting \(\bar \rho \text{.}\)</p></article><p id="p-95">Want to rephrase this with less bases, instead of \(\bar \rho \) use \(\overline V\) a \(d\)-dimensional continuous representation of \(G\) over \(k\text{.}\) \(V\) a free \(A\)-module of rank \(d\) with continuous action of \(G\) s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+V\otimes A/\ideal m _A \simeq \overline V\text{.}
+\end{equation*}
+</div>
+<p id="p-96">Naive hope: two such \(V\)'s are equivalent if they are isomorphic as \(G\)-modules.</p>
+<p id="p-97">Problem: \(R^{univ}\) won't exist, too many automorphisms. Ideally if \(V_A\) is a deformation of \(\overline V\) to \(A\) then there exists a unique</p>
+<div class="displaymath">
+\begin{equation*}
+R^{univ} \to A
+\end{equation*}
+</div>
+<p data-braille="continuation">inducing</p>
+<div class="displaymath">
+\begin{equation*}
+V^{univ } \to V_A\text{.}
+\end{equation*}
+</div>
+<p id="p-98">Take II, let \(V\) be a free \(A\)-module with a continuous action of \(G\) and a fixed isomorphism.</p>
+<div class="displaymath">
+\begin{equation*}
+V\otimes _A A/\ideal m _A \simeq \overline V
+\end{equation*}
+</div>
+<p data-braille="continuation">as representations of \(G\) over \(k\simeq A/\ideal m_A\text{.}\)</p>
+<p id="p-99">Two \(V\)'s are equivalent if there exists a \(G\)-module isomorphism \(V_1\xrightarrow\phi V_2\) s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{
+V_1\ar[r]^\phi\ar[d]  &amp; V_2\ar[d] \\
+V_1\otimes A/\ideal m_A\ar[d]_\sim  &amp; V_2\otimes A/\ideal m_A \ar[d]_sim \\
+\overline V\ar[r]^=  &amp;\overline V 
+}\text{.}
+\end{equation*}
+</div>
+<article class="exercise exercise-like" id="exercise-6"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-6"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.23</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like"><p id="p-100">Check the two definitions are the same, \(\GL_d\) definition vs. \(\overline V\text{.}\)</p></article></div>
+<p id="p-101">Another approach</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{
+G \ar[r]^{\rho } \ar[dr]_{\bar\rho }&amp; \GL_d(A)\ar[d]\\
+&amp; \GL_d(k)
+}
+\end{equation*}
+</div>
+<p data-braille="continuation">lift of \(\bar \rho \) and say two \(\rho \)'s are the same if they are equal as maps, this is a <dfn class="terminology">framed deformation</dfn>. We can write this more abstractly</p>
+<div class="displaymath">
+\begin{equation*}
+\overline V
+\end{equation*}
+</div>
+<p data-braille="continuation">a continuous representation of \(G\) over \(k\) with fixed basis \(\beta \text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+V
+\end{equation*}
+</div>
+<p data-braille="continuation">a free \(A\) module with cont. action of \(G\) and a fixed isom.</p>
+<div class="displaymath">
+\begin{equation*}
+V\otimes_A A/\ideal m_D \simeq \overline V
+\end{equation*}
+</div>
+<p data-braille="continuation">and a basis \(\beta _A\) lifting \(\beta \text{.}\)</p>
+<p id="p-102">Categories</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal C_k =\mathcal C
+\end{equation*}
+</div>
+<p data-braille="continuation">the category of complete local Noetherian rings \(A\) with a fixed isomorphism \(A/\ideal m_A \simeq k\text{.}\) Where the maps are</p>
+<div class="displaymath">
+\begin{equation*}
+A_1\xrightarrow\phi A_2
+\end{equation*}
+</div>
+<p data-braille="continuation">a local ring homomorphism</p>
+<div class="displaymath">
+\begin{equation*}
+\phi (\ideal m_{A_1}) \subseteq \ideal m_{A_2}
+\end{equation*}
+</div>
+<p data-braille="continuation">and the diagram</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{
+A_1/\ideal m_{A_1} \ar[rr]^{\bar \phi } \ar[dr]_\sim &amp; &amp; A_2/\ideal m_{A_2}\ar[dl]^\sim \\
+&amp;  k &amp; 
+}
+\end{equation*}
+</div>
+<p data-braille="continuation">commutes.</p></section></section></div></main>
 </div>
 <!--Start: Google Classic code-->
 <script>
@@ -751,6 +1109,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 </script>
 <!--End: Google Classic code-->
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

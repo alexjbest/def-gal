@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Framed deformations.</span></h5>
+<div class="displaymath">
+\begin{equation*}
+D_{\bar \rho }^{\square} (A)  = \{ \rho \colon G\to \GL_d(A)\text{ lifting }\bar \rho \}
+\end{equation*}
+</div>
+<p data-braille="continuation">we will prove that</p>
+<div class="displaymath">
+\begin{equation*}
+D_{\bar \rho }^{\square}
+\end{equation*}
+</div>
+<p data-braille="continuation">is in fact representable.D_{\bar \rho }^{\square}</p>
+<div class="displaymath">
+\begin{equation*}
+\bar \rho  \colon  G \to \GL_d(k)
+\end{equation*}
+</div>
+<p data-braille="continuation">we build</p>
+<div class="displaymath">
+\begin{equation*}
+R_{\bar \rho }^{\square, univ}
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _{\bar \rho }^{\square, univ} \colon G \to \GL_d(R_{\bar \rho }^{\square, univ})\text{.}
+\end{equation*}
+</div>
+<p>Let \(\{ g_\alpha \}_\alpha \) be a generating set of \(G\text{.}\) Make formal variables \(X_{ij}^\alpha \) for all \(\alpha \text{,}\) \(1 \le i,j \le d\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+R = W(k) \lb \lb \{X_{ij}^\alpha \}\rb \rb 
+\end{equation*}
+</div>
+<p data-braille="continuation">try sending</p>
+<div class="displaymath">
+\begin{equation*}
+g_\alpha  \mapsto (X_{ij}^\alpha ) \in M_d(R)
+\end{equation*}
+</div>
+<p data-braille="continuation">doesn't land in \(\GL_d\text{.}\)</p>
+<p>So “add on \(\bar \rho \)”.</p>
+<div class="displaymath">
+\begin{equation*}
+k\to W(k)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+x\mapsto [x]
+\end{equation*}
+</div>
+<p data-braille="continuation">so we get</p>
+<div class="displaymath">
+\begin{equation*}
+\GL_d(k) \xrightarrow{\lb \cdot \rb } \GL_d(W(k))
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lb (a_{ij})_{ij} \rb \mapsto (\lb a_{ij}\rb )_{ij}
+\end{equation*}
+</div>
+<p data-braille="continuation">now send</p>
+<div class="displaymath">
+\begin{equation*}
+g_\alpha  \mapsto (X_{ij}^\alpha ) + \lb \bar \rho (g_\alpha ) \rb  \in \GL_d(R)
+\end{equation*}
+</div>
+<p data-braille="continuation">this does not give a map</p>
+<div class="displaymath">
+\begin{equation*}
+G \to \GL_d(R)
+\end{equation*}
+</div>
+<p data-braille="continuation">because of relations between \(g_\alpha \text{.}\)</p>
+<article class="example example-like"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.30</span><span class="period">.</span>
+</h6>
+<p>Take the relation</p>
+<div class="displaymath">
+\begin{equation*}
+g_1 g_2\inv = e
+\end{equation*}
+</div>
+<p data-braille="continuation">need</p>
+<div class="displaymath">
+\begin{equation*}
+((X_{ij}^1) + \lb  \bar\rho  (g_1)\rb )((X_{ij}^2) + \lb  \bar\rho  (g_2)\rb )\inv - 1 = 0
+\end{equation*}
+</div>
+<p data-braille="continuation">this gives \(d^2\) equations in \(R\text{.}\)</p></article><p>Can do this in general. In fact the LHS is in \(\ideal m_R\text{.}\) So if \(I\) is the ideal of all relations, then \(I\subseteq \ideal m_R\text{.}\) And let</p>
+<div class="displaymath">
+\begin{equation*}
+R_{\bar \rho }^{univ,\square} = R/I\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\rho \colon  G \to \GL_d(R/I)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+g_\alpha \mapsto (X_{ij}^\alpha ) + \lb \bar\rho (g_\alpha )\rb \pmod I
+\end{equation*}
+</div>
+<p data-braille="continuation">is a well-defined homomorphism. And it is universal: If</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _A \colon G \to \GL_d (A)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+R\xrightarrow\pi A
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(X_{ij}^\alpha )_{ij} \mapsto (\rho _A(g_\alpha ) - \lb \bar\rho (g_\alpha )\rb )_{ij}
+\end{equation*}
+</div>
+<p data-braille="continuation">then \(\pi \) kills \(I\) (exercise).</p>
+<div class="displaymath">
+\begin{equation*}
+R/I \xrightarrow{\bar \pi } A\text{.}
+\end{equation*}
+</div>
+<article class="exercise exercise-like"><a class="original" data-knowl="./knowl/exercise-11-hidden.html" title="Exercise 2.31"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.31</span><span class="period">.</span>
+</h6></a></article><p>There are two problems with this, it is not necessary that the universal deformation we have constructed be continuous, or that the universal deformation ring be continuous.</p>
+<p>The root of these problems is that  there are potentially too many \(g_\alpha \text{.}\) introduce a condition \(\Phi _p\) that for all open finite index</p>
+<div class="displaymath">
+\begin{equation*}
+G_0 \subseteq G
+\end{equation*}
+</div>
+<p data-braille="continuation">we have</p>
+<div class="displaymath">
+\begin{equation*}
+\Hom(G_0, \FF_p)
+\end{equation*}
+</div>
+<p data-braille="continuation">is finite.</p>
+<article class="exercise exercise-like"><a class="original" data-knowl="./knowl/exercise-12-hidden.html" title="Exercise 2.32"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.32</span><span class="period">.</span>
+</h6></a></article><p>If \(G = G_K\) with \(K/\QQ_\ell\) finite, WLOG</p>
+<div class="displaymath">
+\begin{equation*}
+G = G_0 = G_K
+\end{equation*}
+</div>
+<p data-braille="continuation">and \(\Phi _p\) holds in this case</p>
+<div class="displaymath">
+\begin{equation*}
+G_K^\ab \simeq \hat K^* \simeq \hat \ZZ \times \ints_K^*
+\end{equation*}
+</div>
+<p data-braille="continuation">an exercise in LCFT</p>
+<div class="displaymath">
+\begin{equation*}
+G_0 \subseteq G_K
+\end{equation*}
+</div>
+<p data-braille="continuation">fin index open then</p>
+<div class="displaymath">
+\begin{equation*}
+G_0 = G_L
+\end{equation*}
+</div>
+<p data-braille="continuation">with \(L/\QQ_p\)</p></article><span class="incontext"><a href="sec-def-gal-defs.html#paragraphs-5">in-context</a></span>
+</body>
+</html>

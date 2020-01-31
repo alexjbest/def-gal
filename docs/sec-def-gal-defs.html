@@ -1094,7 +1094,342 @@ A_1/\ideal m_{A_1} \ar[rr]^{\bar \phi } \ar[dr]_\sim &amp; &amp; A_2/\ideal m_{A
 }
 \end{equation*}
 </div>
-<p data-braille="continuation">commutes.</p></section></section></div></main>
+<p data-braille="continuation">commutes.</p></section><aside class="aside aside-like" id="aside-4"><p id="p-103">Lecture 4 30/1/2018</p></aside><p id="p-104">Last time: multiplication by \(c\) on \(R^{univ}\) is not a ring map!</p>
+<article class="exercise exercise-like" id="exercise-7"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-7"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.24</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-7"><article class="exercise exercise-like"><p id="p-105">Show that the “bad” definition of deformation (without fixing the isomorphism to \(\overline V\)) can't be representable.</p></article></div>
+<article class="exercise exercise-like" id="exercise-8"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-8"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.25</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-8"><article class="exercise exercise-like"><p id="p-106">If \(\Aut _G(\bar \rho )\supset\neq k^*\) show that the correct definition of deformation doesn't lead to a representable functor.</p></article></div>
+<p id="p-107">\(k\) finite field of characteristic \(p\text{.}\) \(\mathcal C_k\) category of complete local Noetherian rings with a fixed identification</p>
+<div class="displaymath">
+\begin{equation*}
+A/\ideal m_A \simeq k
+\end{equation*}
+</div>
+<p data-braille="continuation">with \((A, \ideal m_A)\) a local ring, maps are local homomorphisms preserving the fixed identification.</p>
+<article class="paragraphs" id="paragraphs-3"><h5 class="heading"><span class="title">Witt vectors.</span></h5>
+<p id="p-108">\(W(k)  = \) Witt vectors of \(k\) and an object of \(\mathcal C_k\text{.}\) The maximal ideal of \(W(k)\) is \(pW(k)\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+W(k)/ pW(k) \simeq k
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+W(k)^\times \to k^\times
+\end{equation*}
+</div>
+<p data-braille="continuation">this map has a section which is multiplicative.</p>
+<div class="displaymath">
+\begin{equation*}
+[x]\mapsfrom x\text{.}
+\end{equation*}
+</div>
+<article class="example example-like" id="example-8"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.26</span><span class="period">.</span>
+</h6>
+<p id="p-109">If \(k \simeq \FF_{q}\text{,}\) \(q=p^n\) then</p>
+<div class="displaymath">
+\begin{equation*}
+W(k) = \ints_{K_n},\, K_n = \QQ_p(\mu _{p^{n}-1})
+\end{equation*}
+</div>
+<p data-braille="continuation">unramified extension with</p>
+<div class="displaymath">
+\begin{equation*}
+\ideal  m_{W(k)} = (p)
+\end{equation*}
+</div>
+<p data-braille="continuation">take \(x^{q-1}\) and observe that its roots are distinct mod \(p\text{.}\) For \(W(\FF_p) \simeq \ZZ_p\text{.}\)</p></article><p id="p-110">\(\bar x\in k\text{,}\) lift to \(x\in W(k)\)</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{m\to \infty } x^{q^m} = [x]\text{.}
+\end{equation*}
+</div>
+<article class="exercise exercise-like" id="exercise-9"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-9"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.27</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-9"><article class="exercise exercise-like"><p id="p-111">Check this.</p></article></div>
+<p id="p-112">\(A\in \mathcal C_k\) there exists a unique ring hom</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{
+W(k) \ar[r] \ar[d] &amp; A \ar[d]\\
+k \ar[r]  &amp; A/\ideal m_A
+}
+\end{equation*}
+</div>
+<p data-braille="continuation">\(A\) is a \(W(k)\)-module.</p>
+<p id="p-113">Moreover, \(A\) is a quotient of \(W(k)\lb \lb x_1, \ldots, \rb \rb \text{.}\) For  \(A,A' \in \mathcal C_k\)</p>
+<div class="displaymath">
+\begin{equation*}
+A \xrightarrow\phi A'
+\end{equation*}
+</div>
+<p data-braille="continuation">in \(\mathcal C_k\) then \(\phi \) is automatically \(W(k)\)-linear.</p></article><article class="paragraphs" id="paragraphs-4"><h5 class="heading"><span class="title">Deformation functor.</span></h5>
+<div class="displaymath" id="p-114">
+\begin{equation*}
+\bar \rho  \colon  G \to \GL_d(k)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+D_{\bar \rho} \colon \mathcal C_k \to \Set
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+A \mapsto \{\text{deformations of }\bar \rho  \text{ to } A\} = \{\rho \colon G \to \GL_d(A) \text{ lifting }\bar \rho \}/\text{strict equiv.}\text{.}
+\end{equation*}
+</div>
+<p id="p-115">Given</p>
+<div class="displaymath">
+\begin{equation*}
+R\in \mathcal C_k
+\end{equation*}
+</div>
+<p data-braille="continuation">we have</p>
+<div class="displaymath">
+\begin{equation*}
+F_R \colon  \mathcal C_k \to \Set
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+A \mapsto \Hom (R, A)\text{.}
+\end{equation*}
+</div>
+<article class="exercise exercise-like" id="exercise-10"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-10"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.28</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-10"><article class="exercise exercise-like"><p id="p-116">If \(A\xrightarrow\phi A'\) is a local ring Hom which is \(W(k)\)-linear then \(\phi \) is a map in \(\mathcal C_k\text{.}\)</p></article></div></article><article class="definition definition-like" id="def-gal-rep"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.29</span><span class="period">.</span><span class="space"> </span><span class="title">Representable functors.</span>
+</h6>
+<p id="p-117">Any functor</p>
+<div class="displaymath">
+\begin{equation*}
+F \colon  \mathcal C_k \to \Set
+\end{equation*}
+</div>
+<p data-braille="continuation">is said to be representable if there exists  \(R \in \mathcal C_k\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+F \simeq F_R\text{.}
+\end{equation*}
+</div></article><p id="p-118">To say \(D_{\bar \rho }\) is representable says that</p>
+<div class="displaymath">
+\begin{equation*}
+\exists R_{\bar \rho }^{univ} \in\mathcal C_k
+\end{equation*}
+</div>
+<p data-braille="continuation">such that</p>
+<div class="displaymath">
+\begin{equation*}
+D_{\bar \rho } (A) \simeq \Hom(R_{\bar \rho }^{univ}, A)
+\end{equation*}
+</div>
+<p data-braille="continuation">which is functorial in \(A\text{.}\)</p>
+<p id="p-119">In this set-up take \(A = R_{\bar \rho }^{univ}\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+D_{\bar \rho }(R_{\bar \rho }^{univ}) \simeq \Hom(R_{\bar \rho }^{univ},R_{\bar \rho }^{univ}) \ni \mathbf 1
+\end{equation*}
+</div>
+<p data-braille="continuation">so this corresponds to some \(V^{univ}\)</p>
+<p id="p-120">Now given</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _A \colon G \to \GL_d(A) \simeq \Aut(V_A)
+\end{equation*}
+</div>
+<p data-braille="continuation">we have \(\rho _A \in D_{\bar \rho }(A) \simeq \Hom(R_{\bar \rho }^{univ}, A)\text{,}\) so we get some \(\phi \colon  R_{\bar \rho }^{univ} \to A\text{.}\) Giving a diagram</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{
+D_{\bar \rho }(R_{\bar \rho }^{univ} ) \ar[r]^{\sim} \ar[d]_\phi  &amp; \Hom(R_{\bar \rho }^{univ}, R_{\bar \rho }^{univ})\ni \mathbf 1 \ar[d] \\
+D_{\bar \rho }(A                     ) \ar[r]^{\sim}              &amp; \Hom(R_{\bar \rho }^{univ}, A                    ) \ni \phi }\text{.}
+\end{equation*}
+</div>
+<article class="paragraphs" id="paragraphs-5"><h5 class="heading"><span class="title">Framed deformations.</span></h5>
+<div class="displaymath" id="p-121">
+\begin{equation*}
+D_{\bar \rho }^{\square} (A)  = \{ \rho \colon G\to \GL_d(A)\text{ lifting }\bar \rho \}
+\end{equation*}
+</div>
+<p data-braille="continuation">we will prove that</p>
+<div class="displaymath">
+\begin{equation*}
+D_{\bar \rho }^{\square}
+\end{equation*}
+</div>
+<p data-braille="continuation">is in fact representable.D_{\bar \rho }^{\square}</p>
+<div class="displaymath" id="p-122">
+\begin{equation*}
+\bar \rho  \colon  G \to \GL_d(k)
+\end{equation*}
+</div>
+<p data-braille="continuation">we build</p>
+<div class="displaymath">
+\begin{equation*}
+R_{\bar \rho }^{\square, univ}
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _{\bar \rho }^{\square, univ} \colon G \to \GL_d(R_{\bar \rho }^{\square, univ})\text{.}
+\end{equation*}
+</div>
+<p id="p-123">Let \(\{ g_\alpha \}_\alpha \) be a generating set of \(G\text{.}\) Make formal variables \(X_{ij}^\alpha \) for all \(\alpha \text{,}\) \(1 \le i,j \le d\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+R = W(k) \lb \lb \{X_{ij}^\alpha \}\rb \rb 
+\end{equation*}
+</div>
+<p data-braille="continuation">try sending</p>
+<div class="displaymath">
+\begin{equation*}
+g_\alpha  \mapsto (X_{ij}^\alpha ) \in M_d(R)
+\end{equation*}
+</div>
+<p data-braille="continuation">doesn't land in \(\GL_d\text{.}\)</p>
+<p id="p-124">So “add on \(\bar \rho \)”.</p>
+<div class="displaymath">
+\begin{equation*}
+k\to W(k)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+x\mapsto [x]
+\end{equation*}
+</div>
+<p data-braille="continuation">so we get</p>
+<div class="displaymath">
+\begin{equation*}
+\GL_d(k) \xrightarrow{\lb \cdot \rb } \GL_d(W(k))
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lb (a_{ij})_{ij} \rb \mapsto (\lb a_{ij}\rb )_{ij}
+\end{equation*}
+</div>
+<p data-braille="continuation">now send</p>
+<div class="displaymath">
+\begin{equation*}
+g_\alpha  \mapsto (X_{ij}^\alpha ) + \lb \bar \rho (g_\alpha ) \rb  \in \GL_d(R)
+\end{equation*}
+</div>
+<p data-braille="continuation">this does not give a map</p>
+<div class="displaymath">
+\begin{equation*}
+G \to \GL_d(R)
+\end{equation*}
+</div>
+<p data-braille="continuation">because of relations between \(g_\alpha \text{.}\)</p>
+<article class="example example-like" id="example-9"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.30</span><span class="period">.</span>
+</h6>
+<p id="p-125">Take the relation</p>
+<div class="displaymath">
+\begin{equation*}
+g_1 g_2\inv = e
+\end{equation*}
+</div>
+<p data-braille="continuation">need</p>
+<div class="displaymath">
+\begin{equation*}
+((X_{ij}^1) + \lb  \bar\rho  (g_1)\rb )((X_{ij}^2) + \lb  \bar\rho  (g_2)\rb )\inv - 1 = 0
+\end{equation*}
+</div>
+<p data-braille="continuation">this gives \(d^2\) equations in \(R\text{.}\)</p></article><p id="p-126">Can do this in general. In fact the LHS is in \(\ideal m_R\text{.}\) So if \(I\) is the ideal of all relations, then \(I\subseteq \ideal m_R\text{.}\) And let</p>
+<div class="displaymath">
+\begin{equation*}
+R_{\bar \rho }^{univ,\square} = R/I\text{.}
+\end{equation*}
+</div>
+<div class="displaymath" id="p-127">
+\begin{equation*}
+\rho \colon  G \to \GL_d(R/I)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+g_\alpha \mapsto (X_{ij}^\alpha ) + \lb \bar\rho (g_\alpha )\rb \pmod I
+\end{equation*}
+</div>
+<p data-braille="continuation">is a well-defined homomorphism. And it is universal: If</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _A \colon G \to \GL_d (A)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+R\xrightarrow\pi A
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(X_{ij}^\alpha )_{ij} \mapsto (\rho _A(g_\alpha ) - \lb \bar\rho (g_\alpha )\rb )_{ij}
+\end{equation*}
+</div>
+<p data-braille="continuation">then \(\pi \) kills \(I\) (exercise).</p>
+<div class="displaymath" id="p-128">
+\begin{equation*}
+R/I \xrightarrow{\bar \pi } A\text{.}
+\end{equation*}
+</div>
+<article class="exercise exercise-like" id="exercise-11"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-11"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.31</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-11"><article class="exercise exercise-like"><p id="p-129">Check this induces \(\rho _A\) from the universal.</p></article></div>
+<p id="p-130">There are two problems with this, it is not necessary that the universal deformation we have constructed be continuous, or that the universal deformation ring be continuous.</p>
+<p id="p-131">The root of these problems is that  there are potentially too many \(g_\alpha \text{.}\) introduce a condition \(\Phi _p\) that for all open finite index</p>
+<div class="displaymath">
+\begin{equation*}
+G_0 \subseteq G
+\end{equation*}
+</div>
+<p data-braille="continuation">we have</p>
+<div class="displaymath">
+\begin{equation*}
+\Hom(G_0, \FF_p)
+\end{equation*}
+</div>
+<p data-braille="continuation">is finite.</p>
+<article class="exercise exercise-like" id="exercise-12"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-12"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.32</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-12"><article class="exercise exercise-like"><div class="displaymath" id="p-132">
+\begin{equation*}
+\Hom(G_0, \FF_p)
+\end{equation*}
+</div>
+<p data-braille="continuation">is finite if and only if \(G^{pro-p}\) is topologically finitely generated. (this is Gouvea lemma 2.1)</p></article></div>
+<p id="p-133">If \(G = G_K\) with \(K/\QQ_\ell\) finite, WLOG</p>
+<div class="displaymath">
+\begin{equation*}
+G = G_0 = G_K
+\end{equation*}
+</div>
+<p data-braille="continuation">and \(\Phi _p\) holds in this case</p>
+<div class="displaymath">
+\begin{equation*}
+G_K^\ab \simeq \hat K^* \simeq \hat \ZZ \times \ints_K^*
+\end{equation*}
+</div>
+<p data-braille="continuation">an exercise in LCFT</p>
+<div class="displaymath">
+\begin{equation*}
+G_0 \subseteq G_K
+\end{equation*}
+</div>
+<p data-braille="continuation">fin index open then</p>
+<div class="displaymath">
+\begin{equation*}
+G_0 = G_L
+\end{equation*}
+</div>
+<p data-braille="continuation">with \(L/\QQ_p\)</p></article></section></div></main>
 </div>
 <!--Start: Google Classic code-->
 <script>

@@ -642,3 +642,197 @@ section#sec-def-gal-defs
                     &amp;  k &amp; 
                 }
             | commutes.
+
+    aside: p Lecture 4 30/1/2018
+
+    p
+        | Last time: multiplication by #[m c] on #[m R^{univ}] is not a ring map!
+
+
+    exercise
+        statement: p
+            | Show that the #[q bad] definition of deformation (without fixing the isomorphism to #[m \overline V]) can't be representable.
+    exercise
+        statement: p
+            | If #[m \Aut _G(\bar \rho )\supset\neq k^*] show that the correct definition of deformation doesn't lead to a representable functor.
+
+    p
+        | #[m k] finite field of characteristic #[m p].
+        | #[m \mathcal C_k] category of complete local Noetherian rings with a fixed identification
+        me A/\ideal m_A \simeq k
+        | with #[m (A, \ideal m_A)] a local ring, maps are local homomorphisms preserving the fixed identification.
+
+    paragraphs
+        title Witt vectors
+        p
+            | #[m W(k)  = ] Witt vectors of #[m k] and an object of #[m \mathcal C_k].
+            | The maximal ideal of #[m W(k)] is #[m pW(k)].
+            me W(k)/ pW(k) \simeq k
+            me W(k)^\times \to k^\times
+            | this map has a section which is multiplicative.
+            me [x]\mapsfrom x
+
+            | .
+        example
+            statement: p
+                | If #[m k \simeq \FF_{q}], #[m q=p^n] then
+                me W(k) = \ints_{K_n},\, K_n = \QQ_p(\mu _{p^{n}-1})
+                | unramified extension with
+                me \ideal  m_{W(k)} = (p)
+                | take #[m x^{q-1}] and observe that its roots are distinct mod #[m p].
+                | For #[m W(\FF_p) \simeq \ZZ_p].
+        p
+            | #[m \bar x\in k], lift to #[m x\in W(k)]
+            me \lim_{m\to \infty } x^{q^m} = [x]
+            |. 
+        exercise: statement: p Check this.
+
+        p
+            | #[m A\in \mathcal C_k] there exists a unique ring hom
+            me.
+                \xymatrix{
+                W(k) \ar[r] \ar[d] &amp; A \ar[d]\\
+                k \ar[r]  &amp; A/\ideal m_A
+                }
+            | #[m A] is a #[m W(k)]-module.
+
+        p
+            | Moreover, #[m A] is a quotient of #[m W(k)\lb \lb x_1, \ldots, \rb \rb ].
+            | For  #[m A,A' \in \mathcal C_k]
+            me A \xrightarrow\phi A'
+            | in #[m \mathcal C_k] then #[m \phi ] is automatically #[m W(k)]-linear.
+
+    paragraphs
+        title Deformation functor
+        p
+            me \bar \rho  \colon  G \to \GL_d(k)
+            me D_{\bar \rho} \colon \mathcal C_k \to \Set
+            me A \mapsto \{\text{deformations of }\bar \rho  \text{ to } A\} = \{\rho \colon G \to \GL_d(A) \text{ lifting }\bar \rho \}/\text{strict equiv.}
+            | .
+        p
+            | Given
+            me R\in \mathcal C_k
+            | we have
+            me F_R \colon  \mathcal C_k \to \Set
+            me A \mapsto \Hom (R, A)
+            | .
+        exercise: statement: p If #[m A\xrightarrow\phi A'] is a local ring Hom which is #[m W(k)]-linear then #[m \phi ] is a map in #[m \mathcal C_k].
+
+    definition#def-gal-rep
+        title Representable functors
+        statement: p
+            | Any functor
+            me F \colon  \mathcal C_k \to \Set
+            | is said to be representable if there exists  #[m R \in \mathcal C_k] such that
+            me F \simeq F_R
+            | .
+    p
+        | To say #[m D_{\bar \rho }] is representable says that
+        me \exists R_{\bar \rho }^{univ} \in\mathcal C_k
+        | such that
+        me D_{\bar \rho } (A) \simeq \Hom(R_{\bar \rho }^{univ}, A)
+        | which is functorial in #[m A].
+    p
+        | In this set-up take #[m A = R_{\bar \rho }^{univ}].
+        | Then
+        me D_{\bar \rho }(R_{\bar \rho }^{univ}) \simeq \Hom(R_{\bar \rho }^{univ},R_{\bar \rho }^{univ}) \ni \mathbf 1
+        | so this corresponds to some #[m V^{univ}]
+
+    p
+        | Now given
+        me \rho _A \colon G \to \GL_d(A) \simeq \Aut(V_A)
+        | we have #[m \rho _A \in D_{\bar \rho }(A) \simeq \Hom(R_{\bar \rho }^{univ}, A)], so we get some #[m \phi \colon  R_{\bar \rho }^{univ} \to A].
+        | Giving a diagram
+        me.
+            \xymatrix{
+            D_{\bar \rho }(R_{\bar \rho }^{univ} ) \ar[r]^{\sim} \ar[d]_\phi  &amp; \Hom(R_{\bar \rho }^{univ}, R_{\bar \rho }^{univ})\ni \mathbf 1 \ar[d] \\
+            D_{\bar \rho }(A                     ) \ar[r]^{\sim}              &amp; \Hom(R_{\bar \rho }^{univ}, A                    ) \ni \phi }
+        | .
+
+    paragraphs
+        title Framed deformations
+        p
+            me  D_{\bar \rho }^{\square} (A)  = \{ \rho \colon G\to \GL_d(A)\text{ lifting }\bar \rho \}
+            | we will prove that
+            me D_{\bar \rho }^{\square}
+            | is in fact representable.D_{\bar \rho }^{\square}
+        p
+            me \bar \rho  \colon  G \to \GL_d(k)
+            | we build 
+            me R_{\bar \rho }^{\square, univ}
+            | and
+            me \rho _{\bar \rho }^{\square, univ} \colon G \to \GL_d(R_{\bar \rho }^{\square, univ})
+            | .
+        p
+            | Let #[m \{ g_\alpha \}_\alpha ] be a generating set of #[m G].
+            | Make formal variables #[m X_{ij}^\alpha ] for all #[m \alpha ], #[m 1 \le i,j \le d].
+            me R = W(k) \lb \lb \{X_{ij}^\alpha \}\rb \rb 
+            | try sending
+            me g_\alpha  \mapsto (X_{ij}^\alpha ) \in M_d(R)
+            | doesn't land in #[m \GL_d].
+        p
+            | So #[q add on <m> \bar \rho </m>].
+            me k\to W(k)
+            me x\mapsto [x]
+            | so we get
+            me \GL_d(k) \xrightarrow{\lb \cdot \rb } \GL_d(W(k))
+            me \lb (a_{ij})_{ij} \rb \mapsto (\lb a_{ij}\rb )_{ij}
+            | now send
+            me g_\alpha  \mapsto (X_{ij}^\alpha ) + \lb \bar \rho (g_\alpha ) \rb  \in \GL_d(R)
+            | this does not give a map
+            me G \to \GL_d(R)
+            | because of relations between #[m g_\alpha ].
+        example: statement: p
+            | Take the relation
+            me g_1 g_2\inv = e
+            | need
+            me ((X_{ij}^1) + \lb  \bar\rho  (g_1)\rb )((X_{ij}^2) + \lb  \bar\rho  (g_2)\rb )\inv - 1 = 0
+            | this gives #[m d^2] equations in #[m R].
+        p
+            | Can do this in general.
+            | In fact the LHS is in #[m \ideal m_R].
+            | So if #[m I] is the ideal of all relations, then #[m I\subseteq \ideal m_R].
+            | And let
+            me R_{\bar \rho }^{univ,\square} = R/I
+            | . 
+        p
+            me \rho \colon  G \to \GL_d(R/I)
+            me g_\alpha \mapsto (X_{ij}^\alpha ) + \lb \bar\rho (g_\alpha )\rb \pmod I
+            | is a well-defined homomorphism.
+            | And it is universal:
+            | If
+            me \rho _A \colon G \to \GL_d (A)
+            me R\xrightarrow\pi A
+            me (X_{ij}^\alpha )_{ij} \mapsto (\rho _A(g_\alpha ) - \lb \bar\rho (g_\alpha )\rb )_{ij}
+            | then #[m \pi ] kills #[m I] (exercise).
+        p
+            me R/I \xrightarrow{\bar \pi } A
+            | .
+        exercise
+            statement: p
+                | Check this induces #[m \rho _A] from the universal.
+
+        p
+            | There are two problems with this, it is not necessary that the universal deformation we have constructed be continuous, or that the universal deformation ring be continuous.
+
+        p
+            | The root of these problems is that  there are potentially too many #[m g_\alpha ].
+            | introduce a condition #[m \Phi _p] that for all open finite index
+            me G_0 \subseteq G
+            | we have
+            me \Hom(G_0, \FF_p)
+            | is finite.
+        exercise: statement: p
+            me \Hom(G_0, \FF_p)
+            | is finite if and only if #[m G^{pro-p}] is topologically finitely generated. (this is Gouvea lemma 2.1)
+
+        p
+            | If #[m G = G_K] with #[m K/\QQ_\ell] finite, WLOG
+            me G = G_0 = G_K
+            | and #[m \Phi _p] holds in this case
+            me G_K^\ab \simeq \hat K^* \simeq \hat \ZZ \times \ints_K^*
+            | an exercise in LCFT
+            me G_0 \subseteq G_K
+            | fin index open then
+            me G_0 = G_L
+            | with #[m L/\QQ_p]

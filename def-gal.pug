@@ -10,7 +10,7 @@ section#sec-def-gal-motivation
     title Motivation
 
     introduction
-        aside: p Lecture 1 21/1/2018
+        aside: p Lecture 1 21/1/2020
         p
             | Let #[m E_k] denote the Eisenstein series of weight #[m k], #[m k\gt 2].
             me E_k = \frac{-B_{k}}{2k} + \sum_{n=1}^\infty \sigma _{k-1} (n) q^n \in M_k(\SL_2(\ZZ))
@@ -179,7 +179,7 @@ section#sec-def-gal-defs
 
     subsection
         title Representations
-        aside: p Lecture 2 23/1/2018
+        aside: p Lecture 2 23/1/2020
 
         definition#def-def-gal-rep
             title Representations
@@ -448,7 +448,7 @@ section#sec-def-gal-defs
 
     subsection
         title More examples of Galois representations in families
-        aside: p Lecture 3 28/1/2018
+        aside: p Lecture 3 28/1/2020
 
         paragraphs
             title A 1-dimensional family
@@ -616,7 +616,7 @@ section#sec-def-gal-defs
             me.
                 \xymatrix{
                 G \ar[r]^{\rho } \ar[dr]_{\bar\rho }&amp; \GL_d(A)\ar[d]\\
-                    &amp; \GL_d(k)
+                    &amp; \GL_d(k) 
                 }
 
             | lift of #[m \bar \rho ] and say two #[m \rho ]'s are the same if they are equal as maps, this is a #[term framed deformation].
@@ -643,7 +643,7 @@ section#sec-def-gal-defs
                 }
             | commutes.
 
-        aside: p Lecture 4 30/1/2018
+        aside: p Lecture 4 30/1/2020
 
         p
             | Last time: multiplication by #[m c] on #[m R^{univ}] is not a ring map!
@@ -836,3 +836,196 @@ section#sec-def-gal-defs
                 | fin index open then
                 me G_0 = G_L
                 | with #[m L/\QQ_p]
+        aside: p Lecture 4 4/2/2020
+
+        paragraphs
+            title Redo
+
+            p
+                me  D_{\bar \rho }^{\square} \colon  \mathcal C \to \Set
+                me.
+                    A \mapsto \left\{
+                    \xymatrix{
+                    G \ar[r]^{\rho } \ar[dr]_{\bar\rho }&amp; \GL_d(A)\ar[d]\\
+                        &amp; \GL_d(k)
+                        } \right\}
+            p
+                me  D_{\bar \rho }\colon  \mathcal C \to \Set
+                me.
+                    A \mapsto D_{\bar \rho }^{\square} /\text{strict equiv.}
+            theorem
+                statement: p
+                    ol
+                        li
+                            | #[m D_{\bar \rho }^{\square}] is representable (by #[m R_{\bar \rho }^{\square} ])
+                        li
+                            | If #[m \Aut_G \bar \rho = k^\times] then #[m D_{\bar\rho }] is representable (#[m R_{\bar\rho }]).
+
+            p
+                | Universal property:
+                | framed case:
+                me \exists \rho _{univ}^{\square} \colon G \to \GL_d(R_{\bar \rho }^\square)
+                | s.t. if #[m \rho  _A] is a lift of #[m \bar \rho ] to #[m A ]then there exists a unique
+                me R_{\bar \rho }^\square \xrightarrow\phi  A
+                | which is in #[m \mathcal C] s.t.
+                me.
+                    \xymatrix{
+                    G \ar[r]^{\rho_{univ}^\square } \ar[dr]_{\rho _A}&amp; \GL_d(A)\ar[d]^{\phi ^*}\\
+                        &amp; \GL_d(A)
+                        }
+            p
+                | unframed case:
+                | there exists a deformation #[m \lb \rho _{univ}\rb ] of #[m \bar \rho ] to #[m R_{\bar \rho }] s.t. if #[m \lb  \rho _A \rb ] is a deformation of #[m \bar \rho ] to #[m A]  then there exists a unique 
+                me R_{\bar \rho } \xrightarrow\phi A
+                | s.t
+                me \phi ^*(\lb \rho _{univ}) = \lb \rho _A\rb 
+                | .
+            p
+                me D_{\bar \rho}  ^\square(R_{\bar \rho }^\square ) = \Hom (R_{\bar \rho }^\square, R_{\bar \rho }^\square )
+                me \rho _{univ}^\square \leftrightarrow \mathbf 1
+                |.
+            exercise
+                statement: p
+                    | Check this universal property (also unframed case).
+
+
+        paragraphs
+            title Last time
+            p
+                me R_{\bar \rho }^\square = W(k) \lb \lb  \left\{ X_{ij}^\alpha \right\}_{i,j,\alpha } \rb \rb / I_{relations}
+
+                |.
+
+
+            p
+                | Introduced the condition
+                me \Phi _p \forall  \text{ open finite index } G_0 \subseteq G,\ \Hom(G_0, \FF_p)\text{ is finite}
+                | .
+            p
+                | This condition holds for #[m G_K] when #[m K/\QQ_\ell] is finite.
+            p
+                | However it is false for #[m G_K] when #[m K/\QQ] is finite.
+                | Such as #[m K = \QQ].
+                | As for #[m \ell\equiv  1 \pmod p] then
+                me G_\QQ \to \Gal{\QQ(\mu _\ell)}\QQ \to \FF_p
+                | and there are infinitely many such #[m \ell]'s
+            p
+                | This is not a problem as the representations we are interested in, those coming from elliptic curves and modular forms, have good reduction outside a finite set of primes #[m S]. We may encode this into our deformation problem as follows:
+                | Let #[m K/\QQ] finite and #[m S] a finite set of places of #[m K] and
+                me K_S
+                | be the maximal extension of #[m K] unramified outside of #[m S].
+                | Then
+                me G_{K,S} = \Gal {K_S}K
+                | .
+                | And #[m \Phi _p] is true of #[m G_{K,S}].
+                | The proof is an exercise in Global CFT.
+                | Silverman #[m VIII] prop. 1.6.
+
+
+            p
+                | #[m H] profinite, let #[m H^{\text{pro-}p}] be the maximal pro-#[m p] quotient of #[m H].
+            exercise
+                statement: p
+                    |#[m \Hom(H, \FF_p)] finite implies that #[m H^{\text{pro-}p}] is topologically finitely generated. This is an equivalence in fact (lemma 2.1 Gouvea).
+
+
+        paragraphs
+            title Existence of the framed deformation ring (take II)
+
+            p
+                | Assume #[m G ] satisfies #[m \Phi _p].
+                me \bar \rho  \colon  G \to \GL_d(k)
+                | , #[m H = \ker(\bar \rho )] is finite index in  #[m G].
+                | Let
+                me \rho _A \colon  G \to \GL_d(A)
+                | lift #[m \bar \rho ].
+                me \rho _A (H) \subseteq \ker(\GL_d(A) \to \GL_d(k))
+                |.
+
+            exercise
+                statement: p
+                    | Prove this is pro-#[m p].
+            p
+                | Hence #[m \rho _A |_H] factors through #[m H^{\text{pro-}p}].
+
+            p
+                | Pick topological generators #[m g_1,\ldots, g_s ] of #[m H^{\text{pro-}p}] (via #[m \Phi _p]).
+                | Pick coset representatives #[m g_s,\ldots, g_t ] of #[m G/H].
+
+            p
+                | Run the argument from last time to get
+                me R_{\bar \rho }^\square = W(k) \lb \lb \left\{ X_{ij}^\alpha \right\}_{\alpha =1,\ldots, t,\,i,j = 1,\ldots, d}\rb \rb /\overline { I_{rel}}
+                |.
+
+        paragraphs
+            title Space of universal framed deformations
+            p
+                me \Hom (R_{\bar \rho }^\square, A)
+
+            p
+                | For unframed deformations it can be the casee that we even have that
+                me R_{\bar \rho  } \simeq \ZZ_p \lb \lb  X_1, X_2, X_3\rb \rb
+                me A = \ZZ_p
+                me D_{\bar \rho  } (\ZZ_p)  = \Hom_{\mathcal C}(\ZZ_p\lb \lb X_1,X_2,X_3\rb \rb , \ZZ_p ) \simeq (p\ZZ_p)^3
+                |.
+            p
+                | To prove this space exists for unframed deformations, we have 3 options
+            p
+                ol
+                    li
+                        | We should have a bigger space of framed deformations in general, which should quotient down to that of unframed deformations, by forgetting the framing.
+                        |Then we could construct #[m R_{\bar\rho }] using this quotient.
+                        | Kisin's notes chapter 3.
+
+                    li
+                        | Pseudo-deformations (for later).
+                    li
+                        |Schlessinger's criterion.
+
+
+        paragraphs
+            title One dimensional examples
+            p
+                me.
+                    \xymatrix{
+                    G \ar[r]^{\bar \rho = \bar \chi } \ar[dr]_{\chi _A}  &amp; \GL_1(k)  = k^\times \\
+                    &amp; A^\times \ar[u] 
+                    }
+                | .
+                me 1 \to 1+ \ideal m_A \to A^\times \to k^\times \to 1
+
+                me A^\times\simeq k^\times \times(1+ \ideal m_A)
+                | last term is free and #[m k^\times] is determined by #[m \bar chi].
+            p
+                | Need
+                me.
+                    \xymatrix{
+                    G \ar[r]  &amp; 1 +\ideal m_A\\
+                    &amp; G^{\ab, \text{pro-}p} \ar[u] 
+                    }
+            p
+                | Any
+                me \chi  \colon G^{\ab, \text{pro-}p} \to 1+\ideal m_A
+                | fives a deformation of #[m \bar\chi ].
+
+            claim
+                statement: p
+                    me W(k) \lb \lb  G^{\ab, \text{pro-}p} \rb \rb  \simeq R_{\bar\chi }
+                    me \Hom_{\mathcal C } (W(k) \lb \lb G^{\ab, \text{pro-}p}  \rb \rb  , A) \simeq \Hom (G^{\ab, \text{pro-}p} , A^\times)
+                    | .
+
+            p
+                | The universal character is then
+                me  G \to G^{\ab, \text{pro-}p} \to W(k) \lb \lb  G^{\ab, \text{pro-}p} \rb \rb  
+                me \sigma  \mapsto \sigma  \mapsto \langle \sigma  \rangle \lb  \bar \chi  (\sigma )\rb 
+                | .
+                me \chi _A \colon  G \to A^*
+                | ????????? check commutes
+
+            example
+                statement: p
+                    | #[m G = G_{\QQ,\left\{p,\infty \right\}}] 
+                    me G^{\ab} = G_{\QQ,\left\{p,\infty \right\}}^ab=\Gal{\QQ(\mu _{p^ \infty })}\QQ \simeq \ZZ_p^*
+                    me  G^{\ab, \text{pro-}p} \simeq 1 + p\ZZ_p \simeq \ZZ_p
+
+                    | #[m R_{\bar \chi }  = \ZZ_p \lb \lb  1+ p \ZZ_p\rb \rb  \simeq \ZZ_p\lb \lb T\rb \rb]

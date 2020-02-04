@@ -603,7 +603,7 @@ section#sec-def-gal-defs
                 \xymatrix{
                 V_1\ar[r]^\phi\ar[d]  &amp; V_2\ar[d] \\
                 V_1\otimes A/\ideal m_A\ar[d]_\sim  &amp; V_2\otimes A/\ideal m_A \ar[d]_\sim \\
-                \overline V\ar[r]^=  &amp;\overline V 
+                \overline V\ar[r]^{\id}  &amp;\overline V 
                 }
             |.
         exercise
@@ -878,7 +878,7 @@ section#sec-def-gal-defs
                 | there exists a deformation #[m \lb \rho _{univ}\rb ] of #[m \bar \rho ] to #[m R_{\bar \rho }] s.t. if #[m \lb  \rho _A \rb ] is a deformation of #[m \bar \rho ] to #[m A]  then there exists a unique 
                 me R_{\bar \rho } \xrightarrow\phi A
                 | s.t
-                me \phi ^*(\lb \rho _{univ}) = \lb \rho _A\rb 
+                me \phi ^*(\lb \rho _{univ})\rb  = \lb \rho _A\rb 
                 | .
             p
                 me D_{\bar \rho}  ^\square(R_{\bar \rho }^\square ) = \Hom (R_{\bar \rho }^\square, R_{\bar \rho }^\square )
@@ -950,7 +950,7 @@ section#sec-def-gal-defs
 
             p
                 | Pick topological generators #[m g_1,\ldots, g_s ] of #[m H^{\text{pro-}p}] (via #[m \Phi _p]).
-                | Pick coset representatives #[m g_s,\ldots, g_t ] of #[m G/H].
+                | Pick coset representatives #[m g_{s+1},\ldots, g_t ] of #[m G/H].
 
             p
                 | Run the argument from last time to get
@@ -963,7 +963,7 @@ section#sec-def-gal-defs
                 me \Hom (R_{\bar \rho }^\square, A)
 
             p
-                | For unframed deformations it can be the casee that we even have that
+                | For unframed deformations it can be the case that we even have that
                 me R_{\bar \rho  } \simeq \ZZ_p \lb \lb  X_1, X_2, X_3\rb \rb
                 me A = \ZZ_p
                 me D_{\bar \rho  } (\ZZ_p)  = \Hom_{\mathcal C}(\ZZ_p\lb \lb X_1,X_2,X_3\rb \rb , \ZZ_p ) \simeq (p\ZZ_p)^3

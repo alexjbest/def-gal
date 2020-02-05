@@ -878,7 +878,7 @@ section#sec-def-gal-defs
                 | there exists a deformation #[m \lb \rho _{univ}\rb ] of #[m \bar \rho ] to #[m R_{\bar \rho }] s.t. if #[m \lb  \rho _A \rb ] is a deformation of #[m \bar \rho ] to #[m A]  then there exists a unique 
                 me R_{\bar \rho } \xrightarrow\phi A
                 | s.t
-                me \phi ^*(\lb \rho _{univ})\rb  = \lb \rho _A\rb 
+                me \phi ^*(\lb \rho _{univ}\rb)  = \lb \rho _A\rb 
                 | .
             p
                 me D_{\bar \rho}  ^\square(R_{\bar \rho }^\square ) = \Hom (R_{\bar \rho }^\square, R_{\bar \rho }^\square )
@@ -995,18 +995,18 @@ section#sec-def-gal-defs
                 me 1 \to 1+ \ideal m_A \to A^\times \to k^\times \to 1
 
                 me A^\times\simeq k^\times \times(1+ \ideal m_A)
-                | last term is free and #[m k^\times] is determined by #[m \bar chi].
+                | last term is free and #[m k^\times] is determined by #[m \bar \chi].
             p
                 | Need
                 me.
                     \xymatrix{
-                    G \ar[r]  &amp; 1 +\ideal m_A\\
+                    G \ar[r]\ar[dr]  &amp; 1 +\ideal m_A\\
                     &amp; G^{\ab, \text{pro-}p} \ar[u] 
                     }
             p
                 | Any
                 me \chi  \colon G^{\ab, \text{pro-}p} \to 1+\ideal m_A
-                | fives a deformation of #[m \bar\chi ].
+                | fixes a deformation of #[m \bar\chi ].
 
             claim
                 statement: p
@@ -1025,7 +1025,7 @@ section#sec-def-gal-defs
             example
                 statement: p
                     | #[m G = G_{\QQ,\left\{p,\infty \right\}}] 
-                    me G^{\ab} = G_{\QQ,\left\{p,\infty \right\}}^ab=\Gal{\QQ(\mu _{p^ \infty })}\QQ \simeq \ZZ_p^*
+                    me G^{\ab} = G_{\QQ,\left\{p,\infty \right\}}^\ab=\Gal{\QQ(\mu _{p^ \infty })}\QQ \simeq \ZZ_p^*
                     me  G^{\ab, \text{pro-}p} \simeq 1 + p\ZZ_p \simeq \ZZ_p
 
                     | #[m R_{\bar \chi }  = \ZZ_p \lb \lb  1+ p \ZZ_p\rb \rb  \simeq \ZZ_p\lb \lb T\rb \rb]

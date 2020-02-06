@@ -1677,7 +1677,351 @@ G^{\ab} = G_{\QQ,\left\{p,\infty \right\}}^\ab=\Gal{\QQ(\mu _{p^ \infty })}\QQ \
 G^{\ab, \text{pro-}p} \simeq 1 + p\ZZ_p \simeq \ZZ_p
 \end{equation*}
 </div>
-<p data-braille="continuation">\(R_{\bar \chi }  = \ZZ_p \lb \lb  1+ p \ZZ_p\rb \rb  \simeq \ZZ_p\lb \lb T\rb \rb\)</p></article></article></section></section></div></main>
+<p data-braille="continuation">\(R_{\bar \chi }  = \ZZ_p \lb \lb  1+ p \ZZ_p\rb \rb  \simeq \ZZ_p\lb \lb T\rb \rb\)</p></article></article><aside class="aside aside-like" id="aside-6"><p id="p-164">Lecture 5 6/2/2020</p></aside><p id="p-165">Today we will assume throughout that</p>
+<div class="displaymath">
+\begin{equation*}
+\Aut_G(\bar \rho  ) \simeq k^*
+\end{equation*}
+</div>
+<p data-braille="continuation">so that there exists</p>
+<div class="displaymath">
+\begin{equation*}
+R_{\bar \rho }
+\end{equation*}
+</div>
+<p data-braille="continuation">the universal deformation ring, although we didn't prove this yet.</p>
+<p id="p-166">Let \(A\in \mathcal C\text{,}\) we define the cotangent space of \(A\) to be</p>
+<div class="displaymath">
+\begin{equation*}
+t_A^*  = \ideal m _A / \ideal m_A ^2 + pA
+\end{equation*}
+</div>
+<p data-braille="continuation">the tangent space is then</p>
+<div class="displaymath">
+\begin{equation*}
+t_A = \Hom(t_A^*, k)\text{.}
+\end{equation*}
+</div>
+<article class="example example-like" id="example-11"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.39</span><span class="period">.</span>
+</h6>
+<div class="displaymath" id="p-167">
+\begin{equation*}
+A = W(k) \lb \lb X_1, \ldots, X_d\rb \rb 
+\end{equation*}
+</div>
+<p data-braille="continuation">and \(\ideal m_A = (p, X_1, \ldots, X_d)\) then</p>
+<div class="displaymath">
+\begin{equation*}
+t_A^* = \frac{(p, X_1, \ldots, X_d)}{(p, \{X_iX_j\}_{ij})} \simeq kX_1\oplus \cdots kX_d\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">so this is \(d\)-dimensional and we see that we just have linear terms, which is consistent with the tangency interpretation.</p></article><article class="fact theorem-like" id="fact-5"><h6 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">2.40</span><span class="period">.</span>
+</h6>
+<div class="displaymath" id="p-168">
+\begin{equation*}
+\dim(A/pA) \le \dim_k t_A
+\end{equation*}
+</div>
+<p data-braille="continuation">where the LHS is the Krull dimension (the length of the longest chain of prime ideals), let \(d = \dim t_A\text{,}\) then Nakayama's lemma implies \(d\) is the minimal number of generators of</p>
+<div class="displaymath">
+\begin{equation*}
+\ideal m_A/pA\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+W(k) \lb \lb X_1, \ldots, X_d\rb \rb  \twoheadrightarrow A
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+X_i \mapsto \text{gen of } \ideal m_A/pA\text{.}
+\end{equation*}
+</div></article><article class="paragraphs" id="paragraphs-11"><h5 class="heading"><span class="title">Tangent spaces and deformations.</span></h5>
+<p id="p-169">Let</p>
+<div class="displaymath">
+\begin{equation*}
+k\lb \epsilon \rb  = k\lb x\rb /(x^2)
+\end{equation*}
+</div>
+<p data-braille="continuation">then \(\epsilon  = \bar x\) and we have \(\epsilon ^2 =0\text{.}\) These are known as the dual numbers.</p>
+<article class="proposition theorem-like" id="proposition-1"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.41</span><span class="period">.</span>
+</h6>
+<div class="displaymath" id="p-170">
+\begin{equation*}
+\Hom_{\mathcal C} (A, k\lb \epsilon \rb ) \simeq t_A
+\end{equation*}
+</div>
+<p data-braille="continuation">for \(A \in \mathcal C\text{.}\)</p></article><article class="hiddenproof" id="proof-1"><a data-knowl="" class="id-ref original" data-refid="hk-proof-1"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><div class="displaymath" id="p-171">
+\begin{equation*}
+\Hom_{\mathcal C} (A, k\lb \epsilon \rb ) \simeq \Hom_{\mathcal C} (A/\ideal m_A^2 + pA, k\lb \epsilon \rb ) 
+\end{equation*}
+</div>
+<p data-braille="continuation">since</p>
+<div class="displaymath">
+\begin{equation*}
+(\ideal m_{k\lb \epsilon \rb })^2 = 0
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+p = 0 \in k\lb \epsilon \rb \text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+A/\ideal m_A^2 + pA \simeq k \oplus \ideal m_A/\ideal m_A^2 + pA
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+x\mapsto (\bar x, x - \lb \bar x\rb  )
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lb \bar x\rb + y  \mapsfrom (\bar x, y)
+\end{equation*}
+</div>
+<p data-braille="continuation">as \(k\)-vector spaces.</p>
+<div class="displaymath">
+\begin{equation*}
+k\lb \epsilon \rb   \simeq k \oplus \epsilon  k\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Hom_{\mathcal C} (A/\ideal m_A^2 + pA, k\lb \epsilon \rb )  \simeq  \Hom_{\mathcal C} (A/\ideal m_A^2 + pA, \epsilon  k )  \simeq t_A
+\end{equation*}
+</div>
+<p data-braille="continuation">where now we take homomorphisms of \(k\)-vector spaces.</p></article></div>
+<p id="p-172">Take \(A = R_{\bar \rho }\) then the proposition implies</p>
+<div class="displaymath">
+\begin{equation*}
+D_{\bar \rho } (k\lb \epsilon \rb ) \simeq t_{R_{\bar\rho }}
+\end{equation*}
+</div>
+<p data-braille="continuation">to deform</p>
+<div class="displaymath">
+\begin{equation*}
+\bar \rho 
+\end{equation*}
+</div>
+<p data-braille="continuation">to \(k\lb \epsilon \rb \)</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _\epsilon(g)  = \bar \rho (g) + \epsilon \phi  (g)
+\end{equation*}
+</div>
+<p data-braille="continuation">for some</p>
+<div class="displaymath">
+\begin{equation*}
+g\mapsto \phi  (g)  \in M_d(k)
+\end{equation*}
+</div>
+<p data-braille="continuation">with</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{
+G \ar[r]^{\rho _\epsilon } \ar[dr]_{\bar\rho }  &amp; \GL_d(k\lb \epsilon \rb )\ar[d]\\
+&amp; \GL_d(k)
+}\text{.}
+\end{equation*}
+</div>
+<p id="p-173">We know</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _\epsilon  (gh) = \rho _\epsilon (g) \rho _\epsilon (h)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\bar \rho  (gh) + \epsilon  \phi (gh) = (\bar \rho (g) + \epsilon   \phi (g))(\bar \rho (h) + \epsilon  \phi (h))
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \bar \rho (g)\bar \rho (h) + \epsilon  ( \phi (g)\bar \rho (h)  +\bar \rho   (g) \phi (h))
+\end{equation*}
+</div>
+<p data-braille="continuation">so</p>
+<div class="displaymath">
+\begin{equation*}
+\phi (gh) =   \phi (g) \bar \rho (h)+\bar \rho   (g) \phi (h)
+\end{equation*}
+</div>
+<p data-braille="continuation">scale on the right by</p>
+<div class="displaymath">
+\begin{equation*}
+\bar \rho  (h)\inv  \bar \rho (g)\inv  = \bar \rho (gh)\inv \text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\phi (gh) \bar \rho (gh)\inv  =   \phi (g) \bar \rho (g)\inv +\bar \rho   (g) \phi (h) \bar \rho  (h)\inv \bar \rho (g)\inv 
+\end{equation*}
+</div>
+<p data-braille="continuation">set</p>
+<div class="displaymath">
+\begin{equation*}
+\psi (g)  = \phi (g) \bar \rho (g)\inv 
+\end{equation*}
+</div>
+<p data-braille="continuation">so</p>
+<div class="displaymath">
+\begin{equation*}
+\psi  (gh) = \psi (g) + \bar \rho  ( g) \psi (h) \bar \rho (g)\inv 
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\psi (h) \in M_d(k) \simeq \End(\bar \rho )\acts G
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\End (\bar  \rho ) = \Hom(V_{\bar \rho  },V_{\bar \rho  }) = \ad(\bar \rho )
+\end{equation*}
+</div>
+<p data-braille="continuation">this is the representation where</p>
+<div class="displaymath">
+\begin{equation*}
+g \bullet M = \bar \rho  (g) M \bar \rho (g)\inv \text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\psi   \in Z^1 (G, \ad(\bar \rho ))
+\end{equation*}
+</div>
+<p data-braille="continuation">so we get a map</p>
+<div class="displaymath">
+\begin{equation*}
+\{ \text{lifts of }\bar \rho \} \to Z^1(G, \ad \bar \rho )\text{.}
+\end{equation*}
+</div>
+<article class="exercise exercise-like" id="exercise-16"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-16"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.42</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-16"><article class="exercise exercise-like"><p id="p-174">Strictly equivalent lifts yield cocyles differing by coboundaries.</p></article></div>
+<article class="proposition theorem-like" id="proposition-2"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.43</span><span class="period">.</span>
+</h6>
+<div class="displaymath" id="p-175">
+\begin{equation*}
+t_{R_{\bar \rho }}\simeq D_{\bar \rho  }( k\lb \epsilon \rb ) \simeq H^1(G, \ad \bar \rho )
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+D^\square_{\bar \rho  }( k\lb \epsilon \rb ) \simeq Z^1(G, \ad \bar \rho )
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="exercise-17"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-17"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.44</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-17"><article class="exercise exercise-like"><p id="p-176">Prove this.</p></article></div>
+<article class="exercise exercise-like" id="exercise-18"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-18"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.45</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-18"><article class="exercise exercise-like"><p id="p-177">Show that \(\forall \bar\rho \text{,}\) \(H^1(G, \ad \bar \rho )\) is finite dimensional if and only if \(G\) satisfies \(\Phi _p\text{.}\)</p></article></div>
+<p id="p-178">Let</p>
+<div class="displaymath">
+\begin{equation*}
+d_1 = \dim_k H^1(G, \ad \bar \rho )
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+0 \to I \to W(k)\lb \lb X_1, \ldots, X_{d_1}\rb \rb  \to R_{\bar \rho } \to 0\text{.}
+\end{equation*}
+</div>
+<p id="p-179">How  big is \(I\text{?}\) This is equivalent to finding lower bounds on \(\dim R_{\bar \rho }\text{.}\) Obstruction to lifting \(\bar \rho \text{.}\)</p>
+<div class="displaymath" id="p-180">
+\begin{equation*}
+\xymatrix{
+G \ar[r]^{\exists ? \rho } \ar[dr]_{\bar\rho }  &amp; \GL_d(\ZZ/p^2)\ar[d]\\
+&amp; \GL_d(\FF_p)
+}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">If we choose a set map \(\rho \) then we can set</p>
+<div class="displaymath">
+\begin{equation*}
+\phi (g,h) = \rho (gh) \rho (h)\inv \rho (g)\inv \in 1+  p M_d(\FF_p)
+\end{equation*}
+</div>
+<p data-braille="continuation">in the sequence</p>
+<div class="displaymath">
+\begin{equation*}
+1 \to 1+ p M_d(\FF_p) \to \GL_d(\ZZ/p^2) \to \GL_d(\FF_p) \to 1
+\end{equation*}
+</div>
+<p data-braille="continuation">where</p>
+<div class="displaymath">
+\begin{equation*}
+1+ pM_d(\FF_p) \simeq M_d(\FF_p) \simeq \End(\bar \rho )\text{.}
+\end{equation*}
+</div>
+<article class="claim theorem-like" id="claim-2"><h6 class="heading">
+<span class="type">Claim</span><span class="space"> </span><span class="codenumber">2.46</span><span class="period">.</span>
+</h6>
+<div class="displaymath" id="p-181">
+\begin{equation*}
+\phi (g,h) \in Z^2(G, \ad \bar \rho )
+\end{equation*}
+</div></article><p id="p-182">The condition to be such a cocycle is</p>
+<div class="displaymath">
+\begin{equation*}
+a \bullet \phi (b,c) - \phi (ab,c) + \phi (a,bc) - \phi (a,b) = 0\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">So we do a long calculation, using the fact that the kernel is abelian.</p>
+<p id="p-183">Exercise check that changing \(\rho \) changes by a coboundary.</p>
+<div class="displaymath">
+\begin{equation*}
+\phi \in H^2(G, \ad \bar \rho )\text{.}
+\end{equation*}
+</div>
+<p id="p-184">More generally</p>
+<div class="displaymath">
+\begin{equation*}
+A_1 \xtwoheadrightarrow {\pi } A_0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+I = \ker \pi 
+\end{equation*}
+</div>
+<p data-braille="continuation">s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+\ideal m_{A_1} I = 0
+\end{equation*}
+</div>
+<p data-braille="continuation">so \(I\) is a \(k\)-vector space.</p>
+<div class="displaymath" id="p-185">
+\begin{equation*}
+\phi (g,h) = \rho _1(gh) \rho _1(h)\inv \rho _1(g)\inv  \equiv  1 \pmod I
+\end{equation*}
+</div>
+<p data-braille="continuation">so in</p>
+<div class="displaymath">
+\begin{equation*}
+1 + M_d(I) \simeq 1 + M_d(k) \otimes I
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\simeq \ad \bar \rho  \otimes I\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\phi  \in H^2(G,\ad \bar \rho  ) \otimes I\text{.}
+\end{equation*}
+</div></article></section></section></div></main>
 </div>
 <!--Start: Google Classic code-->
 <script>

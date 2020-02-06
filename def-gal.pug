@@ -1029,3 +1029,182 @@ section#sec-def-gal-defs
                     me  G^{\ab, \text{pro-}p} \simeq 1 + p\ZZ_p \simeq \ZZ_p
 
                     | #[m R_{\bar \chi }  = \ZZ_p \lb \lb  1+ p \ZZ_p\rb \rb  \simeq \ZZ_p\lb \lb T\rb \rb]
+        aside: p Lecture 5 6/2/2020
+
+
+        p
+            | Today we will assume throughout that
+            me \Aut_G(\bar \rho  ) \simeq k^*
+            | so that there exists
+            me R_{\bar \rho }
+            | the universal deformation ring, although we didn't prove this yet.
+
+
+        p
+            | Let #[m A\in \mathcal C], we define the cotangent space of #[m A] to be
+            me t_A^*  = \ideal m _A / \ideal m_A ^2 + pA
+            | the tangent space is then
+            me t_A = \Hom(t_A^*, k)
+            | .
+
+        example
+            statement: p
+                me A = W(k) \lb \lb X_1, \ldots, X_d\rb \rb 
+                | and #[m \ideal m_A = (p, X_1, \ldots, X_d)]
+                | then
+                me t_A^* = \frac{(p, X_1, \ldots, X_d)}{(p, \{X_iX_j\}_{ij})} \simeq kX_1\oplus \cdots kX_d
+                | , so this is #[m d]-dimensional and we see that we just have linear terms, which is consistent with the tangency interpretation.
+
+
+        fact
+            statement: p
+                me \dim(A/pA) \le \dim_k t_A
+                | where the LHS is the Krull dimension (the length of the longest chain of prime ideals), let #[m d = \dim t_A], then Nakayama's lemma implies #[m d] is the minimal number of generators of
+                me \ideal m_A/pA
+                | .
+                me W(k) \lb \lb X_1, \ldots, X_d\rb \rb  \twoheadrightarrow A
+                me X_i \mapsto \text{gen of } \ideal m_A/pA
+                |.
+
+        paragraphs
+            title Tangent spaces and deformations
+
+            p
+                | Let
+                me k\lb \epsilon \rb  = k\lb x\rb /(x^2)
+                | then #[m \epsilon  = \bar x] and we have #[m \epsilon ^2 =0].
+                | These are known as the dual numbers.
+
+
+            proposition
+                statement: p
+                    me \Hom_{\mathcal C} (A, k\lb \epsilon \rb ) \simeq t_A
+                    | for #[m A \in \mathcal C].
+                proof
+                    p
+                        me \Hom_{\mathcal C} (A, k\lb \epsilon \rb ) \simeq \Hom_{\mathcal C} (A/\ideal m_A^2 + pA, k\lb \epsilon \rb ) 
+                        | since
+                        me (\ideal m_{k\lb \epsilon \rb })^2 = 0
+                        | and
+                        me  p = 0 \in k\lb \epsilon \rb 
+                        |.
+                        me A/\ideal m_A^2 + pA \simeq k \oplus \ideal m_A/\ideal m_A^2 + pA
+                        me x\mapsto (\bar x, x - \lb \bar x\rb  )
+                        me \lb \bar x\rb + y  \mapsfrom (\bar x, y)
+                        | as #[m k]-vector spaces.
+                        me k\lb \epsilon \rb   \simeq k \oplus \epsilon  k
+                        | .
+                        me \Hom_{\mathcal C} (A/\ideal m_A^2 + pA, k\lb \epsilon \rb )  \simeq  \Hom_{\mathcal C} (A/\ideal m_A^2 + pA, \epsilon  k )  \simeq t_A
+                        | where now we take homomorphisms of #[m k]-vector spaces.
+
+            p
+                | Take #[m A = R_{\bar \rho }] then the proposition implies
+                me D_{\bar \rho } (k\lb \epsilon \rb ) \simeq t_{R_{\bar\rho }}
+                | to deform
+                me \bar \rho 
+                | to #[m k\lb \epsilon \rb ]
+                me \rho _\epsilon(g)  = \bar \rho (g) + \epsilon \phi  (g)
+                | for some
+                me g\mapsto \phi  (g)  \in M_d(k)
+                |with
+                me.
+                    \xymatrix{
+                    G \ar[r]^{\rho _\epsilon } \ar[dr]_{\bar\rho }  &amp; \GL_d(k\lb \epsilon \rb )\ar[d]\\
+                    &amp; \GL_d(k)
+                    }
+                |.
+            p
+                | We know
+                me \rho _\epsilon  (gh) = \rho _\epsilon (g) \rho _\epsilon (h)
+                me \bar \rho  (gh) + \epsilon  \phi (gh) = (\bar \rho (g) + \epsilon   \phi (g))(\bar \rho (h) + \epsilon  \phi (h))
+                me                                       = \bar \rho (g)\bar \rho (h) + \epsilon  ( \phi (g)\bar \rho (h)  +\bar \rho   (g) \phi (h))
+                | so
+                me \phi (gh) =   \phi (g) \bar \rho (h)+\bar \rho   (g) \phi (h)
+                | scale on the right by
+                me \bar \rho  (h)\inv  \bar \rho (g)\inv  = \bar \rho (gh)\inv 
+                | .
+
+                me \phi (gh) \bar \rho (gh)\inv  =   \phi (g) \bar \rho (g)\inv +\bar \rho   (g) \phi (h) \bar \rho  (h)\inv \bar \rho (g)\inv 
+                | set
+                me \psi (g)  = \phi (g) \bar \rho (g)\inv 
+                | so
+                me \psi  (gh) = \psi (g) + \bar \rho  ( g) \psi (h) \bar \rho (g)\inv 
+                me \psi (h) \in M_d(k) \simeq \End(\bar \rho )\acts G
+                me \End (\bar  \rho ) = \Hom(V_{\bar \rho  },V_{\bar \rho  }) = \ad(\bar \rho )
+                | this is the representation where
+                me g \bullet M = \bar \rho  (g) M \bar \rho (g)\inv 
+                | .
+                me \psi   \in Z^1 (G, \ad(\bar \rho ))
+                | so we get a map
+                me \{ \text{lifts of }\bar \rho \} \to Z^1(G, \ad \bar \rho )
+                | .
+
+            exercise
+                statement: p
+                    | Strictly equivalent lifts yield cocyles differing by coboundaries.
+
+            proposition
+                statement: p
+                    me t_{R_{\bar \rho }}\simeq D_{\bar \rho  }( k\lb \epsilon \rb ) \simeq H^1(G, \ad \bar \rho )
+                    me D^\square_{\bar \rho  }( k\lb \epsilon \rb ) \simeq Z^1(G, \ad \bar \rho )
+            exercise: statement: p Prove this.
+            exercise: statement: p Show that #[m \forall \bar\rho ], #[m H^1(G, \ad \bar \rho )] is finite dimensional if and only if #[m G] satisfies #[m \Phi _p].
+
+            p
+                | Let
+                me d_1 = \dim_k H^1(G, \ad \bar \rho )
+                me 0 \to I \to W(k)\lb \lb X_1, \ldots, X_{d_1}\rb \rb  \to R_{\bar \rho } \to 0
+                | .
+
+            p
+                | How  big is #[m I]?
+                | This is equivalent to finding lower bounds on #[m \dim R_{\bar \rho }].
+                | Obstruction to lifting #[m \bar \rho ].
+
+            p
+                me.
+                    \xymatrix{
+                    G \ar[r]^{\exists ? \rho } \ar[dr]_{\bar\rho }  &amp; \GL_d(\ZZ/p^2)\ar[d]\\
+                    &amp; \GL_d(\FF_p)
+                    }
+                |.
+                | If we choose a set map #[m \rho ] then we can set
+                me \phi (g,h) = \rho (gh) \rho (h)\inv \rho (g)\inv \in 1+  p M_d(\FF_p)
+                | in the sequence
+                me 1 \to 1+ p M_d(\FF_p) \to \GL_d(\ZZ/p^2) \to \GL_d(\FF_p) \to 1
+                | where
+                me 1+ pM_d(\FF_p) \simeq M_d(\FF_p) \simeq \End(\bar \rho )
+                | .
+
+            claim
+                statement: p
+                    me \phi (g,h) \in Z^2(G, \ad \bar \rho )
+
+            p
+                | The condition to be such a cocycle is
+                me a \bullet \phi (b,c) - \phi (ab,c) + \phi (a,bc) - \phi (a,b) = 0
+                |.
+                | So we do a long calculation, using the fact that the kernel is abelian.
+
+            p
+                |Exercise check that changing #[m \rho ] changes by a coboundary.
+                me \phi \in H^2(G, \ad \bar \rho )
+                | .
+            p
+                | More generally
+                me A_1 \xtwoheadrightarrow {\pi } A_0
+                me I = \ker \pi 
+                | s.t.
+                me \ideal m_{A_1} I = 0
+                | so #[m I] is a #[m k]-vector space.
+
+
+            p
+                me \phi (g,h) = \rho _1(gh) \rho _1(h)\inv \rho _1(g)\inv  \equiv  1 \pmod I
+                | so in
+                me 1 + M_d(I) \simeq 1 + M_d(k) \otimes I
+                me \simeq \ad \bar \rho  \otimes I
+                | .
+                me \phi  \in H^2(G,\ad \bar \rho  ) \otimes I
+                |.
+

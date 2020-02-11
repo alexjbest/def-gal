@@ -1208,3 +1208,200 @@ section#sec-def-gal-defs
                 me \phi  \in H^2(G,\ad \bar \rho  ) \otimes I
                 |.
 
+        aside: p Lecture 6 11/2/2020
+
+        p
+            me \bar \rho  \colon  G \to \GL_d(k)
+            me \Aut_D \bar \rho   \simeq k^\times
+            | implies that there exists
+            me R_{\bar \rho }
+            | a universal deformation ring representing
+            me D_{\bar \rho }
+            | .
+
+        p
+            | We defines
+            me t_R^* = \ideal m_R /\ideal m_R^2 + p
+            | .
+            me t_R = \Hom(t_R^*, k)
+            | .
+
+            me t_{R_{\bar\rho }} \simeq D_{\bar\rho }(k\lb \epsilon \rb ) \simeq H^1(G, \ad \bar \rho )
+            me \dim =  d_1 \lambda  \infty 
+            | .
+            me 0 \to I \to W(k) \lb \lb X_1, \ldots,X_{d_1} \rb \rb   \to R_{\bar \rho } \to 0
+            | .
+
+        p
+            me A_0 \in \mathcal C
+            me \rho _0 \colon G \to \GL_d(A_0)
+            | deforming #[m \bar \rho ].
+        p
+            me A_1 \xrightarrow {\pi } A_0
+            me \ideal m_{A_1} \cdot \ker(\pi ) =0
+            me \sheaf O (\rho  _0)  \in H^2 (G, \ad \bar \rho ) \otimes \ker(\pi )
+            me \sheaf O (\rho  _0)  = 0 
+            | if and only if there exists a deformation of #[m \rho _0] to #[m A_1] (via #[m \pi ]).
+            | If #[m H^2(G, \ad \bar\rho ) = 0] then we can always deform these small homs.
+
+        theorem: statement: p
+            | Let
+            me d_ i = \dim H^i(G, \ad \bar \rho ),\,i = 1,2
+            | then
+            men#eqn-krulldim-def-ring \krulldim (R_{\bar\rho} / p R_{\bar \rho }) \ge d_1 - d_2
+            | .
+            | Additionally if #[m d _2 = 0] then
+            me R_{\bar \rho } \simeq W(k) \lb \lb  X_1, \ldots, X_{d_1}\rb \rb 
+            |.
+        conjecture: statement: p
+            | We have equality in #[xref(ref="eqn-krulldim-def-ring")/].
+
+        p
+            | If we have
+            me R \to S \in \mathcal C
+            me t^*_R \to t^*_S
+            me t_S \to t_R
+            | .
+            me W(k)\lb \lb X_1,\ldots, X_{d_1}\rb \rb  \to R_{\bar\rho } \to 0
+            me t_{R_{\bar \rho }} \xrightarrow \sim t_{W(k)\lb \lb X_1, \ldots, X_{d_1}\rb \rb }
+            | .
+            | Same dimensions and injective since surj on cotangent space.
+
+
+        proof
+            title Of above
+            p
+                me 0 \to I \to W(k)\lb \lb X_1, \ldots, X_{d_1}\rb \rb  \to R_{\bar\rho } \to  0
+                me 0 \to J \to k\lb \lb X_1, \ldots, X_{d_1}\rb \rb  \to R_{\bar\rho }/pR_{\bar\rho } \to  0
+                me 0 \to J /\ideal m J\to k\lb \lb X_1, \ldots, X_{d_1}\rb \rb /\ideal m J \to R_{\bar\rho }/pR_{\bar\rho } \to  0
+            p
+                | Claim: there exists
+                me \Hom(J/\ideal mJ, k) \hookrightarrow H^2(G,\ad \bar\rho )
+                | this implies
+                me \dim_k (J / \ideal m J) \le d_2
+                | so #[m J] has a set of generators of length #[m \le d_2] by Nakayama.
+                | So
+                me \krulldim(R_{\bar\rho }/pR_{\bar\rho }) \ge d_1 - d_2
+                | .
+                | Maybe this is Krull's principal ideal theorem.
+
+
+            p
+                | The proof of the claim is as follows:
+                | Let
+                me \tilde \rho 
+                | be #[m \rho ^{univ}] mod #[m p]
+                me \tilde \rho\colon  G \to \GL_d(R_{\bar\rho }/pR_{\bar\rho })
+                me \sheaf O (\tilde \rho )  \in H^2(G, \ad \bar \rho ) \otimes J/\ideal m J
+                me \Hom(J/\ideal m J,k) \xrightarrow\alpha H^2(G, \ad \bar\rho )
+                me f\mapsto (1\otimes f)(\sheaf O(\tilde \rho ))
+                | #[m f\ne 0] so that
+                me \alpha (f) = 0
+                me f\colon  J/\ideal m  J \to k
+                me 0 \to (J/\ideal m J)/ \ker f \to ((k \lb \lb X_1, \ldots, X_{d_1}\rb \rb )/\ideal m J)/ \ker f \to R_{\bar \rho }/ p R_{\bar\rho } \to 0
+                | .
+                | But this is
+                me  0 \to k \to R'\to R_{\bar\rho }/pR_{\bar\rho } \to 0
+                | .
+                | Obstruction class is #[m f (\sheaf O (\tilde \rho )) = 0].
+
+                | So there exists a deformation of #[m \tilde \rho ] to #[m R'].
+                | But #[m \characteristic R' = p] as
+                me \tilde \rho 
+                | is the universal deformation of #[m \bar\rho ] to a  characteristic #[m p] ring.
+
+            p
+                | So there exists
+                me R_{\bar\rho }/p R_{\bar\rho } \to R'
+                | hence
+                me t_{R'}
+                | has larger dimension than
+                me t_{R_{\bar \rho }/pR_{\bar \rho }}
+                | a contradiction.
+            p
+                | For the second part
+                me 0 \to J \to k\lb \lb X_1,\ldots, X_{d_1}\rb \rb  \to R_{\bar \rho }/ p R_{\bar\rho } \to 0
+                | so
+                me \dim(J/\ideal mJ) \le d_2  = 0
+                | so
+                me J/\ideal mJ = 0
+                | i.e.
+                me J = 0
+                | .
+                | Hence
+                me R_{\bar \rho }/pR_{\bar\rho } \simeq k \lb \lb  X_1, \ldots, X_{d_1}\rb \rb 
+                | .
+            p
+                | We need to know that #[m p^n \ne 0] in #[m R_{\bar \rho }].
+                | Suffices to show that
+                me D_{\bar \rho }(W(k)) \ne \emptyset
+                | .
+
+                | Having #[m H^2 = 0] implies we can lift small homomorphisms
+                me k \simeq W(k) / p \leftarrow W(k)/p^2 \leftarrow \cdots
+                | so we can lift to #[m W(k)].
+
+
+        p
+            | Now we switch to
+            me G = G_{K,S}
+            | and we will introduce Tate's global Euler characteristic formula.
+            me M = \text{finite cardinality} G_{K,S}\text{-module}
+            me S \supseteq \{\text{inf. places}\} \cup\{\ell : \ell| \# M\}
+            me \frac{\# H^0(G, M) \# H^2(G,M)}{\# H^1(G,M)} = (\# M)^{-[K : \QQ] } \cdot \prod_{v \in S_\infty } \# H^0(G_{K_v}, M)
+            | .
+
+        p
+            | Take #[m M = \ad \bar \rho  \simeq M_d(k)].
+            me S = \{ \text{inf. places}\} \cup \{\ideal p : \ideal p | p\} \cup\{\text{ram. primes for }\bar \rho \}
+
+            me d_0 - d_1 + d_2 = \sum_{v\in S_\infty } \dim H^0 (G_{K_v}, \ad \bar \rho ) - \lb K : \QQ \rb d^2
+            | where #[m d_0 = \dim H^0(G, \ad \bar \rho )]
+            me g\cdot M = M
+
+            | implies #[m d_0 = 1]
+            me \bar\rho (g) M \bar\rho (g)\inv  = M
+            me \implies M \in \End_G(\bar \rho ) = k
+            | .
+            me d_ - d_2 = \lb K : \QQ \rb  d^2 + 1 - \sum _{v\in S_\infty } \dim_k H^0(G_{K_v}, \ad \bar \rho )
+            | .
+
+        example
+            statement: p
+                me \bar\rho =  \bar\chi  = \text{character of } =G_{K,S}
+                me \ad \bar \rho  \simeq \mathbf 1
+                | so
+                me \dim_k (H^0(G_{K_v}, \ad \bar \rho )) = 1
+                | hence
+                me \krulldim(R_{\bar\chi}/p R_{\bar \chi }) \ge d_1 - d_2 = \lb K : \QQ \rb   + 1 - r_1 - r_2 = r_2 + 1 \gt 0
+                | .
+                me R_{\bar \chi } \simeq W(k) \lb \lb  G_{K,S}^{\ab, (p)}\rb \rb 
+                me R_{\bar\chi}/p R_{\bar \chi } \simeq k \lb \lb  G_{K,S}^{\ab, (p)}\rb \rb 
+                me \krulldim(R_{\bar\chi}/p R_{\bar \chi })  = \rk_{\ZZ_p} (G_{K,S}^{\ab , (p)}) = r_2 + 1
+                | which is exactly Leopoldt's conjecture.
+        example
+            statement
+                p
+                    me \bar\rho \colon  G_{K,S} \to \GL_2(k)
+                    me S=  \{ p, \infty \}
+                    me \krulldim(R_{\bar\rho }/p R_{\bar \rho  })  = 4 + 1  - \dim H^0(G_{\RR}, \ad \bar \rho )
+                    | take
+                    me c  \in  \Gal \CC \RR
+                    | either
+                    me \bar \rho  (c) =\pm \begin{pmatrix} 1 \amp 0 \\ 0 \amp 1\end{pmatrix}
+                    | or
+                    me \bar \rho  (c) \sim \begin{pmatrix} 1 \amp 0 \\ 0 \amp -1\end{pmatrix}
+                    | the first case is called even the second odd.
+                    | In the even case wee have
+                    me \ad \bar \rho  = \mathbf 1
+                    | and so #[m H^0] has dimension 4.
+                    | And
+                    me \krulldim(R_{\bar\rho }/p R_{\bar \rho  })  = 1
+                    me \dim(R_{\bar\rho }/p R_{\bar \rho  })  \ge 1
+                    | .
+                p
+                    | In the odd case
+                    me \begin{pmatrix} 1 \amp 0\\ 0 \amp -1 \end{pmatrix}\begin{pmatrix} a \amp b\\ c \amp  d \end{pmatrix}\begin{pmatrix} 1 \amp 0\\ 0 \amp -1 \end{pmatrix} = \begin{pmatrix} a \amp-b\\ -c\amp  d \end{pmatrix}
+                    | so #[m H^0] is 2 dimensional and
+                    me \dim(R_{\bar\rho }/p R_{\bar \rho  })  \ge 3
+                    | .

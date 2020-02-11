@@ -12,7 +12,7 @@
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/x-mathjax-config">
-MathJax.Ajax.config.path["Contrib"] = "//cdn.rawgit.com/mathjax/MathJax-third-party-extensions/22087770";
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.jsdelivr.net/gh/mathjax/MathJax-third-party-extensions/legacy";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
@@ -2020,6 +2020,447 @@ I = \ker \pi
 <div class="displaymath">
 \begin{equation*}
 \phi  \in H^2(G,\ad \bar \rho  ) \otimes I\text{.}
+\end{equation*}
+</div></article><aside class="aside aside-like" id="aside-7"><p id="p-186">Lecture 6 11/2/2020</p></aside><div class="displaymath" id="p-187">
+\begin{equation*}
+\bar \rho  \colon  G \to \GL_d(k)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Aut_D \bar \rho   \simeq k^\times
+\end{equation*}
+</div>
+<p data-braille="continuation">implies that there exists</p>
+<div class="displaymath">
+\begin{equation*}
+R_{\bar \rho }
+\end{equation*}
+</div>
+<p data-braille="continuation">a universal deformation ring representing</p>
+<div class="displaymath">
+\begin{equation*}
+D_{\bar \rho }\text{.}
+\end{equation*}
+</div>
+<p id="p-188">We defines</p>
+<div class="displaymath">
+\begin{equation*}
+t_R^* = \ideal m_R /\ideal m_R^2 + p\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+t_R = \Hom(t_R^*, k)\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+t_{R_{\bar\rho }} \simeq D_{\bar\rho }(k\lb \epsilon \rb ) \simeq H^1(G, \ad \bar \rho )
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\dim =  d_1 \lambda  \infty \text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+0 \to I \to W(k) \lb \lb X_1, \ldots,X_{d_1} \rb \rb   \to R_{\bar \rho } \to 0\text{.}
+\end{equation*}
+</div>
+<div class="displaymath" id="p-189">
+\begin{equation*}
+A_0 \in \mathcal C
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\rho _0 \colon G \to \GL_d(A_0)
+\end{equation*}
+</div>
+<p data-braille="continuation">deforming \(\bar \rho \text{.}\)</p>
+<div class="displaymath" id="p-190">
+\begin{equation*}
+A_1 \xrightarrow {\pi } A_0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\ideal m_{A_1} \cdot \ker(\pi ) =0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sheaf O (\rho  _0)  \in H^2 (G, \ad \bar \rho ) \otimes \ker(\pi )
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sheaf O (\rho  _0)  = 0 
+\end{equation*}
+</div>
+<p data-braille="continuation">if and only if there exists a deformation of \(\rho _0\) to \(A_1\) (via \(\pi \)). If \(H^2(G, \ad \bar\rho ) = 0\) then we can always deform these small homs.</p>
+<article class="theorem theorem-like" id="theorem-2"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.47</span><span class="period">.</span>
+</h6>
+<p id="p-191">Let</p>
+<div class="displaymath">
+\begin{equation*}
+d_ i = \dim H^i(G, \ad \bar \rho ),\,i = 1,2
+\end{equation*}
+</div>
+<p data-braille="continuation">then</p>
+<div class="displaymath">
+\begin{equation}
+\krulldim (R_{\bar\rho} / p R_{\bar \rho }) \ge d_1 - d_2\text{.}\label{eqn-krulldim-def-ring}\tag{2.1}
+\end{equation}
+</div>
+<p data-braille="continuation">Additionally if \(d _2 = 0\) then</p>
+<div class="displaymath">
+\begin{equation*}
+R_{\bar \rho } \simeq W(k) \lb \lb  X_1, \ldots, X_{d_1}\rb \rb \text{.}
+\end{equation*}
+</div></article><article class="conjecture theorem-like" id="conjecture-2"><h6 class="heading">
+<span class="type">Conjecture</span><span class="space"> </span><span class="codenumber">2.48</span><span class="period">.</span>
+</h6>
+<p id="p-192">We have equality in <a class="xref" data-knowl="./knowl/eqn-krulldim-def-ring.html" title="Equation 2.1">(2.1)</a>.</p></article><p id="p-193">If we have</p>
+<div class="displaymath">
+\begin{equation*}
+R \to S \in \mathcal C
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+t^*_R \to t^*_S
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+t_S \to t_R\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+W(k)\lb \lb X_1,\ldots, X_{d_1}\rb \rb  \to R_{\bar\rho } \to 0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+t_{R_{\bar \rho }} \xrightarrow \sim t_{W(k)\lb \lb X_1, \ldots, X_{d_1}\rb \rb }\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Same dimensions and injective since surj on cotangent space.</p>
+<article class="hiddenproof" id="proof-2"><a data-knowl="" class="id-ref original" data-refid="hk-proof-2"><h6 class="heading"><span class="title">Of above.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><div class="displaymath" id="p-194">
+\begin{equation*}
+0 \to I \to W(k)\lb \lb X_1, \ldots, X_{d_1}\rb \rb  \to R_{\bar\rho } \to  0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+0 \to J \to k\lb \lb X_1, \ldots, X_{d_1}\rb \rb  \to R_{\bar\rho }/pR_{\bar\rho } \to  0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+0 \to J /\ideal m J\to k\lb \lb X_1, \ldots, X_{d_1}\rb \rb /\ideal m J \to R_{\bar\rho }/pR_{\bar\rho } \to  0
+\end{equation*}
+</div>
+<p id="p-195">Claim: there exists</p>
+<div class="displaymath">
+\begin{equation*}
+\Hom(J/\ideal mJ, k) \hookrightarrow H^2(G,\ad \bar\rho )
+\end{equation*}
+</div>
+<p data-braille="continuation">this implies</p>
+<div class="displaymath">
+\begin{equation*}
+\dim_k (J / \ideal m J) \le d_2
+\end{equation*}
+</div>
+<p data-braille="continuation">so \(J\) has a set of generators of length \(\le d_2\) by Nakayama. So</p>
+<div class="displaymath">
+\begin{equation*}
+\krulldim(R_{\bar\rho }/pR_{\bar\rho }) \ge d_1 - d_2\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Maybe this is Krull's principal ideal theorem.</p>
+<p id="p-196">The proof of the claim is as follows: Let</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde \rho 
+\end{equation*}
+</div>
+<p data-braille="continuation">be \(\rho ^{univ}\) mod \(p\)</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde \rho\colon  G \to \GL_d(R_{\bar\rho }/pR_{\bar\rho })
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sheaf O (\tilde \rho )  \in H^2(G, \ad \bar \rho ) \otimes J/\ideal m J
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Hom(J/\ideal m J,k) \xrightarrow\alpha H^2(G, \ad \bar\rho )
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+f\mapsto (1\otimes f)(\sheaf O(\tilde \rho ))
+\end{equation*}
+</div>
+<p data-braille="continuation">\(f\ne 0\) so that</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha (f) = 0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+f\colon  J/\ideal m  J \to k
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+0 \to (J/\ideal m J)/ \ker f \to ((k \lb \lb X_1, \ldots, X_{d_1}\rb \rb )/\ideal m J)/ \ker f \to R_{\bar \rho }/ p R_{\bar\rho } \to 0\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">But this is</p>
+<div class="displaymath">
+\begin{equation*}
+0 \to k \to R'\to R_{\bar\rho }/pR_{\bar\rho } \to 0\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Obstruction class is \(f (\sheaf O (\tilde \rho )) = 0\text{.}\) So there exists a deformation of \(\tilde \rho \) to \(R'\text{.}\) But \(\characteristic R' = p\) as</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde \rho 
+\end{equation*}
+</div>
+<p data-braille="continuation">is the universal deformation of \(\bar\rho \) to a  characteristic \(p\) ring.</p>
+<p id="p-197">So there exists</p>
+<div class="displaymath">
+\begin{equation*}
+R_{\bar\rho }/p R_{\bar\rho } \to R'
+\end{equation*}
+</div>
+<p data-braille="continuation">hence</p>
+<div class="displaymath">
+\begin{equation*}
+t_{R'}
+\end{equation*}
+</div>
+<p data-braille="continuation">has larger dimension than</p>
+<div class="displaymath">
+\begin{equation*}
+t_{R_{\bar \rho }/pR_{\bar \rho }}
+\end{equation*}
+</div>
+<p data-braille="continuation">a contradiction.</p>
+<p id="p-198">For the second part</p>
+<div class="displaymath">
+\begin{equation*}
+0 \to J \to k\lb \lb X_1,\ldots, X_{d_1}\rb \rb  \to R_{\bar \rho }/ p R_{\bar\rho } \to 0
+\end{equation*}
+</div>
+<p data-braille="continuation">so</p>
+<div class="displaymath">
+\begin{equation*}
+\dim(J/\ideal mJ) \le d_2  = 0
+\end{equation*}
+</div>
+<p data-braille="continuation">so</p>
+<div class="displaymath">
+\begin{equation*}
+J/\ideal mJ = 0
+\end{equation*}
+</div>
+<p data-braille="continuation">i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+J = 0\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Hence</p>
+<div class="displaymath">
+\begin{equation*}
+R_{\bar \rho }/pR_{\bar\rho } \simeq k \lb \lb  X_1, \ldots, X_{d_1}\rb \rb \text{.}
+\end{equation*}
+</div>
+<p id="p-199">We need to know that \(p^n \ne 0\) in \(R_{\bar \rho }\text{.}\) Suffices to show that</p>
+<div class="displaymath">
+\begin{equation*}
+D_{\bar \rho }(W(k)) \ne \emptyset\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Having \(H^2 = 0\) implies we can lift small homomorphisms</p>
+<div class="displaymath">
+\begin{equation*}
+k \simeq W(k) / p \leftarrow W(k)/p^2 \leftarrow \cdots
+\end{equation*}
+</div>
+<p data-braille="continuation">so we can lift to \(W(k)\text{.}\)</p></article></div>
+<p id="p-200">Now we switch to</p>
+<div class="displaymath">
+\begin{equation*}
+G = G_{K,S}
+\end{equation*}
+</div>
+<p data-braille="continuation">and we will introduce Tate's global Euler characteristic formula.</p>
+<div class="displaymath">
+\begin{equation*}
+M = \text{finite cardinality} G_{K,S}\text{-module}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+S \supseteq \{\text{inf. places}\} \cup\{\ell : \ell| \# M\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\frac{\# H^0(G, M) \# H^2(G,M)}{\# H^1(G,M)} = (\# M)^{-[K : \QQ] } \cdot \prod_{v \in S_\infty } \# H^0(G_{K_v}, M)\text{.}
+\end{equation*}
+</div>
+<p id="p-201">Take \(M = \ad \bar \rho  \simeq M_d(k)\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+S = \{ \text{inf. places}\} \cup \{\ideal p : \ideal p | p\} \cup\{\text{ram. primes for }\bar \rho \}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+d_0 - d_1 + d_2 = \sum_{v\in S_\infty } \dim H^0 (G_{K_v}, \ad \bar \rho ) - \lb K : \QQ \rb d^2
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(d_0 = \dim H^0(G, \ad \bar \rho )\)</p>
+<div class="displaymath">
+\begin{equation*}
+g\cdot M = M
+\end{equation*}
+</div>
+<p data-braille="continuation">implies \(d_0 = 1\)</p>
+<div class="displaymath">
+\begin{equation*}
+\bar\rho (g) M \bar\rho (g)\inv  = M
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\implies M \in \End_G(\bar \rho ) = k\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+d_ - d_2 = \lb K : \QQ \rb  d^2 + 1 - \sum _{v\in S_\infty } \dim_k H^0(G_{K_v}, \ad \bar \rho )\text{.}
+\end{equation*}
+</div>
+<article class="example example-like" id="example-12"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.49</span><span class="period">.</span>
+</h6>
+<div class="displaymath" id="p-202">
+\begin{equation*}
+\bar\rho =  \bar\chi  = \text{character of } =G_{K,S}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\ad \bar \rho  \simeq \mathbf 1
+\end{equation*}
+</div>
+<p data-braille="continuation">so</p>
+<div class="displaymath">
+\begin{equation*}
+\dim_k (H^0(G_{K_v}, \ad \bar \rho )) = 1
+\end{equation*}
+</div>
+<p data-braille="continuation">hence</p>
+<div class="displaymath">
+\begin{equation*}
+\krulldim(R_{\bar\chi}/p R_{\bar \chi }) \ge d_1 - d_2 = \lb K : \QQ \rb   + 1 - r_1 - r_2 = r_2 + 1 \gt 0\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+R_{\bar \chi } \simeq W(k) \lb \lb  G_{K,S}^{\ab, (p)}\rb \rb 
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+R_{\bar\chi}/p R_{\bar \chi } \simeq k \lb \lb  G_{K,S}^{\ab, (p)}\rb \rb 
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\krulldim(R_{\bar\chi}/p R_{\bar \chi })  = \rk_{\ZZ_p} (G_{K,S}^{\ab , (p)}) = r_2 + 1
+\end{equation*}
+</div>
+<p data-braille="continuation">which is exactly Leopoldt's conjecture.</p></article><article class="example example-like" id="example-13"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.50</span><span class="period">.</span>
+</h6>
+<div class="displaymath" id="p-203">
+\begin{equation*}
+\bar\rho \colon  G_{K,S} \to \GL_2(k)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+S=  \{ p, \infty \}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\krulldim(R_{\bar\rho }/p R_{\bar \rho  })  = 4 + 1  - \dim H^0(G_{\RR}, \ad \bar \rho )
+\end{equation*}
+</div>
+<p data-braille="continuation">take</p>
+<div class="displaymath">
+\begin{equation*}
+c  \in  \Gal \CC \RR
+\end{equation*}
+</div>
+<p data-braille="continuation">either</p>
+<div class="displaymath">
+\begin{equation*}
+\bar \rho  (c) =\pm \begin{pmatrix} 1 \amp 0 \\ 0 \amp 1\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">or</p>
+<div class="displaymath">
+\begin{equation*}
+\bar \rho  (c) \sim \begin{pmatrix} 1 \amp 0 \\ 0 \amp -1\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">the first case is called even the second odd. In the even case wee have</p>
+<div class="displaymath">
+\begin{equation*}
+\ad \bar \rho  = \mathbf 1
+\end{equation*}
+</div>
+<p data-braille="continuation">and so \(H^0\) has dimension 4. And</p>
+<div class="displaymath">
+\begin{equation*}
+\krulldim(R_{\bar\rho }/p R_{\bar \rho  })  = 1
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\dim(R_{\bar\rho }/p R_{\bar \rho  })  \ge 1\text{.}
+\end{equation*}
+</div>
+<p id="p-204">In the odd case</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} 1 \amp 0\\ 0 \amp -1 \end{pmatrix}\begin{pmatrix} a \amp b\\ c \amp  d \end{pmatrix}\begin{pmatrix} 1 \amp 0\\ 0 \amp -1 \end{pmatrix} = \begin{pmatrix} a \amp-b\\ -c\amp  d \end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">so \(H^0\) is 2 dimensional and</p>
+<div class="displaymath">
+\begin{equation*}
+\dim(R_{\bar\rho }/p R_{\bar \rho  })  \ge 3\text{.}
 \end{equation*}
 </div></article></section></section></div></main>
 </div>

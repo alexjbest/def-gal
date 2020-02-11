@@ -30,7 +30,7 @@
         <!-- // contrib directory for accessibility menu, moot after v2.6+ -->
         <!-- MathJax.Ajax.config.path["Contrib"] = "<some-url>";           -->
         <!-- ://cdn.mathjax.org/mathjax/contrib/ -->
-        <xsl:text>MathJax.Ajax.config.path["Contrib"] = "//cdn.rawgit.com/mathjax/MathJax-third-party-extensions/22087770";&#xa;</xsl:text>
+            <xsl:text>MathJax.Ajax.config.path["Contrib"] = "https://cdn.jsdelivr.net/gh/mathjax/MathJax-third-party-extensions/legacy";&#xa;</xsl:text>
         <xsl:text>MathJax.Hub.Config({&#xa;</xsl:text>
         <xsl:text>    tex2jax: {&#xa;</xsl:text>
         <xsl:text>        inlineMath: [['\\(','\\)']],&#xa;</xsl:text>

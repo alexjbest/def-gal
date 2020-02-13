@@ -312,6 +312,7 @@ var js_version = 0.13;
 <li><a href="sec-def-gal-defs.html#subsection-6" data-scroll="subsection-6">Hida theory</a></li>
 <li><a href="sec-def-gal-defs.html#subsection-7" data-scroll="subsection-7">More examples of Galois representations in families</a></li>
 <li><a href="sec-def-gal-defs.html#subsection-8" data-scroll="subsection-8">Deformation theory</a></li>
+<li><a href="sec-def-gal-defs.html#subsection-9" data-scroll="subsection-9">Deformation theory II</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/def-gal/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -2413,7 +2414,7 @@ S=  \{ p, \infty \}
 </div>
 <div class="displaymath">
 \begin{equation*}
-\krulldim(R_{\bar\rho }/p R_{\bar \rho  })  = 4 + 1  - \dim H^0(G_{\RR}, \ad \bar \rho )
+\krulldim(R_{\bar\rho }/p R_{\bar \rho  })  \ge 4 + 1  - \dim H^0(G_{\RR}, \ad \bar \rho )
 \end{equation*}
 </div>
 <p data-braille="continuation">take</p>
@@ -2443,12 +2444,7 @@ c  \in  \Gal \CC \RR
 <p data-braille="continuation">and so \(H^0\) has dimension 4. And</p>
 <div class="displaymath">
 \begin{equation*}
-\krulldim(R_{\bar\rho }/p R_{\bar \rho  })  = 1
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\dim(R_{\bar\rho }/p R_{\bar \rho  })  \ge 1\text{.}
+\krulldim(R_{\bar\rho }/p R_{\bar \rho  })  = 1\text{.}
 \end{equation*}
 </div>
 <p id="p-205">In the odd case</p>
@@ -2460,9 +2456,281 @@ c  \in  \Gal \CC \RR
 <p data-braille="continuation">so \(H^0\) is 2 dimensional and</p>
 <div class="displaymath">
 \begin{equation*}
-\dim(R_{\bar\rho }/p R_{\bar \rho  })  \ge 3\text{.}
+\krulldim(R_{\bar\rho }/p R_{\bar \rho  })  \ge 3\text{.}
 \end{equation*}
-</div></article></section></section></div></main>
+</div></article><aside class="aside aside-like" id="aside-8"><p id="p-206">Lecture 7 13/2/2020</p></aside><p id="p-207">When \(\bar \rho  = \bar\rho _f\) for some \(f\in S_k(\Gamma _0(N))\text{.}\)</p>
+<article class="theorem theorem-like" id="theorem-3"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.51</span><span class="period">.</span><span class="space"> </span><span class="title">Weston.</span>
+</h6>
+<p id="p-208">When \(k \ge 3\) then \(H^2(G_{\QQ,S}, \ad \bar \rho ) = 0\) for all but finitely many \(p\text{.}\)</p></article><p id="p-209">So \(R_{\bar\rho } \simeq W(k)\lb \lb X,Y,Z\rb \rb \) and</p>
+<div class="displaymath">
+\begin{equation*}
+D_{\bar\rho }(W(k)) = \Hom(R_{\bar\rho }, W(k))
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+k = \FF_q = \Hom(R_{\bar\rho }, \ZZ_p)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\phi \colon \ZZ_p\lb\lb X,Y,Z \rb \rb  \to \ZZ_p
+\end{equation*}
+</div>
+<p data-braille="continuation">is determined by the image of \(X,Y,Z\)</p>
+<div class="displaymath">
+\begin{equation*}
+\phi (X), \phi (Y), \phi (Z) \in p \ZZ_p\text{.}
+\end{equation*}
+</div>
+<p id="p-210">The question is, why three dimensional?</p>
+<p id="p-211">One dimension comes from twists</p>
+<div class="displaymath">
+\begin{equation*}
+\mathbf 1^{univ} \colon G_{\QQ,S} \to \ZZ_p \lb \lb G_{\QQ,S}^{\ab, pro-p}\rb \rb ^* \simeq \ZZ_p\lb \lb T\rb \rb 
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\bar \rho \otimes \mathbf 1^{univ} \colon G_{\QQ, S} \to \GL_2(\FF_p\lb \lb T\rb \rb )\text{.}
+\end{equation*}
+</div>
+<p id="p-212">A second dimension is from \(p\)-adic variation, given \(f \) of weight \(k_0\) there exists</p>
+<div class="displaymath">
+\begin{equation*}
+\mathscr F = \sum_{n\ge1} a_n(x) q^n
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(a_n(x)\) is a \(p\)-adic analytic function on a disc around \(k_0\) s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+k \in \ZZ^{\ge 2}
+\end{equation*}
+</div>
+<p data-braille="continuation">in that disc.</p>
+<div class="displaymath">
+\begin{equation*}
+\mathscr F_k = \sum _{n\ge 1} a_n(k) q^n \in S_k(\Gamma _0(Np))
+\end{equation*}
+</div>
+<p data-braille="continuation">an eigenform.</p>
+<div class="displaymath">
+\begin{equation*}
+\rho _{\mathscr F} \colon  G_{\QQ,S} \to \GL_2(A)
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(A\) are analytic functions in a disk.</p>
+<p id="p-213">Different families.</p>
+<p id="p-214">The third dimension comes from the infinite fern, we can place a form in a family in two distinct ways, get a space filling curve.</p>
+<p id="p-215">We will also want to add conditions to our deformations, getting subfunctors with conditions until we get finite sets of points.</p></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.6</span> <span class="title">Deformation theory II</span>
+</h3>
+<p id="p-216">Let \(\mathcal C \) be the category of complete local Noetherian rings \((A, \ideal m_A)\) with finite residue field \(k\) and an identification \(A/\ideal m_A \simeq k\text{.}\) The morphisms are local homomorphisms preserving the identification of residue fields.</p>
+<p id="p-217">This is the same as the category of complete local Noetherian \(W(k)\)-algebras with residue field \(k\) and morphisms are local \(W(k)\)-algebra homomorphisms.</p>
+<p id="p-218">This is as we have</p>
+<div class="displaymath">
+\begin{equation*}
+W(k) \to A
+\end{equation*}
+</div>
+<p data-braille="continuation">local, leading to</p>
+<div class="displaymath">
+\begin{equation*}
+k \xrightarrow \sim A/\ideal m_A \simeq k
+\end{equation*}
+</div>
+<p data-braille="continuation">the \(W(k)\)-algebra structure provides a canonical identification of \(A/\ideal m_A\) with \(k\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{ A \ar[rr]^{\phi } &amp;  &amp; B\\
+&amp; W(k) \ar[ul] \ar[ur] &amp; }
+\leadsto
+\xymatrix{ A/\ideal m_A \ar[rr] &amp;  &amp; B/\ideal m_B\\
+&amp; k \ar[ul]_{\sim} \ar[ur]^{\sim} &amp; }\text{.}
+\end{equation*}
+</div>
+<p id="p-219">So from now on we will use the second definition.</p>
+<p id="p-220">Given \(A \in \mathcal C\) the ring \(A \) is a topological ring under the \(\ideal m\)-adic topology.</p>
+<div class="displaymath">
+\begin{equation*}
+A \simeq \varprojlim_n A/ \ideal m_A^n\text{.}
+\end{equation*}
+</div>
+<article class="lemma theorem-like" id="lemma-1"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.52</span><span class="period">.</span>
+</h6>
+<p id="p-221">\(A, B\in \mathcal C\)</p>
+<div class="displaymath">
+\begin{equation*}
+f\colon  A \to B
+\end{equation*}
+</div>
+<p data-braille="continuation">then \(f\) is continuous.</p></article><article class="hiddenproof" id="proof-3"><a data-knowl="" class="id-ref original" data-refid="hk-proof-3"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-222">We need</p>
+<div class="displaymath">
+\begin{equation*}
+f\inv  (\ideal m_B^n) \supseteq \ideal m_A^m
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+f(\ideal m _A )\subseteq \ideal m_B \implies f(\ideal m _A^n )\subseteq \ideal m_B^n \implies f\inv (\ideal m_B^n)\supseteq \ideal m_A^n\text{.}
+\end{equation*}
+</div></article></div>
+<article class="lemma theorem-like" id="lemma-2"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.53</span><span class="period">.</span>
+</h6>
+<p id="p-223">\(A, B \in \mathcal C\)</p>
+<div class="displaymath">
+\begin{equation*}
+f\colon  A\to B
+\end{equation*}
+</div>
+<p data-braille="continuation">a ring homomorphism, then \(f\) is local.</p></article><article class="hiddenproof" id="proof-4"><a data-knowl="" class="id-ref original" data-refid="hk-proof-4"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><div class="displaymath" id="p-224">
+\begin{equation*}
+A \xrightarrow f B \supseteq \ideal m_B
+\end{equation*}
+</div>
+<p data-braille="continuation">where the containment is finite index.</p>
+<div class="displaymath" id="p-225">
+\begin{equation*}
+A/f\inv (\ideal m_B) \hookrightarrow B/\ideal m_B
+\end{equation*}
+</div>
+<p data-braille="continuation">as \(k\) is finite we have \(A/f\inv (\ideal m_B)\) is finite hence artinian. So</p>
+<div class="displaymath">
+\begin{equation*}
+\ideal m_A^n \subseteq f\inv (\ideal m_B)\text{.}
+\end{equation*}
+</div>
+<p id="p-226">Since finite artinian rings have nilpotent maximal ideals.</p>
+<p id="p-227">So</p>
+<div class="displaymath">
+\begin{equation*}
+f(\ideal m_A^n) \subseteq \ideal m_B
+\end{equation*}
+</div>
+<p data-braille="continuation">assume</p>
+<div class="displaymath">
+\begin{equation*}
+f(\ideal m_A) \not \subseteq \ideal m_B\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Take</p>
+<div class="displaymath">
+\begin{equation*}
+x\in \ideal m_A
+\end{equation*}
+</div>
+<p data-braille="continuation">s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)\not \in \ideal m_B
+\end{equation*}
+</div>
+<p data-braille="continuation">hence</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)
+\end{equation*}
+</div>
+<p data-braille="continuation">is a unit. So</p>
+<div class="displaymath">
+\begin{equation*}
+f(x^n)
+\end{equation*}
+</div>
+<p data-braille="continuation">is a unit, a contradiction.</p></article></div>
+<article class="paragraphs" id="paragraphs-12"><h5 class="heading"><span class="title">Deformations.</span></h5>
+<p id="p-228">\(A \in \mathcal C\) then</p>
+<div class="displaymath">
+\begin{equation*}
+D_{\bar \rho } (A) = \left\{ (V_A, i_A) : V_A \simeq A^d \acts G,\,i_A \colon V_A \otimes k \simeq \overline V \right\}/ \sim\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(V_A, i_A) \simeq (V_A' , i_A')
+\end{equation*}
+</div>
+<p data-braille="continuation">when</p>
+<div class="displaymath">
+\begin{equation*}
+\exists \phi  \colon V_A \xrightarrow\sim V'_A
+\end{equation*}
+</div>
+<p data-braille="continuation">as \(G\)-reps making the diagram commute.</p>
+<p id="p-229">A funny observation is that</p>
+<div class="displaymath">
+\begin{equation*}
+(V_A, i_A) \simeq (V_A, i'_A)\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(i_A')\inv  \circ i_A \in \End(V_A \otimes k ) = \End(\bar \rho ) \simeq k
+\end{equation*}
+</div>
+<p data-braille="continuation">so we are just scaling by \(c \in k^*\text{.}\) But we can take \(\phi  = \lb c\rb \text{.}\)</p></article><article class="paragraphs" id="paragraphs-13"><h5 class="heading"><span class="title">Larger category.</span></h5>
+<p id="p-230">\(\mathcal C' \) the category of local profinite \(W(k)\)-algebras with residue field \(k\)</p>
+<div class="displaymath">
+\begin{equation*}
+A \in \mathcal C'\implies A = \varprojlim_I A/I
+\end{equation*}
+</div>
+<p data-braille="continuation">for \(I\) finite index. The profinite topology on \(A\) has \(\{I\}_{I\text{ finite index}}\) base of opens around 0. Morphisms are \(W(k)\)-algebra homomorphisms.</p>
+<p id="p-231">If \(A, B \in \mathcal C'\) with</p>
+<div class="displaymath">
+\begin{equation*}
+f  \colon  A \to B
+\end{equation*}
+</div>
+<p data-braille="continuation">a ring hom, then \(f\) is continuous.</p>
+<p id="p-232">Two topologies  (profinite, \(\ideal m\)-adic). Need not be the same.</p>
+<article class="example example-like" id="example-14"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.54</span><span class="period">.</span>
+</h6>
+<div class="displaymath" id="p-233">
+\begin{equation*}
+A = k \lb \lb x_1, \ldots, x_n, \ldots \rb \rb 
+\end{equation*}
+</div>
+<p data-braille="continuation">have</p>
+<div class="displaymath">
+\begin{equation*}
+\ideal m_A = (x_1, \ldots)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\ideal m_A^2 = (x_1, \ldots)^2
+\end{equation*}
+</div>
+<p data-braille="continuation">not finite index.</p></article><article class="claim theorem-like" id="claim-3"><h6 class="heading">
+<span class="type">Claim</span><span class="space"> </span><span class="codenumber">2.55</span><span class="period">.</span>
+</h6>
+<p id="p-234">Generally \(I\) open for the profinite topology implies it is open \(\ideal m\)-adically.</p></article><article class="hiddenproof" id="proof-5"><a data-knowl="" class="id-ref original" data-refid="hk-proof-5"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><p id="p-235">If</p>
+<div class="displaymath">
+\begin{equation*}
+A/I
+\end{equation*}
+</div>
+<p data-braille="continuation">is finite (thus artinian) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\ideal m_A^n \subseteq I
+\end{equation*}
+</div>
+<p data-braille="continuation">so \(I\) is \(\ideal m\)-adically open.</p></article></div>
+<article class="claim theorem-like" id="claim-4"><h6 class="heading">
+<span class="type">Claim</span><span class="space"> </span><span class="codenumber">2.56</span><span class="period">.</span>
+</h6>
+<p id="p-236">If \(A\) is in addition noetherian \(I\) open \(\ideal m\)-adically then it is open in the profinite topology.</p></article><article class="hiddenproof" id="proof-6"><a data-knowl="" class="id-ref original" data-refid="hk-proof-6"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><p id="p-237">If \(I\) is open \(\ideal m\)-adically \(I\) is open profinitely \(\iff\) (\(I \supseteq m_A^n\) implies finite index). Suffices to see \(A / \ideal m_A^n\) is finite. For \(A\) noetherian have \(\ideal m_A^j\) finitely generated for all \(j\text{.}\) So \(\ideal m_A^j/\ideal m_A^{j+1}\) is finite (since fin. dim. \(/k\)).</p>
+<div class="displaymath">
+\begin{equation*}
+A/\ideal m_A^n \supseteq \ideal m / \ideal m^2 \supseteq \cdots \supseteq 0
+\end{equation*}
+</div></article></div></article></section></section></div></main>
 </div>
 <!--Start: Google Classic code-->
 <script>

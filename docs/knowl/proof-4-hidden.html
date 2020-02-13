@@ -10,53 +10,59 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="displaymath">
+<body><article class="hiddenproof"><div class="displaymath">
 \begin{equation*}
-\bar\rho \colon  G_{K,S} \to \GL_2(k)
+A \xrightarrow f B \supseteq \ideal m_B
 \end{equation*}
 </div>
+<p data-braille="continuation">where the containment is finite index.</p>
 <div class="displaymath">
 \begin{equation*}
-S=  \{ p, \infty \}
+A/f\inv (\ideal m_B) \hookrightarrow B/\ideal m_B
 \end{equation*}
 </div>
+<p data-braille="continuation">as \(k\) is finite we have \(A/f\inv (\ideal m_B)\) is finite hence artinian. So</p>
 <div class="displaymath">
 \begin{equation*}
-\krulldim(R_{\bar\rho }/p R_{\bar \rho  })  \ge 4 + 1  - \dim H^0(G_{\RR}, \ad \bar \rho )
+\ideal m_A^n \subseteq f\inv (\ideal m_B)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">take</p>
+<p>Since finite artinian rings have nilpotent maximal ideals.</p>
+<p>So</p>
 <div class="displaymath">
 \begin{equation*}
-c  \in  \Gal \CC \RR
+f(\ideal m_A^n) \subseteq \ideal m_B
 \end{equation*}
 </div>
-<p data-braille="continuation">either</p>
+<p data-braille="continuation">assume</p>
 <div class="displaymath">
 \begin{equation*}
-\bar \rho  (c) =\pm \begin{pmatrix} 1 \amp 0 \\ 0 \amp 1\end{pmatrix}
+f(\ideal m_A) \not \subseteq \ideal m_B\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">or</p>
+<p data-braille="continuation">Take</p>
 <div class="displaymath">
 \begin{equation*}
-\bar \rho  (c) \sim \begin{pmatrix} 1 \amp 0 \\ 0 \amp -1\end{pmatrix}
+x\in \ideal m_A
 \end{equation*}
 </div>
-<p data-braille="continuation">the first case is called even the second odd. In the even case we have</p>
+<p data-braille="continuation">s.t.</p>
 <div class="displaymath">
 \begin{equation*}
-\ad \bar \rho  = \mathbf 1
+f(x)\not \in \ideal m_B
 \end{equation*}
 </div>
-<p data-braille="continuation">and so \(H^0\) has dimension 4. And</p>
+<p data-braille="continuation">hence</p>
 <div class="displaymath">
 \begin{equation*}
-\krulldim(R_{\bar\rho }/p R_{\bar \rho  })  = 1\text{.}
+f(x)
 \end{equation*}
 </div>
-<span class="incontext"><a href="sec-def-gal-defs.html#p-204">in-context</a></span>
-</body>
+<p data-braille="continuation">is a unit. So</p>
+<div class="displaymath">
+\begin{equation*}
+f(x^n)
+\end{equation*}
+</div>
+<p data-braille="continuation">is a unit, a contradiction.</p></article></body>
 </html>

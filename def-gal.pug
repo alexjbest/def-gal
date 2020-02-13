@@ -1383,7 +1383,7 @@ section#sec-def-gal-defs
                 p
                     me \bar\rho \colon  G_{K,S} \to \GL_2(k)
                     me S=  \{ p, \infty \}
-                    me \krulldim(R_{\bar\rho }/p R_{\bar \rho  })  = 4 + 1  - \dim H^0(G_{\RR}, \ad \bar \rho )
+                    me \krulldim(R_{\bar\rho }/p R_{\bar \rho  })  \ge 4 + 1  - \dim H^0(G_{\RR}, \ad \bar \rho )
                     | take
                     me c  \in  \Gal \CC \RR
                     | either
@@ -1396,11 +1396,204 @@ section#sec-def-gal-defs
                     | and so #[m H^0] has dimension 4.
                     | And
                     me \krulldim(R_{\bar\rho }/p R_{\bar \rho  })  = 1
-                    me \dim(R_{\bar\rho }/p R_{\bar \rho  })  \ge 1
                     | .
                 p
                     | In the odd case
                     me \begin{pmatrix} 1 \amp 0\\ 0 \amp -1 \end{pmatrix}\begin{pmatrix} a \amp b\\ c \amp  d \end{pmatrix}\begin{pmatrix} 1 \amp 0\\ 0 \amp -1 \end{pmatrix} = \begin{pmatrix} a \amp-b\\ -c\amp  d \end{pmatrix}
                     | so #[m H^0] is 2 dimensional and
-                    me \dim(R_{\bar\rho }/p R_{\bar \rho  })  \ge 3
+                    me \krulldim(R_{\bar\rho }/p R_{\bar \rho  })  \ge 3
                     | .
+
+        aside: p Lecture 7 13/2/2020
+
+        p
+            | When #[m \bar \rho  = \bar\rho _f] for some #[m f\in S_k(\Gamma _0(N))].
+        theorem
+            title Weston
+            statement: p
+                | When #[m k \ge 3] then #[m H^2(G_{\QQ,S}, \ad \bar \rho ) = 0] for all but finitely many #[m p].
+        p
+            | So #[m R_{\bar\rho } \simeq W(k)\lb \lb X,Y,Z\rb \rb ] and
+            me D_{\bar\rho }(W(k)) = \Hom(R_{\bar\rho }, W(k))
+            me k = \FF_q = \Hom(R_{\bar\rho }, \ZZ_p)
+
+            me \phi \colon \ZZ_p\lb\lb X,Y,Z \rb \rb  \to \ZZ_p
+            | is determined by the image of #[m X,Y,Z]
+            me \phi (X), \phi (Y), \phi (Z) \in p \ZZ_p
+            | .
+
+        p
+            | The question is, why three dimensional?
+        p
+            | One dimension comes from twists
+            me \mathbf 1^{univ} \colon G_{\QQ,S} \to \ZZ_p \lb \lb G_{\QQ,S}^{\ab, pro-p}\rb \rb ^* \simeq \ZZ_p\lb \lb T\rb \rb 
+            me \bar \rho \otimes \mathbf 1^{univ} \colon G_{\QQ, S} \to \GL_2(\FF_p\lb \lb T\rb \rb )
+            | .
+
+        p
+            | A second dimension is from #[m p]-adic variation, given #[m f ] of weight #[m k_0] there exists
+            me \mathscr F = \sum_{n\ge1} a_n(x) q^n
+            | where #[m a_n(x)] is a #[m p]-adic analytic function on a disc around #[m k_0] s.t.
+            me k \in \ZZ^{\ge 2}
+            | in that disc.
+            me \mathscr F_k = \sum _{n\ge 1} a_n(k) q^n \in S_k(\Gamma _0(Np))
+            | an eigenform.
+            me \rho _{\mathscr F} \colon  G_{\QQ,S} \to \GL_2(A)
+            | where #[m A] are analytic functions in a disk.
+        p
+            | Different families.
+
+        p
+            | The third dimension comes from the infinite fern, we can place a form in a family in two distinct ways, get a space filling curve.
+
+        p
+            | We will also want to add conditions to our deformations, getting subfunctors with conditions until we get finite sets of points.
+
+
+
+
+    subsection
+        title Deformation theory II
+
+        p
+            | Let #[m \mathcal C ] be the category of complete local Noetherian rings #[m (A, \ideal m_A)] with finite residue field #[m k] and an identification #[m A/\ideal m_A \simeq k].
+            | The morphisms are local homomorphisms preserving the identification of residue fields.
+        p
+            | This is the same as the category of complete local Noetherian #[m W(k)]-algebras with residue field #[m k] and morphisms are local #[m W(k)]-algebra homomorphisms.
+
+        p
+            | This is as we have
+            me W(k) \to A
+            | local, leading to
+            me k \xrightarrow \sim A/\ideal m_A \simeq k
+            | the #[m W(k)]-algebra structure provides a canonical identification of #[m A/\ideal m_A] with #[m k].
+            me.
+                \xymatrix{ A \ar[rr]^{\phi } &amp;  &amp; B\\
+                &amp; W(k) \ar[ul] \ar[ur] &amp; }
+                \leadsto
+                \xymatrix{ A/\ideal m_A \ar[rr] &amp;  &amp; B/\ideal m_B\\
+                &amp; k \ar[ul]_{\sim} \ar[ur]^{\sim} &amp; }
+            | .
+        p
+            | So from now on we will use the second definition.
+
+        p
+            | Given #[m A \in \mathcal C] the ring #[m A ] is a topological ring under the #[m \ideal m]-adic topology.
+            me A \simeq \varprojlim_n A/ \ideal m_A^n
+            |.
+
+        lemma
+            statement: p
+                | #[m A, B\in \mathcal C]
+                me f\colon  A \to B
+                | then #[m f] is continuous.
+
+            proof
+                p
+                    | We need
+                    me f\inv  (\ideal m_B^n) \supseteq \ideal m_A^m
+                    me f(\ideal m _A )\subseteq \ideal m_B \implies f(\ideal m _A^n )\subseteq \ideal m_B^n \implies f\inv (\ideal m_B^n)\supseteq \ideal m_A^n
+                    | .
+
+
+        lemma
+            statement: p
+                | #[m A, B \in \mathcal C]
+                me f\colon  A\to B
+                | a ring homomorphism, then #[m f] is local.
+            proof
+                p
+                    me A \xrightarrow f B \supseteq \ideal m_B
+                    | where the containment is finite index.
+                p
+                    me A/f\inv (\ideal m_B) \hookrightarrow B/\ideal m_B
+                    | as #[m k] is finite we have #[m A/f\inv (\ideal m_B)] is finite hence artinian. So
+                    me \ideal m_A^n \subseteq f\inv (\ideal m_B)
+                    | .
+                p
+                    | Since finite artinian rings have nilpotent maximal ideals.
+                p
+                    | So
+                    me f(\ideal m_A^n) \subseteq \ideal m_B
+                    | assume
+                    me f(\ideal m_A) \not \subseteq \ideal m_B
+                    | .
+                    | Take
+                    me x\in \ideal m_A
+                    | s.t.
+                    me f(x)\not \in \ideal m_B
+                    | hence
+                    me f(x)
+                    | is a unit.
+                    | So
+                    me f(x^n)
+                    | is a unit, a contradiction.
+
+
+        paragraphs
+            title Deformations
+
+            p
+                | #[m A \in \mathcal C] then
+                me D_{\bar \rho } (A) = \left\{ (V_A, i_A) : V_A \simeq A^d \acts G,\,i_A \colon V_A \otimes k \simeq \overline V \right\}/ \sim
+                | .
+                me (V_A, i_A) \simeq (V_A' , i_A')
+                | when
+                me \exists \phi  \colon V_A \xrightarrow\sim V'_A
+                | as #[m G]-reps making the diagram commute.
+
+            p
+                | A funny observation is that
+                me (V_A, i_A) \simeq (V_A, i'_A)
+                | .
+                me (i_A')\inv  \circ i_A \in \End(V_A \otimes k ) = \End(\bar \rho ) \simeq k
+                | so we are just scaling by #[m c \in k^*].
+                | But we can take #[m \phi  = \lb c\rb ].
+
+
+        paragraphs
+            title Larger category
+
+
+            p
+                | #[m \mathcal C' ] the category of local profinite #[m W(k)]-algebras with residue field #[m k]
+                me A \in \mathcal C'\implies A = \varprojlim_I A/I
+                | for #[m I] finite index.
+
+                | The profinite topology on #[m A] has #[m \{I\}_{I\text{ finite index}}] base of opens around 0.
+                | Morphisms are #[m W(k)]-algebra homomorphisms.
+
+            p
+                | If #[m A, B \in \mathcal C'] with
+                me f  \colon  A \to B
+                | a ring hom, then #[m f] is continuous.
+
+            p
+                | Two topologies  (profinite, #[m \ideal m]-adic).
+                | Need not be the same.
+            example: statement: p
+                me A = k \lb \lb x_1, \ldots, x_n, \ldots \rb \rb 
+                | have
+                me \ideal m_A = (x_1, \ldots)
+                me \ideal m_A^2 = (x_1, \ldots)^2
+                | not finite index.
+            claim
+                statement: p
+                    | Generally #[m I] open for the profinite topology implies it is open #[m \ideal m]-adically.
+                proof: p
+                    | If
+                    me A/I
+                    | is finite (thus artinian) we have
+                    me \ideal m_A^n \subseteq I
+                    | so #[m I] is #[m \ideal m]-adically open.
+
+            claim
+                statement: p
+                    | If #[m A] is in addition noetherian #[m I] open #[m \ideal m]-adically then it is open in the profinite topology.
+                proof: p
+                    | If #[m I] is open #[m \ideal m]-adically #[m I] is open profinitely #[m \iff] (#[m I \supseteq m_A^n] implies finite index).
+                    | Suffices to see #[m A / \ideal m_A^n] is finite.
+                    | For #[m A] noetherian have #[m \ideal m_A^j] finitely generated for all #[m j].
+                    | So #[m \ideal m_A^j/\ideal m_A^{j+1}] is finite (since fin. dim. #[m /k]).
+                    me A/\ideal m_A^n \supseteq \ideal m / \ideal m^2 \supseteq \cdots \supseteq 0
+
